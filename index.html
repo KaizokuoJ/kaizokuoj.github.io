@@ -821,6 +821,25 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
   document.querySelectorAll(".chain").forEach(function(el){ co.observe(el); });
 })();
 </script>
+<script>
+(function(){
+  var q = new URLSearchParams(location.search);
+  var keys = ["utm_source","utm_medium","utm_campaign","utm_content","utm_term"].filter(function(k){ return q.get(k); });
+  if (!keys.length) return;
+  var tag = function(u){
+    var url = new URL(u);
+    keys.forEach(function(k){ url.searchParams.set(k, q.get(k)); });
+    return url.toString();
+  };
+  document.querySelectorAll(".calendly-inline-widget[data-url]").forEach(function(el){
+    el.setAttribute("data-url", tag(el.getAttribute("data-url")));
+  });
+  document.querySelectorAll('a[href^="https://calendly.com/"]').forEach(function(a){
+    a.href = tag(a.href);
+  });
+})();
+</script>
+<script data-goatcounter="https://goldeneraai.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
