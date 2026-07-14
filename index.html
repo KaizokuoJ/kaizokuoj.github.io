@@ -1,498 +1,822 @@
 <!doctype html>
+<!--
+  GoldenEraAI — landing v2 / VARIANT A2 "The Counsel Record + founder furniture"
+  Base: variant-a.html (kept untouched). Register: sales-os/landing/brand-web.md.
+
+  OPERATOR COPY PASS (Jordy, 2026-07-14) — spine amendments authorized by the operator:
+  - Eyebrow suffix "since 2025" CUT (redundant, unproven-feeling).
+  - Hero sub rewritten: "client intake", work arrives in the email inbox (vague "tools your firm
+    already uses" removed), "live in your firm within 48 hours" names the employee.
+  - Fact line gains "everything included" (price never stands naked above the fold).
+  - Founder row reworded: "Built and run by Jordy Backes. You deal with the builder directly,
+    not a sales team." ("the person in the videos" cut as presumptuous at current channel size.)
+  - Step 1 + booking card + FAQ5 mechanism: prospect names the time sink in the booking questions
+    (sales-os/intake/calendly-questions.md), demo runs on "that kind of work" (not "exact").
+  - Step 2/FAQ 6: "highest-value job we picked on the call"; daily basics now lead with the
+    morning brief (video 3 use case).
+  - Step 3/claim 05/FAQ 6: BOARD LANGUAGE REMOVED site-wide; requests are sent by email,
+    delivered one at a time, typically within 48 hours each.
+  - NEW claim 09 "Updates you can watch": every change ships with a short personal video from
+    Jordy to their inbox (operator fact). NO meeting-cadence claims anywhere on the page
+    (operator rule 2026-07-14; "no scoping meetings" in claim 05 is locked offer-sheet copy
+    about the request process, not cadence, and stays).
+  - Claims 3.0 compressed to a 9-item two-column grid; exhibit rail (01.A chips + 07.A mini
+    chain) removed as redundant with the hero.
+  - Terms sheet 4.0: INCLUDED checklist removed (3.0 carries the benefits now, no duplication);
+    no-lock-in line added: playbooks, files, and everything she produced stay with the firm.
+  - Confidentiality: "approves every document she produces" (was "everything");
+    FAQ 1 "its own tools" -> "its own email inbox".
+  - FAQ 3 gains the no-lock-in sentence.
+  - Fit list: "with real volume" cut; "repetitive document drafting"; not-for #2 reworded
+    ("handed over and forgotten").
+  - Record 5.0: [ Exhibit B ] + B.1-3 tags removed; four named deliverables incl. THE MORNING
+    BRIEF; proof lead honesty rework (no "exactly what you would be getting").
+  - Founder bio: "$10M+ funded startup" clause cut. Pull-quote caption "The promise, in one
+    line" cut.
+  - Hero exhibit (email card + review chain) scaled up ~10-15%.
+  SECOND OPERATOR PASS (Jordy, 2026-07-14): not-for #2 = the point-of-contact requirement
+  (replaces the vague one-off line); "picked on the call" -> "I map out from our call" (the
+  analysis happens after the call); step 3 "keep improving her, request or no request";
+  morning-brief deliverable gains drafted routine replies; bio "for three years" (OPERATOR:
+  confirm against LinkedIn).
+  Carried from the build: booking CTAs scroll to the inline Calendly (locked URL in widget +
+  fallback); [ EXHIBIT A ] kept on the hero artifact (lawyers' native evidence format, pairs
+  with the honesty caption); all other spine lines verbatim.
+-->
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <title>AI Employees for Law Firms | GoldenEraAI</title>
 <meta name="description" content="Hire an AI employee for your law firm. Demand letters, contract redlines and intake, handled inside the tools your team already uses. Built, run and maintained for you. First one live within 48 hours.">
-<meta property="og:title" content="AI Employees for Law Firms | GoldenEraAI">
-<meta property="og:description" content="Hire an AI employee for your law firm. Demand letters, contract redlines and intake, handled inside the tools your team already uses. Built, run and maintained for you. First one live within 48 hours.">
-<meta property="og:type" content="website">
-<meta name="theme-color" content="#141414">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f96a00'/%3E%3Ctext x='32' y='45' font-family='Arial, Helvetica, sans-serif' font-size='40' font-weight='bold' text-anchor='middle' fill='%23ffffff'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20256%20256'%3E%3Cpath%20fill='%23f96a00'%20d='M%20246%20128%20A%20118%20118%200%201%201%2010%20128%20A%20118%20118%200%201%201%20246%20128%20Z%20M%20123%20128%20L%20123%20162%20L%20161.88%20162%20A%2048%2048%200%201%201%20163.67%2095.88%20L%20188.94%2073.13%20A%2082%2082%200%201%200%20210%20128%20Z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 <style>
 :root{
+  --paper:#f7faf9;
+  --mint:#e4f2f2;
+  --ink:#212442;
+  --ink-2:#2c2f45;
+  --ink-3:#4a4e69;
+  --ink-4:#7a7f99;
   --dark:#141414;
   --orange:#f96a00;
-  --orange-deep:#e05f00;
-  --white:#ffffff;
-  --navy:#212442;
-  --mint:#e4f2f2;
-  --ink:#333333;
-  --body:#4b5058;
-  --muted:#6b7076;
-  --line:rgba(20,20,20,.1);
-  --light:#f7f7f7;
-  color-scheme:light;
+  --accent-ink:#c14d00;
+  --hair:rgba(33,36,66,.16);
+  --hair-soft:rgba(33,36,66,.10);
+  --hair-inv:rgba(255,255,255,.17);
+  --paper-inv:#d9dce6;
+  --mono:ui-monospace,"SF Mono",SFMono-Regular,Menlo,Consolas,monospace;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --w:1160px;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;background:#141414}
-@media (prefers-reduced-motion:reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{transition:none!important}
-}
-body{
-  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  font-size:16px;line-height:1.6;color:var(--ink);background:var(--white);
-  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
-}
-img{max-width:100%;display:block}
-a{color:inherit}
-ul,ol{list-style:none}
-.wrap{max-width:1080px;margin:0 auto;padding-left:clamp(20px,4vw,32px);padding-right:clamp(20px,4vw,32px)}
-.section{padding-top:clamp(56px,9vw,96px);padding-bottom:clamp(56px,9vw,96px)}
-h1,h2,h3{color:var(--dark);font-weight:800;letter-spacing:-.02em;line-height:1.12}
-h1{font-size:clamp(2.05rem,4.4vw + .6rem,3.3rem);line-height:1.06}
-h2{font-size:clamp(1.55rem,2.4vw + .7rem,2.3rem)}
-h3{font-size:1.18rem;letter-spacing:-.01em}
-.sec-head{text-align:center;max-width:820px;margin:0 auto clamp(36px,5vw,52px)}
-.sec-head p{margin-top:14px;color:var(--body);font-size:1.05rem}
-a:focus-visible,summary:focus-visible{outline:3px solid rgba(249,106,0,.65);outline-offset:3px;border-radius:6px}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.faq summary::after,.nav{transition:none}}
+@media print{html.jsm .rv{opacity:1;transform:none}html.jsm .chain-track{transform:scaleX(1)}html.jsm .chain .stamp{opacity:.85;transform:translateX(-50%) rotate(-4deg)}}
+body{background:var(--paper);color:var(--ink-3);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--ink);text-underline-offset:3px}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:2px}
+.band--dark :focus-visible,footer.site :focus-visible{outline-color:var(--orange)}
+.cal-card :focus-visible{outline-color:var(--ink)}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 32px}
+section{padding:104px 0}
+h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--ink);text-wrap:balance}
+p{max-width:65ch;text-wrap:pretty}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:10px;
-  font-weight:700;font-size:1.05rem;line-height:1.2;text-decoration:none;
-  padding:16px 28px;border-radius:10px;transition:background-color .15s ease,border-color .15s ease,color .15s ease;
-}
-.btn-primary{background:var(--orange);color:var(--white)}
-.btn-primary:hover{background:var(--orange-deep)}
-.btn-ghost{border:1px solid rgba(255,255,255,.32);color:var(--white)}
-.btn-ghost:hover{border-color:var(--white)}
-.btn-top{border:1px solid rgba(255,255,255,.32);color:var(--white);text-decoration:none;font-weight:600;font-size:.9rem;padding:9px 16px;border-radius:9px;transition:border-color .15s ease}
-.btn-top:hover{border-color:var(--white)}
+/* ---------- mono layer ---------- */
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;font-weight:400}
+.tag{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--accent-ink);text-transform:uppercase}
+.band--dark .tag{color:var(--orange)}
 
-.hero-bg{background:var(--dark);color:var(--white)}
-.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:22px;padding-bottom:10px}
-.brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:1.08rem;letter-spacing:-.01em;color:var(--white)}
-.brand svg{border-radius:8px}
+/* ---------- chapter heads ---------- */
+.chap{display:flex;align-items:center;gap:16px;margin-bottom:44px}
+.chap-i{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--accent-ink)}
+.chap-t{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--ink-3);text-transform:uppercase}
+.chap-r{flex:1;height:1px;background:var(--hair)}
+.band--dark .chap-i{color:var(--orange)}
+.band--dark .chap-t{color:var(--paper-inv)}
+.band--dark .chap-r{background:var(--hair-inv)}
 
-.hero-grid{
-  display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.92fr);
-  gap:clamp(36px,5vw,64px);align-items:center;
-  padding-top:clamp(40px,7vw,84px);padding-bottom:clamp(52px,8vw,96px);
-}
-.eyebrow{color:var(--orange);font-weight:700;font-size:.82rem;letter-spacing:.16em;margin-bottom:18px}
-.hero-sub{margin-top:22px;color:rgba(255,255,255,.76);font-size:1.13rem;max-width:34em}
-.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
-.trust{display:flex;gap:9px;align-items:flex-start;margin-top:20px;color:rgba(255,255,255,.58);font-size:.9rem;max-width:34em}
-.trust svg{flex:none;margin-top:3px}
-.hero-bg h1{color:var(--white)}
+/* ---------- logo ---------- */
+.logo-n{fill:var(--dark)}
+.logo-a{fill:var(--orange)}
+.logo--inv .logo-n{fill:#fff}
 
-.mail-wrap{width:100%;max-width:480px;justify-self:center}
-.mail{
-  background:var(--white);color:var(--ink);border-radius:16px;padding:24px;
-  box-shadow:0 24px 60px rgba(0,0,0,.45),0 2px 10px rgba(0,0,0,.3);
-}
-.mail-head{display:flex;gap:13px;align-items:center}
-.mail-ava{width:42px;height:42px;flex:none;border-radius:50%;background:var(--orange);color:var(--white);font-weight:800;font-size:1.15rem;display:grid;place-items:center}
-.mail-label{display:block;font-size:.68rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9aa0a6;margin-bottom:1px}
-.mail-from{font-weight:700;font-size:.96rem;color:var(--dark);line-height:1.3}
-.mail-subj{margin-top:16px;font-weight:750;font-size:1.04rem;color:var(--dark);line-height:1.35}
-.mail hr{border:0;border-top:1px solid #ececec;margin:16px 0}
-.mail-body{font-size:.94rem;color:var(--body);line-height:1.55}
-.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-.chip{display:inline-flex;align-items:center;gap:8px;border:1px solid #e6e6e6;background:#fafafa;border-radius:9px;padding:8px 13px;font-size:.82rem;font-weight:600;color:var(--ink);text-decoration:none;transition:border-color .15s ease,background-color .15s ease}
-a.chip:hover{border-color:var(--orange);background:#fff}
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:600 15px/1.2 var(--sans);padding:15px 26px;border-radius:3px;text-decoration:none;border:1px solid transparent}
+.btn--primary{background:var(--orange);color:var(--dark)}
+.btn--primary:hover{background:#e56100}
+.btn--ghost{color:var(--ink);border-color:var(--ink);background:transparent}
+.btn--ghost:hover{background:var(--mint)}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid transparent;transition:border-color .3s ease}
+.nav.scrolled{border-bottom-color:var(--hair)}
+.nav-in{max-width:var(--w);margin:0 auto;padding:0 32px;height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:inline-flex;align-items:center;gap:11px;text-decoration:none}
+.brand svg{display:block;flex:none}
+.btn--nav{border-radius:999px;padding:11px 20px;font-size:13.5px;flex:none;white-space:nowrap;min-height:44px}
+.cta-short{display:none}
+@media (max-width:640px){.cta-long{display:none}.cta-short{display:inline}}
+
+/* ---------- hero ---------- */
+.hero{padding:72px 0 96px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--ink-3);text-transform:uppercase;margin-bottom:28px}
+.eyebrow b{color:var(--accent-ink);font-weight:400}
+.hero h1{font-size:clamp(2.7rem,7vw,5.5rem);line-height:1.03;letter-spacing:-.012em}
+.hero h1 span{display:block}
+.hero-grid{display:grid;grid-template-columns:minmax(0,9fr) minmax(0,13fr);gap:24px 64px;margin-top:52px;align-items:start}
+.hero-sub{font-size:18px;line-height:1.65;color:var(--ink-2);max-width:34em}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;margin:32px 0 0}
+.factline{display:inline-flex;align-items:baseline;gap:10px;margin-top:36px;border:1px solid var(--hair);padding:12px 16px;font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--ink);text-transform:uppercase;line-height:1.7}
+.factline::before{content:"";width:8px;height:8px;background:var(--orange);align-self:center;flex:none}
+
+/* ---------- exhibit / email card ---------- */
+.exhibit-tag{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.exhibit-tag .tag{white-space:nowrap}
+.mail{background:#fff;border:1px solid var(--hair);border-radius:6px;box-shadow:0 24px 48px -28px rgba(33,36,66,.25),0 2px 6px rgba(33,36,66,.05)}
+.mail-head{padding:20px 26px 16px;border-bottom:1px solid var(--hair-soft);display:grid;gap:8px}
+.mail-row{display:grid;grid-template-columns:74px 1fr;gap:12px;align-items:baseline}
+.mail-k{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--ink-3);text-transform:uppercase}
+.mail-v{font-size:16px;color:var(--ink-2)}
+.mail-v.subj{font-weight:600;color:var(--ink)}
+.mail-body{padding:20px 26px 24px;font-size:15.5px;line-height:1.6;color:var(--ink-3)}
+.chip-row{display:flex;flex-wrap:wrap;gap:10px;padding:0 26px 24px}
+.chip{display:inline-flex;align-items:center;gap:8px;background:var(--mint);border:1px solid var(--hair-soft);border-radius:4px;padding:8px 12px;font-size:13.5px;font-weight:500;color:var(--ink);text-decoration:none;overflow-wrap:anywhere;min-height:44px}
+.chip:hover{border-color:var(--ink)}
 .chip svg{flex:none}
-.mail-cap{margin-top:16px;text-align:center;font-size:.82rem;color:rgba(255,255,255,.55)}
+.mail-cap{font-size:13px;line-height:1.55;color:var(--ink-3);margin-top:14px;max-width:56ch}
 
-.cards2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:900px;margin:0 auto}
-.fit-card{border-radius:16px;padding:30px}
-.fit-yes{background:var(--mint)}
-.fit-no{background:var(--white);border:1px solid var(--line)}
-.fit-card h3{margin-bottom:18px}
-.fit-card li{display:flex;gap:12px;align-items:flex-start;font-size:.98rem;color:var(--ink)}
-.fit-card li + li{margin-top:14px}
-.fit-card li svg{flex:none;margin-top:2px}
+/* ---------- review chain ---------- */
+.chain{position:relative;margin-top:64px;padding-top:64px}
+.chain ol{list-style:none;display:grid;grid-template-columns:1fr 1fr 1fr;position:relative}
+.chain-track{position:absolute;top:64px;left:8%;right:8%;height:1px;background:var(--hair);transform-origin:left center}
+.node{position:relative;text-align:center;padding-top:22px}
+.dot{position:absolute;top:-6px;left:50%;transform:translateX(-50%);width:12px;height:12px;border-radius:50%;background:var(--paper);border:1.5px solid var(--ink-4)}
+.lbl{font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;color:var(--ink-3);text-transform:uppercase;display:inline-block;max-width:170px;line-height:1.6}
+.stamp{position:absolute;left:50%;top:-70px;transform:translateX(-50%) rotate(-4deg);display:inline-flex;flex-direction:column;align-items:center;padding:10px 18px 9px;border:1.5px solid var(--ink);border-radius:5px;color:var(--ink);opacity:.85;background:var(--paper)}
+.stamp::before{content:"";position:absolute;inset:3px;border:1px solid var(--ink);border-radius:3px}
+.stamp-word{font-family:var(--mono);font-size:14px;letter-spacing:.14em;font-weight:400}
+.stamp-sub{font-family:var(--mono);font-size:9px;letter-spacing:.05em;margin-top:2px;text-transform:lowercase}
+.trustline{display:flex;gap:10px;align-items:flex-start;margin-top:40px;font-size:14.5px;line-height:1.55;color:var(--ink-2);max-width:52ch}
+.trustline svg{flex:none;margin-top:2px}
+.trustline b{color:var(--ink);font-weight:600}
+/* chain colors (final state) */
+.chain .n1 .dot,.chain .n3 .dot{background:var(--ink);border-color:var(--ink)}
+.chain .n2 .dot{background:var(--orange);border-color:var(--orange)}
+/* chain choreography (motion only when .jsm) */
+html.jsm .chain-track{transform:scaleX(0);transition:transform .9s ease .1s}
+html.jsm .chain .dot{transition:background .35s ease,border-color .35s ease}
+html.jsm .chain:not(.play) .dot{background:var(--paper);border-color:var(--ink-4)}
+html.jsm .chain .n1 .dot{transition-delay:.15s}
+html.jsm .chain .n2 .dot{transition-delay:.5s}
+html.jsm .chain .n3 .dot{transition-delay:.85s}
+html.jsm .chain .stamp{opacity:0;transform:translateX(-50%) rotate(-9deg) scale(.86);transition:opacity .4s ease 1.05s,transform .4s ease 1.05s}
+html.jsm .chain.play .chain-track{transform:scaleX(1)}
+html.jsm .chain.play .stamp{opacity:.85;transform:translateX(-50%) rotate(-4deg) scale(1)}
+html.jsm .chain.play .n1 .dot,html.jsm .chain.play .n3 .dot{background:var(--ink);border-color:var(--ink)}
+html.jsm .chain.play .n2 .dot{background:var(--orange);border-color:var(--orange)}
 
-.bg-light{background:var(--light)}
-.inc{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;max-width:980px;margin:0 auto}
-.inc-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;gap:14px;align-items:flex-start}
-.inc-card svg{flex:none;margin-top:2px}
-.inc-card h3{margin-bottom:6px;font-size:1.05rem}
-.inc-card p{color:var(--body);font-size:.95rem}
-.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px}
-.step{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:30px 26px}
-.step-num{width:36px;height:36px;border-radius:50%;background:var(--orange);color:var(--white);font-weight:800;font-size:1rem;display:grid;place-items:center}
-.step h3{margin:16px 0 8px}
-.step p{color:var(--body);font-size:.97rem}
+/* ---------- reveal ---------- */
+html.jsm .rv{opacity:0;transform:translateY(12px);transition:opacity .5s ease,transform .5s ease;transition-delay:var(--d,0ms)}
+html.jsm .rv.in{opacity:1;transform:none}
 
-.proof-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:clamp(28px,4vw,44px);align-items:center}
-.video-shell{aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:var(--dark);box-shadow:0 10px 34px rgba(20,20,20,.14)}
-.video-shell iframe{width:100%;height:100%;border:0;display:block}
-.artifacts li{display:flex;gap:12px;align-items:flex-start;font-size:1rem;color:var(--ink)}
-.artifacts li + li{margin-top:18px}
-.artifacts li svg{flex:none;margin-top:2px}
+/* ---------- section headings ---------- */
+h2.h-sec{font-size:clamp(1.9rem,3.4vw,2.65rem);line-height:1.15;max-width:22em}
+.lead{font-size:19px;line-height:1.6;color:var(--ink-2);margin-top:20px;max-width:38em}
 
-.founder{
-  margin-top:clamp(44px,6vw,64px);background:var(--navy);color:var(--white);
-  border-radius:18px;padding:clamp(26px,4vw,38px);
-  display:flex;gap:30px;align-items:center;
+/* ---------- fit ---------- */
+.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:56px}
+.fit-col h3{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--ink);text-transform:uppercase;font-weight:400;padding-bottom:14px;border-bottom:1px solid var(--hair)}
+.fit-col ul{list-style:none}
+.fit-col li{padding:18px 0 18px 26px;border-bottom:1px solid var(--hair-soft);position:relative;font-size:16px;line-height:1.6}
+.fit-col li::before{content:"";position:absolute;left:2px;top:27px;width:8px;height:8px;background:var(--ink)}
+.fit-col--not li::before{background:transparent;border:1.5px solid var(--ink-4)}
+
+/* ---------- process ---------- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:60px}
+.step{border-top:1px solid var(--hair);padding-top:26px;position:relative}
+.step::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;background:var(--ink)}
+.step-i{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--accent-ink);text-transform:uppercase}
+.step h3{font-size:1.45rem;font-weight:600;margin:12px 0 12px}
+.step p{font-size:15.5px;line-height:1.62}
+
+/* ---------- numbered claims (3.0) ---------- */
+.claims{list-style:none;margin-top:8px;display:grid;grid-template-columns:1fr 1fr;gap:0 76px}
+.claim{padding:28px 0 30px;border-bottom:1px solid var(--hair-soft)}
+.claim:nth-child(-n+2){border-top:1px solid var(--hair)}
+.claim-n{font-family:var(--serif);font-size:1.15rem;color:var(--ink-4);line-height:1;font-variant-numeric:tabular-nums;display:block;margin-bottom:10px}
+.claim h3{font-size:1.3rem;font-weight:600;margin-bottom:9px}
+.claim p{font-size:15.5px;line-height:1.6;max-width:58ch}
+
+/* ---------- dark bands ---------- */
+.band--dark{background:var(--dark);color:var(--paper-inv)}
+.band--dark h2{color:#fff}
+.band--dark p{color:var(--paper-inv)}
+/* light cards sitting on dark bands keep ink text */
+.band--dark .sheet p,.band--dark .cal-card p{color:var(--ink-3)}
+.band--dark .sheet .price{color:var(--ink)}
+.band--dark .sheet .gbox p{color:var(--ink)}
+.band--dark .sheet .gbox .gk{color:var(--ink-3)}
+
+/* ---------- terms (4.0) ---------- */
+.terms-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:start}
+.sheet{background:var(--paper);color:var(--ink-3);border-radius:6px;padding:40px 44px 36px;border:1px solid var(--hair)}
+.sheet-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.sheet h3{font-size:1.6rem;font-weight:400}
+.m2m{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;border:1px solid var(--hair);padding:7px 10px;color:var(--ink-3);text-transform:uppercase;white-space:nowrap}
+.price{font-family:var(--serif);font-variant-numeric:tabular-nums;color:var(--ink);font-size:clamp(3rem,5vw,4rem);line-height:1;margin:22px 0 8px;letter-spacing:-.01em}
+.price small{font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--ink-3);margin-left:10px;text-transform:uppercase}
+.sheet .note{font-size:15px;color:var(--ink-3)}
+.inc{margin-top:30px;padding-top:24px;border-top:1px solid var(--hair)}
+.inc-l{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--accent-ink);text-transform:uppercase;margin-bottom:16px}
+.inc ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:12px 28px}
+.inc li{font-size:14.5px;color:var(--ink-2);display:flex;gap:10px;align-items:baseline;line-height:1.45}
+.inc li svg{flex:none;transform:translateY(1px)}
+.gbox{margin-top:30px;border:1px solid var(--ink);border-radius:4px;padding:20px 22px}
+.gbox .inc-l{margin-bottom:8px}
+.gbox p{font-size:15.5px;line-height:1.55;color:var(--ink);font-weight:500}
+.gbox .gk{font-size:13px;color:var(--ink-3);font-weight:400;margin-top:6px}
+.sheet-foot{margin-top:22px;font-size:14px;color:var(--ink-3)}
+.conf h3{color:#fff;font-family:var(--mono);font-size:12px;letter-spacing:.1em;font-weight:400;text-transform:uppercase;margin-bottom:6px}
+.conf ul{list-style:none;margin-top:18px}
+.conf li{padding:16px 0;border-top:1px solid var(--hair-inv);font-size:15px;line-height:1.55;color:var(--paper-inv);display:flex;gap:12px}
+.conf li::before{content:"";flex:none;width:7px;height:7px;background:var(--orange);margin-top:8px}
+.conf-close{margin-top:20px;font-family:var(--serif);font-style:italic;font-size:16.5px;color:#fff;line-height:1.5}
+.terms-cta{margin-top:64px;display:flex;flex-wrap:wrap;align-items:center;gap:24px}
+.terms-cta .mono{color:var(--paper-inv)}
+
+/* ---------- record (5.0) ---------- */
+.rec-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:64px;margin-top:56px;align-items:start}
+.frame{border:1px solid var(--hair);border-radius:6px;overflow:hidden;background:var(--mint);aspect-ratio:16/9}
+.frame iframe{width:100%;height:100%;border:0;display:block}
+.rec-list{list-style:none}
+.rec-list li{padding:20px 0;border-bottom:1px solid var(--hair-soft);font-size:16px;line-height:1.6}
+.rec-list li:first-child{border-top:1px solid var(--hair)}
+.rec-list b{font-family:var(--serif);font-weight:600;color:var(--ink);display:block;font-size:1.15rem;margin-bottom:5px}
+.rec-link{display:inline-block;margin-top:24px;font-size:14px;font-weight:500;color:var(--ink)}
+
+/* ---------- founder (6.0) ---------- */
+.op-grid{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:72px;align-items:start}
+.op-photo{border:1px solid var(--hair);padding:10px;background:#fff}
+.op-cap{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--ink-3);text-transform:uppercase;margin-top:12px;line-height:1.7}
+.op-name{font-size:15px;font-weight:600;color:var(--ink)}
+.op-name span{color:var(--ink-3);font-weight:400}
+.op-bio{font-family:var(--serif);font-size:clamp(1.3rem,2vw,1.6rem);line-height:1.5;margin-top:14px;max-width:26em}
+.op-bio b{color:var(--ink);font-weight:600}
+.op-bio span{color:var(--ink-3)}
+.op-quote{margin-top:36px;font-family:var(--serif);font-size:1.3rem;line-height:1.5;color:var(--ink);max-width:24em}
+.op-quote em{font-style:normal;border-bottom:2px solid var(--orange);padding-bottom:1px}
+.op-quote footer{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;color:var(--ink-3);margin-top:14px;text-transform:uppercase}
+
+/* ---------- testimonials (7.0) ---------- */
+.t-label{font-family:var(--mono);font-size:11px;letter-spacing:.07em;color:var(--ink-3);text-transform:uppercase;margin-top:18px;max-width:none}
+.quotes{margin-top:48px}
+.quote{padding:40px 0;border-top:1px solid var(--hair);display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:24px 64px;align-items:start}
+.quote:last-child{border-bottom:1px solid var(--hair)}
+.quote blockquote{font-family:var(--serif);font-size:clamp(1.2rem,1.9vw,1.45rem);line-height:1.5;color:var(--ink-2);max-width:30em}
+.attr{display:flex;gap:14px;align-items:center}
+.attr img{width:46px;height:46px;border:1px solid var(--hair);padding:3px;background:#fff;flex:none}
+.attr b{display:block;font-size:14px;color:var(--ink);font-weight:600;line-height:1.35}
+.attr .role{font-size:12.5px;color:var(--ink-3);line-height:1.4;display:block}
+
+/* ---------- faq (8.0) ---------- */
+.faq{max-width:860px;margin-top:48px}
+.faq details{border-top:1px solid var(--hair)}
+.faq details:last-child{border-bottom:1px solid var(--hair)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:26px 4px;font-family:var(--serif);font-size:1.3rem;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);font-size:1.1rem;color:var(--accent-ink);flex:none;transition:transform .2s ease}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq .a{padding:0 4px 30px;font-size:16px;line-height:1.65;max-width:62ch}
+
+/* ---------- booking (9.0) ---------- */
+.book-head{max-width:30em}
+.book-head h2{font-size:clamp(2.1rem,3.8vw,3rem);line-height:1.12}
+.book-sub{margin-top:16px;font-size:17px}
+.cal-card{background:#fff;border-radius:6px;margin-top:52px;overflow:hidden;color:var(--ink-3);max-width:980px}
+.cal-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 22px;border-bottom:1px solid var(--hair)}
+.cal-head .mono{color:var(--ink-3)}
+.cal-dot{display:inline-flex;align-items:center;gap:8px}
+.cal-dot::before{content:"";width:8px;height:8px;background:var(--orange);border-radius:50%}
+.calendly-inline-widget{min-width:280px;height:700px}
+.cal-fall{padding:14px 22px;border-top:1px solid var(--hair);font-size:14px;color:var(--ink-3);max-width:none}
+.cal-fall a{color:var(--ink);font-weight:500}
+.expect{margin-top:36px;font-size:15.5px;line-height:1.65;color:var(--paper-inv);max-width:62ch}
+.expect .mono{display:block;color:var(--orange);margin-bottom:10px}
+.gsign{margin-top:44px;border:1px solid var(--hair-inv);border-radius:4px;padding:26px 28px;max-width:720px}
+.gsign p{font-size:16.5px;line-height:1.55;color:#fff}
+.gsign .gk{font-size:13px;color:var(--paper-inv);margin-top:6px}
+.sig{margin-top:18px;font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--mint)}
+
+/* ---------- A2 grafts ---------- */
+.hero-op{display:flex;gap:12px;align-items:center;margin-top:20px}
+.hero-op img{width:40px;height:40px;border:1px solid var(--hair);padding:2px;background:#fff;flex:none}
+.hero-op p{font-size:14px;color:var(--ink-3);line-height:1.5;max-width:34em}
+.hero-op b{color:var(--ink);font-weight:600}
+.faq-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:64px;align-items:start;margin-top:48px}
+.faq-grid .faq{margin-top:0}
+.faq-side{position:sticky;top:96px}
+.side-card{display:block;background:#fff;border:1px solid var(--hair);border-radius:6px;padding:26px 28px;text-decoration:none;color:var(--ink-3);box-shadow:0 24px 48px -28px rgba(33,36,66,.18)}
+.side-card:hover{border-color:var(--ink)}
+.side-card>.mono{color:var(--accent-ink);display:block}
+.side-line{font-family:var(--serif);font-size:1.25rem;line-height:1.45;color:var(--ink);margin-top:14px;text-wrap:pretty}
+.side-div{display:block;height:1px;background:var(--hair-soft);margin:20px 0 16px}
+.side-row{display:flex;gap:13px;align-items:center}
+.side-row img{width:44px;height:44px;border:1px solid var(--hair);padding:3px;background:#fff;flex:none}
+.side-row b{display:block;font-size:14px;color:var(--ink);font-weight:600;line-height:1.35}
+.side-row .sub{display:block;font-size:12.5px;color:var(--ink-3);margin-top:2px}
+.side-arrow{margin-left:auto;font-family:var(--mono);color:var(--accent-ink);font-size:15px;flex:none}
+.side-mail{margin-top:14px;font-size:13.5px;color:var(--ink-3);text-align:center;max-width:none}
+.side-mail a{color:var(--ink);font-weight:500}
+.sheet .anchor{margin-top:8px;font-family:var(--serif);font-style:italic;font-size:15.5px}
+.sig-row{display:flex;gap:12px;align-items:center;justify-content:flex-end;margin-top:18px;border-top:1px solid var(--hair-inv);padding-top:18px}
+.sig-row img{width:40px;height:40px;border-radius:50%;flex:none}
+.sig-row .sig{margin-top:0}
+
+/* ---------- footer ---------- */
+footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:44px 0 52px;color:var(--paper-inv)}
+.foot-row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px}
+.foot-links{display:flex;flex-wrap:wrap;gap:26px;font-size:14px}
+.foot-links a{color:var(--paper-inv);text-decoration:none;border-bottom:1px solid var(--hair-inv);padding-bottom:2px}
+.foot-links a:hover{color:#fff;border-color:#fff}
+.foot-legal{margin-top:30px;padding-top:24px;border-top:1px solid var(--hair-inv);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 32px;font-size:13px;color:#a7abbb}
+.foot-legal p{color:#a7abbb;font-size:13px;line-height:1.6}
+
+/* ---------- responsive ---------- */
+@media (max-width:1023px){
+  .hero-grid{grid-template-columns:1fr;gap:56px}
+  .faq-grid{grid-template-columns:1fr;gap:40px}
+  .faq-side{position:static;max-width:520px}
+  .hero-sub{max-width:60ch}
+  .claims{grid-template-columns:1fr;gap:0}
+  .claim:nth-child(2){border-top:0}
+  .terms-grid{grid-template-columns:1fr;gap:56px}
+  .rec-grid{grid-template-columns:1fr;gap:48px}
+  .op-grid{grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:48px}
 }
-.founder img{width:120px;height:120px;flex:none;border-radius:50%;object-fit:cover;box-shadow:0 0 0 4px rgba(255,255,255,.14)}
-.founder-name{font-weight:800;font-size:1.15rem;color:var(--white);letter-spacing:-.01em}
-.founder-name span{font-weight:600;color:rgba(255,255,255,.62)}
-.founder p{margin-top:10px;color:rgba(255,255,255,.84);font-size:.98rem}
-
-.label-honest{text-align:center;color:var(--muted);font-size:.9rem;margin:-28px auto clamp(32px,4vw,44px);max-width:640px}
-.quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:24px}
-.quote{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:26px 24px;display:flex;flex-direction:column}
-.qmark{font-size:2.5rem;line-height:.6;color:var(--orange);font-weight:800;margin-bottom:16px}
-.quote blockquote p{color:#3c4046;font-size:.95rem}
-.quote figcaption{margin-top:auto;padding-top:20px;display:flex;align-items:center;gap:12px}
-.quote figcaption img{width:52px;height:52px;border-radius:50%;object-fit:cover;flex:none;box-shadow:0 0 0 2px var(--white),0 0 0 4px rgba(249,106,0,.35)}
-.quote figcaption strong{display:block;color:var(--dark);font-size:.95rem;line-height:1.25}
-.quote figcaption span{display:block;color:var(--muted);font-size:.83rem;margin-top:2px}
-
-.faq-wrap{max-width:760px;margin:0 auto}
-.faq-wrap details{border-bottom:1px solid #e9e9e9}
-.faq-wrap details:first-of-type{border-top:1px solid #e9e9e9}
-.faq-wrap summary{
-  display:flex;justify-content:space-between;align-items:center;gap:18px;
-  padding:21px 4px;cursor:pointer;font-weight:700;color:var(--dark);font-size:1.05rem;
-  list-style:none;transition:color .15s ease;
+@media (max-width:640px){
+  section{padding:76px 0}
+  .wrap{padding:0 22px}
+  .nav-in{padding:0 22px;height:64px}
+  .nav-in svg.wordmark{display:none}
+  .btn--nav{padding:10px 14px;font-size:12.5px}
+  .hero{padding:48px 0 72px}
+  .hero h1{font-size:2.55rem}
+  .hero h1 span{display:inline}
+  .hero h1 span:first-child::after{content:" "}
+  .steps{grid-template-columns:1fr;gap:36px}
+  .fit-grid{grid-template-columns:1fr;gap:48px;margin-top:44px}
+  .op-grid{grid-template-columns:1fr;gap:40px}
+  .op-photo{max-width:280px}
+  .quote{grid-template-columns:1fr;gap:20px;padding:32px 0}
+  .sheet{padding:28px 22px}
+  .inc ul{grid-template-columns:1fr}
+  .mail-head,.mail-body{padding-left:18px;padding-right:18px}
+  .chip-row{padding-left:18px;padding-right:18px}
+  .lbl{max-width:116px;font-size:10px}
+  .chain-track{left:12%;right:12%}
+  .claim{padding:24px 0 26px}
+  .cta-row .btn{flex:1 1 100%;text-align:center}
+  .factline{width:100%}
+  .terms-cta .btn{flex:1 1 100%}
 }
-.faq-wrap summary:hover{color:var(--orange)}
-.faq-wrap summary::-webkit-details-marker{display:none}
-.plus{flex:none;transition:transform .18s ease}
-details[open] .plus{transform:rotate(45deg)}
-.faq-a{padding:2px 4px 24px;color:var(--body);font-size:.98rem;max-width:66ch}
-
-.final{background:var(--dark);color:var(--white);text-align:center}
-.final h2{color:var(--white)}
-.final .sub{margin-top:14px;color:rgba(255,255,255,.72);font-size:1.08rem}
-.final .btn-primary{margin-top:30px}
-.cal-card{background:var(--white);border-radius:18px;padding:18px;margin-top:44px;min-height:700px;text-align:center}
-.btn-fallback{
-  display:inline-flex;align-items:center;justify-content:center;
-  border:1px solid #dcdcdc;border-radius:9px;padding:10px 18px;margin:2px auto 12px;
-  font-size:.9rem;font-weight:600;color:var(--ink);text-decoration:none;transition:border-color .15s ease;
-}
-.btn-fallback:hover{border-color:var(--orange)}
-.calendly-inline-widget{width:100%;min-width:0;height:700px}
-
-footer{background:var(--dark);color:rgba(255,255,255,.66);border-top:1px solid rgba(255,255,255,.12);padding:34px 0 40px;text-align:center;font-size:.92rem}
-.foot-row{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 14px}
-.foot-row .foot-brand{color:var(--white);font-weight:800}
-.foot-row a{color:rgba(255,255,255,.8);text-decoration:none}
-.foot-row a:hover{color:var(--white);text-decoration:underline}
-.foot-item{display:inline-flex;align-items:center;gap:14px;white-space:nowrap}
-.foot-dot{color:rgba(255,255,255,.35)}
-.foot-note{margin:16px auto 0;max-width:700px;font-size:.8rem;color:rgba(255,255,255,.45)}
-.foot-copy{margin-top:8px;font-size:.8rem;color:rgba(255,255,255,.45)}
-
-@media (max-width:900px){
-  .hero-grid{grid-template-columns:minmax(0,1fr)}
-  .proof-grid{grid-template-columns:minmax(0,1fr)}
-  .mail-wrap{justify-self:stretch;max-width:520px;margin:0 auto}
-}
-@media (max-width:620px){
-  .founder{flex-direction:column;align-items:flex-start;gap:22px}
-  .cta-row .btn{width:100%}
-  .topbar .btn-top{padding:8px 13px;font-size:.85rem}
+@media (max-width:400px){
+  .lbl{max-width:92px;font-size:9px}
+  .btn--nav{font-size:11.5px;padding:9px 11px}
 }
 </style>
 </head>
-<body id="top">
+<body>
 
-<div class="hero-bg">
-  <header class="wrap topbar">
-    <a class="brand" href="#top" aria-label="GoldenEraAI, back to top">
-      <svg width="30" height="30" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><rect width="64" height="64" rx="14" fill="#f96a00"/><text x="32" y="45" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" fill="#ffffff">G</text></svg>
-      GoldenEraAI
+<header class="nav" id="top">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="GoldenEraAI home">
+      <svg width="30" height="30" viewBox="0 0 256 256" aria-hidden="true"><path class="logo-n" d="M 216 128 A 88 88 0 1 1 199.19 76.27 L 170.07 97.44 A 52 52 0 1 0 180 128 Z"/><path class="logo-a" d="M 121 128 H 216 V 164 H 121 Z"/></svg>
+      <svg class="wordmark" width="170" height="24" viewBox="0 -6 794 112" aria-hidden="true"><g><path class="logo-n" d="M 104 50 A 52 52 0 1 1 86.79 11.36 L 75.42 23.99 A 35 35 0 1 0 82.59 67 L 48 67 L 48 50 Z"/><path class="logo-n" transform="translate(113 0)" d="M 77 64 A 38.5 38.5 0 1 1 0 64 A 38.5 38.5 0 1 1 77 64 Z M 60 64 A 21.5 21.5 0 1 0 17 64 A 21.5 21.5 0 1 0 60 64 Z"/><path class="logo-n" transform="translate(200 0)" d="M 0 0 H 17 V 100 H 0 Z"/><path class="logo-n" transform="translate(227 0)" d="M 77 64 A 38.5 38.5 0 1 1 0 64 A 38.5 38.5 0 1 1 77 64 Z M 60 64 A 21.5 21.5 0 1 0 17 64 A 21.5 21.5 0 1 0 60 64 Z"/><path class="logo-n" transform="translate(227 0)" d="M 60 0 H 77 V 100 H 60 Z"/><path class="logo-n" transform="translate(313 0)" d="M 64.26 92.61 A 38.5 38.5 0 1 1 75.86 73.31 L 59.36 69.2 A 21.5 21.5 0 1 0 52.89 79.98 Z"/><path class="logo-n" transform="translate(313 0)" d="M 11 55.5 H 74 V 72.5 H 11 Z"/><path class="logo-n" transform="translate(400 0)" d="M 0 61.5 A 36 36 0 0 1 72 61.5 L 55 61.5 A 19 19 0 0 0 17 61.5 Z"/><path class="logo-n" transform="translate(400 0)" d="M 0 28 L 17 30.92 L 17 100 L 0 100 Z"/><path class="logo-n" transform="translate(400 0)" d="M 55 60 H 72 V 100 H 55 Z"/><path class="logo-n" transform="translate(484 0)" d="M 0 0 H 17 V 100 H 0 Z"/><path class="logo-n" transform="translate(484 0)" d="M 0 0 H 62 V 17 H 0 Z"/><path class="logo-n" transform="translate(484 0)" d="M 0 41 H 56 V 58 H 0 Z"/><path class="logo-n" transform="translate(484 0)" d="M 0 83 H 62 V 100 H 0 Z"/><path class="logo-n" transform="translate(557 0)" d="M 0 55.5 A 30 30 0 0 1 30 25.5 L 30 42.5 A 13 13 0 0 0 17 55.5 Z"/><path class="logo-n" transform="translate(557 0)" d="M 0 28 L 17 28.46 L 17 100 L 0 100 Z"/><path class="logo-n" transform="translate(595 0)" d="M 77 64 A 38.5 38.5 0 1 1 0 64 A 38.5 38.5 0 1 1 77 64 Z M 60 64 A 21.5 21.5 0 1 0 17 64 A 21.5 21.5 0 1 0 60 64 Z"/><path class="logo-n" transform="translate(595 0)" d="M 60 28 H 77 V 100 H 60 Z"/><path class="logo-a" transform="translate(679 0)" d="M 35 0 L 53 0 L 88 100 L 69.99 100 L 44 25.75 L 18.01 100 L 0 100 Z"/><path class="logo-a" transform="translate(679 0)" d="M 24 62 H 64 V 79 H 24 Z"/><path class="logo-a" transform="translate(777 0)" d="M 0 0 H 17 V 100 H 0 Z"/></g></svg>
     </a>
-    <a class="btn-top" href="https://calendly.com/backes-jordy/20min?utm_source=landing" target="_blank" rel="noopener">Book a call</a>
-  </header>
+    <a class="btn btn--primary btn--nav" href="#book"><span class="cta-long">Book the 20 minute demo call</span><span class="cta-short">Book a call</span></a>
+  </div>
+</header>
 
-  <main>
-    <section class="wrap hero-grid" aria-labelledby="hero-h">
+<main>
+
+<!-- ======================= HERO ======================= -->
+<section class="hero" aria-labelledby="h-hero">
+  <div class="wrap">
+    <p class="eyebrow">AI employees for law firms</p>
+    <h1 id="h-hero"><span>Hire an AI employee</span><span>for your law firm.</span></h1>
+    <div class="hero-grid">
       <div>
-        <p class="eyebrow">AI EMPLOYEES FOR LAW FIRMS</p>
-        <h1 id="hero-h">Hire an AI employee for your law firm.</h1>
-        <p class="hero-sub">She drafts demand letters, redlines contracts in Word, and handles intake, inside the tools your firm already uses. Built, run, and maintained for you. On duty 24/7. First one live within 48 hours.</p>
+        <p class="hero-sub">She drafts demand letters, redlines contracts in Word, and handles client intake. The finished work arrives in your email inbox, ready for attorney review. Built, run, and maintained for you, on duty 24/7, live in your firm within 48 hours.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" href="https://calendly.com/backes-jordy/20min?utm_source=landing" target="_blank" rel="noopener">Book the 20 minute demo call</a>
-          <a class="btn btn-ghost" href="https://www.youtube.com/@jordy-agents" target="_blank" rel="noopener">
-            <svg width="17" height="17" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 8.4l6 3.6-6 3.6z" fill="currentColor"/></svg>
-            Watch a build on YouTube
-          </a>
+          <a class="btn btn--primary" href="#book">Book the 20 minute demo call</a>
+          <a class="btn btn--ghost" href="#record">Watch a build on YouTube</a>
         </div>
-        <p class="trust">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
-          Review-ready, never send-ready. A licensed attorney at your firm makes every final call.
-        </p>
+        <!-- COPY-DELTA D2: compressed price + guarantee fact line; full locked wording at 4.0 and 9.0 -->
+        <p class="factline">$4,000 a month flat, everything included &middot; live in 48 hours or month one is free</p>
+        <!-- COPY-DELTA D10: hero founder row -->
+        <div class="hero-op"><img src="assets/jordy.png" alt="" width="40" height="40"><p><b>Built and run by Jordy Backes.</b> You deal with the builder directly, not a sales team.</p></div>
       </div>
-
-      <figure class="mail-wrap">
-        <div class="mail">
+      <div>
+        <div class="exhibit-tag">
+          <span class="tag">[ Exhibit A ]</span>
+          <span class="mono" style="color:var(--ink-3)">What lands in your inbox</span>
+        </div>
+        <figure class="mail">
           <div class="mail-head">
-            <div class="mail-ava" aria-hidden="true">M</div>
-            <p class="mail-from"><span class="mail-label">From</span>Mia (your AI employee)</p>
+            <p class="mail-row"><span class="mail-k">From</span><span class="mail-v">Mia (your AI employee)</span></p>
+            <p class="mail-row"><span class="mail-k">Subject</span><span class="mail-v subj">Redline ready: Merrivale Bluepine NDA</span></p>
           </div>
-          <p class="mail-subj"><span class="mail-label">Subject</span>Redline ready: Merrivale Bluepine NDA</p>
-          <hr>
           <p class="mail-body">Attached: the contract with tracked changes and a one page risk memo. Two clauses need your call, both flagged. Ready for attorney review.</p>
-          <div class="chips">
+          <div class="chip-row">
             <a class="chip" href="assets/sample-redline.docx" download>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#212442" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+              <svg width="13" height="15" viewBox="0 0 13 15" aria-hidden="true"><path d="M1 0h7l4 4v10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1Z" fill="none" stroke="#212442" stroke-width="1.2"/><path d="M8 0v4h4" fill="none" stroke="#212442" stroke-width="1.2"/></svg>
               Merrivale-NDA-redline.docx
             </a>
             <a class="chip" href="assets/sample-risk-memo.html" target="_blank" rel="noopener">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#212442" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg>
+              <svg width="13" height="15" viewBox="0 0 13 15" aria-hidden="true"><path d="M1 0h7l4 4v10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1Z" fill="none" stroke="#212442" stroke-width="1.2"/><path d="M8 0v4h4" fill="none" stroke="#212442" stroke-width="1.2"/></svg>
               risk-memo (one page)
             </a>
           </div>
-        </div>
-        <figcaption class="mail-cap">The attachments are real. Click them: an actual redline and risk memo from a published build, on a sample contract.</figcaption>
-      </figure>
-    </section>
-  </main>
-</div>
+        </figure>
+        <p class="mail-cap">The attachments are real. Click them: an actual redline and risk memo from a published build, on a sample contract.</p>
 
-<section class="section" id="fit" aria-labelledby="fit-h">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2 id="fit-h">Built for firms that want work handled, not another tool to learn.</h2>
+        <figure class="chain" aria-label="The review chain: drafted by Mia, reviewed and approved by a licensed attorney at your firm, sent by your firm.">
+          <div class="chain-track" aria-hidden="true"></div>
+          <ol>
+            <li class="node n1"><span class="dot" aria-hidden="true"></span><span class="lbl">Drafted by Mia</span></li>
+            <li class="node n2">
+              <span class="stamp" aria-hidden="true"><span class="stamp-word">APPROVED</span><span class="stamp-sub">by a licensed attorney</span></span>
+              <span class="dot" aria-hidden="true"></span><span class="lbl">Reviewed by your attorney</span>
+            </li>
+            <li class="node n3"><span class="dot" aria-hidden="true"></span><span class="lbl">Sent by your firm</span></li>
+          </ol>
+        </figure>
+        <p class="trustline">
+          <svg width="15" height="18" viewBox="0 0 15 18" aria-hidden="true"><path d="M7.5 1 14 3.5v5.2c0 4-2.8 6.8-6.5 8.3C3.8 15.5 1 12.7 1 8.7V3.5L7.5 1Z" fill="none" stroke="#212442" stroke-width="1.4"/><path d="M4.6 8.8l2 2 3.8-4" fill="none" stroke="#f96a00" stroke-width="1.5"/></svg>
+          <span><b>Review-ready, never send-ready.</b> A licensed attorney at your firm makes every final call.</span>
+        </p>
+      </div>
     </div>
-    <div class="cards2">
-      <div class="fit-card fit-yes">
+  </div>
+</section>
+
+<!-- ======================= 1.0 THE FIT ======================= -->
+<section aria-labelledby="h-fit">
+  <div class="wrap">
+    <div class="chap rv"><span class="chap-i">1.0</span><span class="chap-t">The fit</span><span class="chap-r"></span></div>
+    <h2 class="h-sec rv" id="h-fit">Built for firms that want work handled, not another tool to learn.</h2>
+    <div class="fit-grid">
+      <div class="fit-col rv">
         <h3>This is for you if</h3>
         <ul>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="9" fill="#f96a00" opacity=".15"/><path d="M6.2 10.4l2.5 2.5 5.1-5.6" fill="none" stroke="#f96a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            You run a small or boutique firm with real volume: contracts to review, letters to draft, intake to answer.
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="9" fill="#f96a00" opacity=".15"/><path d="M6.2 10.4l2.5 2.5 5.1-5.6" fill="none" stroke="#f96a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            Partners or staff are the bottleneck on repetitive drafting and follow-ups.
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="9" fill="#f96a00" opacity=".15"/><path d="M6.2 10.4l2.5 2.5 5.1-5.6" fill="none" stroke="#f96a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            You want it working wherever your team already works: email, Word, Teams, Slack. An attorney approves everything that leaves the firm.
-          </li>
+          <li>You run a small or boutique firm: contracts to review, letters to draft, client intake to answer.</li>
+          <li>Partners or staff are the bottleneck on repetitive document drafting and follow-ups.</li>
+          <li>You want it working wherever your team already works: email, Word, Teams, Slack. An attorney approves everything that leaves the firm.</li>
         </ul>
       </div>
-      <div class="fit-card fit-no">
+      <div class="fit-col fit-col--not rv" style="--d:90ms">
         <h3>This is not for</h3>
         <ul>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="9" fill="#212442" opacity=".08"/><path d="M7 7l6 6M13 7l-6 6" stroke="#212442" stroke-width="2" stroke-linecap="round" opacity=".75"/></svg>
-            Firms looking for a chatbot to play with.
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="9" fill="#212442" opacity=".08"/><path d="M7 7l6 6M13 7l-6 6" stroke="#212442" stroke-width="2" stroke-linecap="round" opacity=".75"/></svg>
-            One-off automation projects with nobody accountable for keeping them alive.
-          </li>
-          <li>
-            <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="9" fill="#212442" opacity=".08"/><path d="M7 7l6 6M13 7l-6 6" stroke="#212442" stroke-width="2" stroke-linecap="round" opacity=".75"/></svg>
-            Firms that want the AI making the legal calls on its own. Everything she produces is reviewed and approved by your attorneys, by design.
-          </li>
+          <li>Firms looking for a chatbot to play with.</li>
+          <li>Firms that cannot give her one point of contact. Mia needs a single person on your side to work with; everything else is handled.</li>
+          <li>Firms that want the AI making the legal calls on its own. Everything she produces is reviewed and approved by your attorneys, by design.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section bg-light" id="how" aria-labelledby="how-h">
+<!-- ======================= 2.0 THE PROCESS ======================= -->
+<section aria-labelledby="h-process">
   <div class="wrap">
-    <div class="sec-head">
-      <h2 id="how-h">From first call to working employee in 48 hours.</h2>
-    </div>
-    <ol class="steps" role="list">
-      <li class="step">
-        <span class="step-num" aria-hidden="true">1</span>
+    <div class="chap rv"><span class="chap-i">2.0</span><span class="chap-t">The process</span><span class="chap-r"></span></div>
+    <h2 class="h-sec rv" id="h-process">From first call to working employee in 48 hours.</h2>
+    <div class="steps" data-stagger>
+      <div class="step rv">
+        <p class="step-i">Step 01</p>
         <h3>The 20 minute call</h3>
-        <p>You bring your biggest time sink. I bring your firm's first AI employee and run it live on that exact kind of work, on the call. You leave with a map of what to hire first and what it costs, whether or not we work together.</p>
-      </li>
-      <li class="step">
-        <span class="step-num" aria-hidden="true">2</span>
+        <p>You tell me your firm's biggest time sink when you book. I bring your firm's first AI employee and run it live on that kind of work, on the call. You leave with a map of what to hire first and what it costs, whether or not we work together.</p>
+      </div>
+      <div class="step rv">
+        <p class="step-i">Step 02</p>
         <h3>Live in 48 hours</h3>
-        <p>After kickoff, your AI employee is live inside your firm within 48 hours, or your first month is free. Mia starts with the one job that pays for her, plus the daily basics: inbox triage, follow-ups, deadlines.</p>
-      </li>
-      <li class="step">
-        <span class="step-num" aria-hidden="true">3</span>
+        <p>After kickoff, your AI employee is live inside your firm within 48 hours, or your first month is free. Mia starts with the highest-value job I map out from our call, plus the daily basics: a morning brief, inbox triage, follow-ups, deadlines.</p>
+      </div>
+      <div class="step rv">
+        <p class="step-i">Step 03</p>
         <h3>She grows with the firm</h3>
-        <p>New requests go on a simple board and get delivered, typically within 48 hours each. I watch her, maintain her, and keep her current, so nobody at the firm ever has to.</p>
+        <p>New requests you simply send by email, and they are typically live within 48 hours each. Every change arrives with a short personal video from me. I watch her, maintain her, and keep improving her, request or no request, so nobody at the firm ever has to.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 3.0 THE RETAINER ======================= -->
+<section aria-labelledby="h-buys">
+  <div class="wrap">
+    <div class="chap rv"><span class="chap-i">3.0</span><span class="chap-t">The retainer</span><span class="chap-r"></span></div>
+    <h2 class="h-sec rv" id="h-buys">What $4,000 a month actually buys.</h2>
+    <p class="lead rv">The whole point: your firm gets the best of what AI can do today, and nobody at the firm has to learn, touch, or handle any of it.</p>
+    <ol class="claims">
+      <li class="claim rv"><span class="claim-n" aria-hidden="true">01</span>
+        <h3>A working employee, not a tool</h3>
+        <p>Real work delivered by email, in the Word documents your team already opens. Nothing to install, nothing to learn, and nobody at the firm ever touches an AI tool.</p>
+      </li>
+      <li class="claim rv"><span class="claim-n" aria-hidden="true">02</span>
+        <h3>Built for your firm in 48 hours</h3>
+        <p>Live within 48 hours of kickoff doing the highest-value job we picked together, tuned on your firm's own documents, or your first month is free.</p>
+      </li>
+      <li class="claim rv"><span class="claim-n" aria-hidden="true">03</span>
+        <h3>Watched so it never breaks alone</h3>
+        <p>Mia is on duty 24/7, and so is her monitoring. If anything fails, an automated alert hits my phone that minute, and it is usually fixed before your team notices. In practice it is almost always me telling you, not the other way around.</p>
+      </li>
+      <li class="claim rv"><span class="claim-n" aria-hidden="true">04</span>
+        <h3>Always current</h3>
+        <p>When better AI ships, Mia gets it. Upgrades, security, and improvements are included, continuously. Your firm stays at the front without reading a single AI newsletter.</p>
+      </li>
+      <li class="claim rv"><span class="claim-n" aria-hidden="true">05</span>
+        <h3>Unlimited requests</h3>
+        <p>Need a new workflow or a change? Email it to her like you would to any employee. Requests are unlimited, built one at a time, and typically live within 48 hours each. No change orders, no scoping meetings, no hourly meter.</p>
+      </li>
+      <li class="claim rv"><span class="claim-n" aria-hidden="true">06</span>
+        <h3>One flat number</h3>
+        <p>Usage, infrastructure, maintenance, monitoring: all included. No surprise bills, no credits, no meters running.</p>
+      </li>
+      <li class="claim rv"><span class="claim-n" aria-hidden="true">07</span>
+        <h3>Your attorneys stay in charge</h3>
+        <p>Review-ready, never send-ready. A licensed attorney at your firm approves everything before it counts. Mia does the work; your firm keeps the judgment.</p>
+      </li>
+      <li class="claim rv"><span class="claim-n" aria-hidden="true">08</span>
+        <h3>A colleague with a memory</h3>
+        <p>Her own email address, your firm's name for her, and a memory of how your firm works that gets better every week she is employed.</p>
+      </li>
+      <li class="claim rv"><span class="claim-n" aria-hidden="true">09</span>
+        <h3>Updates you can watch</h3>
+        <p>Every new workflow, fix, or improvement arrives with a short personal video from me: what changed and what it does for your firm, delivered to your inbox.</p>
       </li>
     </ol>
   </div>
 </section>
 
-<section class="section" id="included" aria-labelledby="inc-h">
+<!-- ======================= 4.0 THE TERMS (dark band) ======================= -->
+<section class="band--dark" aria-labelledby="h-terms">
   <div class="wrap">
-    <div class="sec-head">
-      <h2 id="inc-h">What $4,000 a month actually buys.</h2>
-      <p>The whole point: your firm gets the best of what AI can do today, and nobody at the firm has to learn, touch, or handle any of it.</p>
+    <div class="chap rv"><span class="chap-i">4.0</span><span class="chap-t">The terms</span><span class="chap-r"></span></div>
+    <h2 class="sr" id="h-terms">The terms</h2>
+    <div class="terms-grid">
+      <div class="sheet rv">
+        <div class="sheet-top">
+          <h3>The retainer</h3>
+          <span class="m2m">Month to month</span>
+        </div>
+        <p class="price">$4,000<small>/ month</small></p>
+        <p class="note">No hourly billing, no surprise usage fees.</p>
+        <!-- COPY-DELTA D11: pre-approved paralegal anchor -->
+        <p class="note anchor">A fraction of the paralegal you have been trying to hire, on duty every day.</p>
+        <div class="gbox">
+          <p class="inc-l">The guarantee</p>
+          <p>Your first AI employee is live in your firm within 48 hours of kickoff, or your first month is free.</p>
+          <p class="gk">Kickoff means payment received and access provided.</p>
+        </div>
+        <p class="sheet-foot">Month to month, cancel with 30 days notice. If you ever leave, the playbooks, files, and everything she produced stay with your firm. No lock-in.</p>
+      </div>
+      <div class="conf rv" style="--d:120ms">
+        <h3>Confidentiality</h3>
+        <!-- COPY-DELTA D3: compressed from FAQ 1; closing line verbatim -->
+        <ul>
+          <li>A private, isolated environment set up for your firm alone. Nothing is shared across clients.</li>
+          <li>It can be shut down and deleted on request.</li>
+          <li>Every action she takes is visible to you.</li>
+          <li>A mutual NDA before I ever see a document. Standard practice, offered upfront.</li>
+          <li>A licensed attorney at your firm approves every document she produces.</li>
+        </ul>
+        <p class="conf-close">Confidentiality is treated the way your firm treats it: as non-negotiable.</p>
+      </div>
     </div>
-    <div class="inc">
-      <div class="inc-card">
-        <svg width="22" height="22" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="9" fill="#f96a00" opacity=".15"/><path d="M6.2 10.4l2.5 2.5 5.1-5.6" fill="none" stroke="#f96a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div><h3>A working employee, not a tool</h3><p>Real work delivered in email, Word, Teams, or Slack. Nothing to install, nothing to learn, and nobody at the firm ever touches an AI tool.</p></div>
+    <div class="terms-cta rv">
+      <a class="btn btn--primary" href="#book">Book the 20 minute demo call</a>
+      <span class="mono">20 minutes &middot; free &middot; no slides</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 5.0 THE RECORD ======================= -->
+<section id="record" aria-labelledby="h-record">
+  <div class="wrap">
+    <div class="chap rv"><span class="chap-i">5.0</span><span class="chap-t">The record</span><span class="chap-r"></span></div>
+    <h2 class="h-sec rv" id="h-record">See it before you believe it.</h2>
+    <p class="lead rv">I build AI employees on camera, start to finish, and publish every build on YouTube. See how the work actually gets done before we ever talk.</p>
+    <div class="rec-grid">
+      <div class="rv">
+        <div class="exhibit-tag">
+          <span class="mono" style="color:var(--ink-3)">A published build, start to finish</span>
+        </div>
+        <div class="frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/k8DPuGSl-T4" title="A published build: an AI employee for a law firm, built start to finish" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
       </div>
-      <div class="inc-card">
-        <svg width="22" height="22" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="9" fill="#f96a00" opacity=".15"/><path d="M6.2 10.4l2.5 2.5 5.1-5.6" fill="none" stroke="#f96a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div><h3>Built for your firm in 48 hours</h3><p>Live within 48 hours of kickoff doing the job we picked together, tuned on your firm's own documents, or your first month is free.</p></div>
-      </div>
-      <div class="inc-card">
-        <svg width="22" height="22" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="9" fill="#f96a00" opacity=".15"/><path d="M6.2 10.4l2.5 2.5 5.1-5.6" fill="none" stroke="#f96a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div><h3>Watched so it never breaks alone</h3><p>Mia is on duty 24/7, and so is her monitoring. If anything fails, an automated alert hits my phone that minute, and it is usually fixed before your team notices. In practice it is almost always me telling you, not the other way around.</p></div>
-      </div>
-      <div class="inc-card">
-        <svg width="22" height="22" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="9" fill="#f96a00" opacity=".15"/><path d="M6.2 10.4l2.5 2.5 5.1-5.6" fill="none" stroke="#f96a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div><h3>Always current</h3><p>When better AI ships, Mia gets it. Upgrades, security, and improvements are included, continuously. Your firm stays at the front without reading a single AI newsletter.</p></div>
-      </div>
-      <div class="inc-card">
-        <svg width="22" height="22" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="9" fill="#f96a00" opacity=".15"/><path d="M6.2 10.4l2.5 2.5 5.1-5.6" fill="none" stroke="#f96a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div><h3>Unlimited requests</h3><p>New workflows and changes go on your board and come back typically within 48 hours. No change orders, no scoping meetings, no hourly meter.</p></div>
-      </div>
-      <div class="inc-card">
-        <svg width="22" height="22" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="9" fill="#f96a00" opacity=".15"/><path d="M6.2 10.4l2.5 2.5 5.1-5.6" fill="none" stroke="#f96a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div><h3>One flat number</h3><p>Usage, infrastructure, maintenance, monitoring: all included. No surprise bills, no credits, no meters running.</p></div>
-      </div>
-      <div class="inc-card">
-        <svg width="22" height="22" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="9" fill="#f96a00" opacity=".15"/><path d="M6.2 10.4l2.5 2.5 5.1-5.6" fill="none" stroke="#f96a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div><h3>Your attorneys stay in charge</h3><p>Review-ready, never send-ready. A licensed attorney at your firm approves everything before it counts. Mia does the work; your firm keeps the judgment.</p></div>
-      </div>
-      <div class="inc-card">
-        <svg width="22" height="22" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="9" fill="#f96a00" opacity=".15"/><path d="M6.2 10.4l2.5 2.5 5.1-5.6" fill="none" stroke="#f96a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        <div><h3>A colleague with a memory</h3><p>Her own email address, your firm's name for her, and a memory of how your firm works that gets better every week she is employed.</p></div>
+      <div class="rv" style="--d:120ms">
+        <p class="mono" style="color:var(--ink-3);margin-bottom:14px">What she delivers</p>
+        <ul class="rec-list">
+          <li><b>The redline, returned</b>The contract back as a Word document with tracked changes your attorneys accept or reject.</li>
+          <li><b>The one page risk memo</b>Every flag on the contract, ranked and explained.</li>
+          <li><b>The demand letter</b>Drafted from the case file, ready for attorney review.</li>
+          <li><b>The morning brief</b>In your inbox before you sit down: today's deadlines, new client intake, and drafted replies to the routine mail that does not need a lawyer's judgment.</li>
+        </ul>
+        <!-- COPY-DELTA D5: navigation link label -->
+        <a class="rec-link" href="https://www.youtube.com/@jordy-agents" target="_blank" rel="noopener">More builds on the channel</a>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section bg-light" id="proof" aria-labelledby="proof-h">
+<!-- ======================= 6.0 THE OPERATOR ======================= -->
+<section aria-labelledby="h-op">
   <div class="wrap">
-    <div class="sec-head">
-      <h2 id="proof-h">See it before you believe it.</h2>
-      <p>I publish every system I build on YouTube, start to finish, so you can see exactly what you would be getting before we ever talk.</p>
-    </div>
-    <div class="proof-grid">
-      <div class="video-shell">
-        <iframe src="https://www.youtube-nocookie.com/embed/k8DPuGSl-T4" title="GoldenEraAI build video on YouTube" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="chap rv"><span class="chap-i">6.0</span><span class="chap-t">The operator</span><span class="chap-r"></span></div>
+    <h2 class="sr" id="h-op">The operator</h2>
+    <div class="op-grid">
+      <div class="rv">
+        <div class="op-photo"><img src="assets/jordy.png" alt="Jordy Backes, founder of GoldenEraAI" width="400" height="400"></div>
+        <p class="op-cap">Founder &middot; every build published on YouTube</p>
       </div>
-      <ul class="artifacts" role="list">
-        <li>
-          <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="9" fill="#f96a00" opacity=".15"/><path d="M6.2 10.4l2.5 2.5 5.1-5.6" fill="none" stroke="#f96a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Contracts returned as Word documents with real tracked changes your attorneys accept or reject.
-        </li>
-        <li>
-          <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="9" fill="#f96a00" opacity=".15"/><path d="M6.2 10.4l2.5 2.5 5.1-5.6" fill="none" stroke="#f96a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          A one page risk memo with every flag ranked and explained.
-        </li>
-        <li>
-          <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" focusable="false"><circle cx="10" cy="10" r="9" fill="#f96a00" opacity=".15"/><path d="M6.2 10.4l2.5 2.5 5.1-5.6" fill="none" stroke="#f96a00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Demand letters drafted from the case file, ready for attorney review.
-        </li>
-      </ul>
-    </div>
-    <div class="founder">
-      <img src="assets/jordy.png" alt="Jordy Backes, founder of GoldenEraAI" width="120" height="120" loading="lazy">
-      <div>
-        <p class="founder-name">Jordy Backes <span>&middot; Founder, GoldenEraAI</span></p>
-        <p>Building software and systems for businesses since 2017. Ran a web development and conversion agency, shipped e-commerce systems for a $10M+ funded startup, and since 2025 I work exclusively on AI employees for law firms. I build yours, I run it, and I keep it working.</p>
+      <div class="rv" style="--d:100ms">
+        <p class="op-name">Jordy Backes <span>&middot; Founder, GoldenEraAI</span></p>
+        <p class="op-bio"><b>Building software and systems for businesses since 2017.</b> <span>Ran a web development and conversion agency for three years, and since 2025 I work exclusively on AI employees for law firms. I build yours, I run it, and I keep it working.</span></p>
+        <!-- COPY-DELTA D4: pre-approved positioning pull-quote -->
+        <blockquote class="op-quote">
+          &ldquo;You now have an AI employee, and I make sure it <em>actually works</em>.&rdquo;
+        </blockquote>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="clients" aria-labelledby="clients-h">
+<!-- ======================= 7.0 PRIOR ENGAGEMENTS ======================= -->
+<section aria-labelledby="h-quotes">
   <div class="wrap">
-    <div class="sec-head">
-      <h2 id="clients-h">What past clients say about working with me</h2>
-    </div>
-    <p class="label-honest">From my previous development agency. Different service, same operator.</p>
+    <div class="chap rv"><span class="chap-i">7.0</span><span class="chap-t">Prior engagements</span><span class="chap-r"></span></div>
+    <h2 class="h-sec rv" id="h-quotes">What past clients say about working with me</h2>
+    <p class="t-label rv">From my previous development agency. Different service, same operator.</p>
     <div class="quotes">
-      <figure class="quote">
-        <div class="qmark" aria-hidden="true">&#8220;</div>
-        <blockquote><p>We have seen a noticeable impact on our business. This was easy ROI and the results reached far beyond just making our money back. I feel like I finally have time to focus on my company.</p></blockquote>
-        <figcaption><img src="assets/rec-matti.png" alt="Matti Lamminsalo" width="52" height="52" loading="lazy"><div><strong>Matti Lamminsalo</strong><span>Serial entrepreneur</span></div></figcaption>
-      </figure>
-      <figure class="quote">
-        <div class="qmark" aria-hidden="true">&#8220;</div>
-        <blockquote><p>He cares about the results just as much as we do, which makes the collaboration very enjoyable and effortless. His communication is proactive and clear. You won't regret it.</p></blockquote>
-        <figcaption><img src="assets/rec-andreas.png" alt="Andreas Kolb" width="52" height="52" loading="lazy"><div><strong>Andreas Kolb</strong><span>Senior Online Marketing Manager, Telef&oacute;nica Germany</span></div></figcaption>
-      </figure>
-      <figure class="quote">
-        <div class="qmark" aria-hidden="true">&#8220;</div>
-        <blockquote><p>Thanks to his help, we were able to release on time and with high confidence. He approaches projects with an eye on the overall business objective and user experience, and not just from a technical side.</p></blockquote>
-        <figcaption><img src="assets/rec-marin.png" alt="Marin Gerov" width="52" height="52" loading="lazy"><div><strong>Marin Gerov</strong><span>Head of Partnerships</span></div></figcaption>
-      </figure>
+      <div class="quote rv">
+        <blockquote>&ldquo;We have seen a noticeable impact on our business. This was easy ROI and the results reached far beyond just making our money back. I feel like I finally have time to focus on my company.&rdquo;</blockquote>
+        <p class="attr"><img src="assets/rec-matti.png" alt="" width="100" height="100"><span><b>Matti Lamminsalo</b><span class="role">Serial entrepreneur</span></span></p>
+      </div>
+      <div class="quote rv">
+        <blockquote>&ldquo;He cares about the results just as much as we do, which makes the collaboration very enjoyable and effortless. His communication is proactive and clear. You won't regret it.&rdquo;</blockquote>
+        <p class="attr"><img src="assets/rec-andreas.png" alt="" width="100" height="100"><span><b>Andreas Kolb</b><span class="role">Senior Online Marketing Manager, Telef&oacute;nica Germany</span></span></p>
+      </div>
+      <div class="quote rv">
+        <blockquote>&ldquo;Thanks to his help, we were able to release on time and with high confidence. He approaches projects with an eye on the overall business objective and user experience, and not just from a technical side.&rdquo;</blockquote>
+        <p class="attr"><img src="assets/rec-marin.png" alt="" width="100" height="100"><span><b>Marin Gerov</b><span class="role">Head of Partnerships</span></span></p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section bg-light" id="faq" aria-labelledby="faq-h">
+<!-- ======================= 8.0 THE QUESTIONS ======================= -->
+<section aria-labelledby="h-faq">
   <div class="wrap">
-    <div class="sec-head">
-      <h2 id="faq-h">The questions every firm asks.</h2>
-    </div>
-    <div class="faq-wrap">
-      <details>
-        <summary>Is our client data safe?
-          <svg class="plus" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M9 3v12M3 9h12" stroke="#f96a00" stroke-width="2.4" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="faq-a">Your AI employee works in a private, isolated environment set up for your firm alone. Nothing is shared across clients, and it can be shut down and deleted on request. Your team keeps working in its own tools, and every action the employee takes is visible to you. We also sign a mutual NDA before I ever see a document. Standard practice, offered upfront. Confidentiality is treated the way your firm treats it: as non-negotiable.</p>
+    <div class="chap rv"><span class="chap-i">8.0</span><span class="chap-t">The questions</span><span class="chap-r"></span></div>
+    <h2 class="h-sec rv" id="h-faq">The questions every firm asks.</h2>
+    <div class="faq-grid">
+    <div class="faq">
+      <details open class="rv">
+        <summary>Is our client data safe?</summary>
+        <p class="a">Your AI employee works in a private, isolated environment set up for your firm alone. Nothing is shared across clients, and it can be shut down and deleted on request. Your team keeps working out of its own email inbox, and every action the employee takes is visible to you. We also sign a mutual NDA before I ever see a document. Standard practice, offered upfront. Confidentiality is treated the way your firm treats it: as non-negotiable.</p>
       </details>
-      <details>
-        <summary>What if it makes a mistake?
-          <svg class="plus" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M9 3v12M3 9h12" stroke="#f96a00" stroke-width="2.4" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="faq-a">Everything Mia produces is review-ready, never send-ready. A licensed attorney at your firm approves anything before it leaves the building, the same way you review a junior associate's draft. The first two weeks are an explicit testing period where we tune her on your real work.</p>
+      <details open class="rv">
+        <summary>What if it makes a mistake?</summary>
+        <p class="a">Everything Mia produces is review-ready, never send-ready. A licensed attorney at your firm approves anything before it leaves the building, the same way you review a junior associate's draft. The first two weeks are an explicit testing period where we tune her on your real work.</p>
       </details>
-      <details>
-        <summary>What does it cost?
-          <svg class="plus" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M9 3v12M3 9h12" stroke="#f96a00" stroke-width="2.4" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="faq-a">A flat monthly retainer from $4,000. No hourly billing, no surprise usage fees. Month to month, cancel with 30 days notice. And the guarantee: your first AI employee is live within 48 hours of kickoff, or your first month is free.</p>
+      <details open class="rv">
+        <summary>What does it cost?</summary>
+        <p class="a">A flat monthly retainer from $4,000. No hourly billing, no surprise usage fees. Month to month, cancel with 30 days notice. And the guarantee: your first AI employee is live within 48 hours of kickoff, or your first month is free. If you ever leave, the playbooks, files, and everything she produced stay with your firm. No lock-in.</p>
       </details>
-      <details>
-        <summary>Do we need technical people?
-          <svg class="plus" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M9 3v12M3 9h12" stroke="#f96a00" stroke-width="2.4" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="faq-a">No. There is nothing for your team to install, learn, or maintain. Nobody at your firm has to learn Claude, Cowork, or any AI tool. That is the whole point of how I build these: Mia works inside the interfaces your team already lives in. The work arrives in email, Word, Teams, or Slack, and she can even work over text or iMessage if that is where you need her. I handle everything behind it.</p>
+      <details class="rv">
+        <summary>Do we need technical people?</summary>
+        <p class="a">No. There is nothing for your team to install, learn, or maintain. Nobody at your firm has to learn Claude, Cowork, or any AI tool. That is the whole point of how I build these: Mia works inside the interfaces your team already lives in. The work arrives in email, Word, Teams, or Slack, and she can even work over text or iMessage if that is where you need her. I handle everything behind it.</p>
       </details>
-      <details>
-        <summary>What actually happens on the call?
-          <svg class="plus" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M9 3v12M3 9h12" stroke="#f96a00" stroke-width="2.4" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="faq-a">Twenty minutes. You tell me the work that eats your team's week. I show you an AI employee doing that kind of work, live. You leave with a clear picture of the first employee worth hiring, what she would do in her first month, and what it costs. No slides, no obligation.</p>
+      <details class="rv">
+        <summary>What actually happens on the call?</summary>
+        <p class="a">Twenty minutes. You tell me the work that eats your team's week. I show you an AI employee doing that kind of work, live. You leave with a clear picture of the first employee worth hiring, what she would do in her first month, and what it costs. No slides, no obligation.</p>
       </details>
-      <details>
-        <summary>What happens after we say yes?
-          <svg class="plus" width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" focusable="false"><path d="M9 3v12M3 9h12" stroke="#f96a00" stroke-width="2.4" stroke-linecap="round"/></svg>
-        </summary>
-        <p class="faq-a">Kickoff is the same day: one payment link and a short access checklist. Within 48 hours Mia is live, doing the one job we picked plus the daily basics. From then on, new requests go on your board and I keep her running, watched, and improving.</p>
+      <details class="rv">
+        <summary>What happens after we say yes?</summary>
+        <p class="a">Kickoff is the same day: one payment link and a short access checklist. Within 48 hours Mia is live, doing the highest-value job mapped out from our call plus the daily basics. From then on, you send new requests by email and I keep her running, watched, and improving.</p>
       </details>
     </div>
-  </div>
-</section>
-
-<section class="section final" id="book" aria-labelledby="book-h">
-  <div class="wrap">
-    <h2 id="book-h">Find out what your firm's first AI employee should be.</h2>
-    <p class="sub">20 minutes, free, no slides. You leave with the map either way.</p>
-    <a class="btn btn-primary" href="https://calendly.com/backes-jordy/20min?utm_source=landing" target="_blank" rel="noopener">Book the 20 minute demo call</a>
-    <div class="cal-card">
-      <a class="btn-fallback" href="https://calendly.com/backes-jordy/20min?utm_source=landing" target="_blank" rel="noopener">Calendar not loading? Open the booking page</a>
-      <div class="calendly-inline-widget" data-url="https://calendly.com/backes-jordy/20min?utm_source=landing" style="min-width:0;width:100%;height:700px;"></div>
+      <aside class="faq-side rv" style="--d:120ms">
+        <!-- COPY-DELTA D9: booking card grafted from variant C, restaged in the record register -->
+        <a class="side-card" href="#book">
+          <span class="mono">The 20 minute demo call</span>
+          <p class="side-line">Tell me your biggest time sink when you book. On the call, I show an AI employee doing that kind of work, live.</p>
+          <span class="side-div" aria-hidden="true"></span>
+          <span class="side-row">
+            <img src="assets/jordy.png" alt="" width="44" height="44">
+            <span><b>Book directly with Jordy</b><span class="sub">20 minutes, no slides, no obligation</span></span>
+            <span class="side-arrow" aria-hidden="true">&rarr;</span>
+          </span>
+        </a>
+        <p class="side-mail">Prefer email? <a href="mailto:backes.jordy@gmail.com">backes.jordy@gmail.com</a></p>
+      </aside>
     </div>
   </div>
 </section>
 
-<footer>
+<!-- ======================= 9.0 THE BOOKING (dark band) ======================= -->
+<section class="band--dark" id="book" aria-labelledby="h-book">
   <div class="wrap">
-    <p class="foot-row">
-      <span class="foot-brand">GoldenEraAI</span>
-      <span class="foot-item"><span class="foot-dot" aria-hidden="true">&middot;</span><a href="https://www.youtube.com/@jordy-agents" target="_blank" rel="noopener">YouTube</a></span>
-      <span class="foot-item"><span class="foot-dot" aria-hidden="true">&middot;</span><a href="https://www.linkedin.com/in/jordybackes/" target="_blank" rel="noopener">LinkedIn</a></span>
-      <span class="foot-item"><span class="foot-dot" aria-hidden="true">&middot;</span><a href="mailto:backes.jordy@gmail.com">backes.jordy@gmail.com</a></span>
-    </p>
-    <p class="foot-note">AI employees produce review-ready work. A licensed attorney at your firm makes every final call. GoldenEraAI does not provide legal advice.</p>
-    <p class="foot-copy">&copy; 2026 GoldenEraAI</p>
+    <div class="chap rv"><span class="chap-i">9.0</span><span class="chap-t">The booking</span><span class="chap-r"></span></div>
+    <div class="book-head rv">
+      <h2 id="h-book">Find out what your firm's first AI employee should be.</h2>
+      <p class="book-sub">20 minutes, free, no slides. You leave with the map either way.</p>
+    </div>
+    <div class="cal-card rv">
+      <div class="cal-head">
+        <span class="mono cal-dot">The 20 minute call</span>
+        <span class="mono">Pick a time</span>
+      </div>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/backes-jordy/20min?utm_source=landing&hide_gdpr_banner=1&primary_color=f96a00" aria-label="Calendly booking calendar"></div>
+      <p class="cal-fall">Calendar not loading? <a href="https://calendly.com/backes-jordy/20min?utm_source=landing" target="_blank" rel="noopener">Open the booking page</a></p>
+    </div>
+    <!-- COPY-DELTA D6: direct-booking sentence prepended (review fix: the expectation manager names who they meet) -->
+    <p class="expect rv"><span class="mono">What happens on the call</span>You meet Jordy Backes, the founder. There is no sales team. Twenty minutes. You tell me the work that eats your team's week. I show you an AI employee doing that kind of work, live. You leave with a clear picture of the first employee worth hiring, what she would do in her first month, and what it costs. No slides, no obligation.</p>
+    <div class="gsign rv">
+      <p>Your first AI employee is live in your firm within 48 hours of kickoff, or your first month is free.</p>
+      <p class="gk">Kickoff means payment received and access provided.</p>
+      <!-- COPY-DELTA D12: signature photo -->
+      <div class="sig-row"><img src="assets/jordy.png" alt="" width="40" height="40"><p class="sig">Jordy Backes, Founder</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-row">
+      <a class="brand" href="#top" aria-label="GoldenEraAI, back to top">
+        <svg class="logo--inv" width="26" height="26" viewBox="0 0 256 256" aria-hidden="true"><path class="logo-n" d="M 216 128 A 88 88 0 1 1 199.19 76.27 L 170.07 97.44 A 52 52 0 1 0 180 128 Z"/><path class="logo-a" d="M 121 128 H 216 V 164 H 121 Z"/></svg>
+        <svg class="logo--inv wordmark" width="148" height="21" viewBox="0 -6 794 112" aria-hidden="true"><g><path class="logo-n" d="M 104 50 A 52 52 0 1 1 86.79 11.36 L 75.42 23.99 A 35 35 0 1 0 82.59 67 L 48 67 L 48 50 Z"/><path class="logo-n" transform="translate(113 0)" d="M 77 64 A 38.5 38.5 0 1 1 0 64 A 38.5 38.5 0 1 1 77 64 Z M 60 64 A 21.5 21.5 0 1 0 17 64 A 21.5 21.5 0 1 0 60 64 Z"/><path class="logo-n" transform="translate(200 0)" d="M 0 0 H 17 V 100 H 0 Z"/><path class="logo-n" transform="translate(227 0)" d="M 77 64 A 38.5 38.5 0 1 1 0 64 A 38.5 38.5 0 1 1 77 64 Z M 60 64 A 21.5 21.5 0 1 0 17 64 A 21.5 21.5 0 1 0 60 64 Z"/><path class="logo-n" transform="translate(227 0)" d="M 60 0 H 77 V 100 H 60 Z"/><path class="logo-n" transform="translate(313 0)" d="M 64.26 92.61 A 38.5 38.5 0 1 1 75.86 73.31 L 59.36 69.2 A 21.5 21.5 0 1 0 52.89 79.98 Z"/><path class="logo-n" transform="translate(313 0)" d="M 11 55.5 H 74 V 72.5 H 11 Z"/><path class="logo-n" transform="translate(400 0)" d="M 0 61.5 A 36 36 0 0 1 72 61.5 L 55 61.5 A 19 19 0 0 0 17 61.5 Z"/><path class="logo-n" transform="translate(400 0)" d="M 0 28 L 17 30.92 L 17 100 L 0 100 Z"/><path class="logo-n" transform="translate(400 0)" d="M 55 60 H 72 V 100 H 55 Z"/><path class="logo-n" transform="translate(484 0)" d="M 0 0 H 17 V 100 H 0 Z"/><path class="logo-n" transform="translate(484 0)" d="M 0 0 H 62 V 17 H 0 Z"/><path class="logo-n" transform="translate(484 0)" d="M 0 41 H 56 V 58 H 0 Z"/><path class="logo-n" transform="translate(484 0)" d="M 0 83 H 62 V 100 H 0 Z"/><path class="logo-n" transform="translate(557 0)" d="M 0 55.5 A 30 30 0 0 1 30 25.5 L 30 42.5 A 13 13 0 0 0 17 55.5 Z"/><path class="logo-n" transform="translate(557 0)" d="M 0 28 L 17 28.46 L 17 100 L 0 100 Z"/><path class="logo-n" transform="translate(595 0)" d="M 77 64 A 38.5 38.5 0 1 1 0 64 A 38.5 38.5 0 1 1 77 64 Z M 60 64 A 21.5 21.5 0 1 0 17 64 A 21.5 21.5 0 1 0 60 64 Z"/><path class="logo-n" transform="translate(595 0)" d="M 60 28 H 77 V 100 H 60 Z"/><path class="logo-a" transform="translate(679 0)" d="M 35 0 L 53 0 L 88 100 L 69.99 100 L 44 25.75 L 18.01 100 L 0 100 Z"/><path class="logo-a" transform="translate(679 0)" d="M 24 62 H 64 V 79 H 24 Z"/><path class="logo-a" transform="translate(777 0)" d="M 0 0 H 17 V 100 H 0 Z"/></g></svg>
+      </a>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="https://www.youtube.com/@jordy-agents" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.linkedin.com/in/jordybackes/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:backes.jordy@gmail.com">backes.jordy@gmail.com</a>
+      </nav>
+    </div>
+    <div class="foot-legal">
+      <p style="max-width:60ch">AI employees produce review-ready work. A licensed attorney at your firm makes every final call. GoldenEraAI does not provide legal advice.</p>
+      <p>&copy; 2026 GoldenEraAI</p>
+    </div>
   </div>
 </footer>
 
+<script>
+(function(){
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var nav = document.querySelector(".nav");
+  var onScroll = function(){ nav.classList.toggle("scrolled", window.scrollY > 8); };
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+
+  if (reduce || !("IntersectionObserver" in window)) return;
+  document.documentElement.classList.add("jsm");
+
+  document.querySelectorAll("[data-stagger]").forEach(function(g){
+    Array.prototype.forEach.call(g.children, function(c,i){ c.style.setProperty("--d", (i*70)+"ms"); });
+  });
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      e.target.classList.add("in");
+      io.unobserve(e.target);
+    });
+  }, {threshold:.12, rootMargin:"0px 0px -6% 0px"});
+  document.querySelectorAll(".rv").forEach(function(el){ io.observe(el); });
+
+  var co = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      e.target.classList.add("play");
+      co.unobserve(e.target);
+    });
+  }, {threshold:.5});
+  document.querySelectorAll(".chain").forEach(function(el){ co.observe(el); });
+})();
+</script>
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
