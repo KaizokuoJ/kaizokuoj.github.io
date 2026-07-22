@@ -1,0 +1,50 @@
+<!doctype html>
+<!-- Source for public/og-default.png, the site's default social card.
+     Re-render after edits (from distribution-os/site):
+     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless \
+       --screenshot="$PWD/public/og-default.png" --window-size=1200,630 \
+       --hide-scrollbars --force-device-scale-factor=1 --virtual-time-budget=4000 \
+       "file://$PWD/public/og-default.html" -->
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>og-default</title>
+<style>
+  @font-face { font-family: "Source Serif 4"; src: url("fonts/source-serif-4-600.woff2") format("woff2"); font-weight: 600; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    background: #f7faf9;
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Source Serif 4", Georgia, serif;
+  }
+  .card { text-align: center; }
+  .coin { margin: 0 auto 46px; width: 84px; height: 84px; display: block; }
+  .mark {
+    font-weight: 600; font-size: 104px; line-height: 1;
+    letter-spacing: .06em; text-transform: uppercase; color: #212442;
+    white-space: nowrap;
+  }
+  .tagline {
+    margin-top: 38px;
+    display: flex; align-items: center; justify-content: center; gap: 26px;
+    font-family: "SF Mono", Menlo, Consolas, monospace;
+    font-size: 23px; letter-spacing: .32em; text-transform: uppercase; color: #4a4e69;
+    white-space: nowrap;
+  }
+  .tagline::before, .tagline::after {
+    content: ""; height: 1px; width: 110px; background: rgba(33, 36, 66, .16);
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <svg class="coin" viewBox="0 0 84 84" aria-hidden="true">
+      <circle cx="42" cy="42" r="42" fill="#f96a00" />
+      <circle cx="57" cy="29" r="34" fill="#f7faf9" />
+    </svg>
+    <div class="mark">Night Docket</div>
+    <div class="tagline">AI employees for law firms</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+# Night Docket
+
+Night Docket is an independent publication about AI employees for law firms. It explains, in plain language, how small and boutique firms can put AI tools such as Claude to work on real firm objects: demand letters, contract review, client intake, the morning brief. Pages carry a named human author, a facts-checked date, and samples produced on synthetic matters, never on real client data. Night Docket is not affiliated with Anthropic or with any software vendor it writes about, and nothing on the site is legal advice.
+
+## Key hubs (placeholders: these sections are being built and fill in over time)
+
+- https://nightdocket.com/learn/ : plain answers to the questions firms ask before adopting AI
+- https://nightdocket.com/workflows/ : one piece of firm work, end to end, with samples
+- https://nightdocket.com/compare/ : tools run head to head on the same legal task
+- https://nightdocket.com/newsletter/ : the email digest and its archive
