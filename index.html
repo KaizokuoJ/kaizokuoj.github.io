@@ -316,6 +316,11 @@ h2.h-sec{font-size:clamp(1.9rem,3.4vw,2.65rem);line-height:1.15;max-width:22em}
 .irow[aria-selected="true"] .ichev{visibility:hidden}
 .mail-msg{display:none}
 .mail-msg.on{display:block}
+.brief-crop{position:relative;overflow:hidden;aspect-ratio:760/385;cursor:pointer;border-bottom:1px solid var(--hair-soft)}
+.brief-crop img{display:block;width:100%;height:auto;margin-top:-18.4%}
+.brief-crop::after{content:"";position:absolute;left:0;right:0;bottom:0;height:64px;background:linear-gradient(rgba(255,255,255,0),#fff 92%)}
+.brief-crop:hover img{opacity:.94}
+.brief-full{display:block;width:100%;height:auto;border:1px solid var(--hair);border-radius:4px}
 .mail-body p+p{margin-top:10px}
 .chip-btn{cursor:pointer;font-family:var(--sans)}
 /* ---------- overlays ---------- */
@@ -554,7 +559,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
     <h1 id="h-hero"><span>Hire an AI employee</span><span>for your law firm.</span></h1>
     <div class="hero-grid">
       <div>
-        <p class="hero-sub">Every morning before your team sits down, Mia has read the firm's inbox: the morning brief lists today's deadlines and new client intake, and the routine replies are already drafted, waiting on a lawyer's send. She also redlines contracts in Word and drafts demand letters from the case file. Any other workflow your firm needs, you email her the request and I build it into her, typically live within 48 hours; requests are unlimited. Built, run, and maintained for you, on duty 24/7.</p>
+        <p class="hero-sub">Every morning before your team sits down, Mia has read the firm's inbox: the morning brief lists today's deadlines and the decisions that need a partner, and the routine replies are already drafted, waiting on a lawyer's send. She also redlines contracts in Word and drafts demand letters from the case file. Any other workflow your firm needs, you email her the request and I build it into her, typically live within 48 hours; requests are unlimited. Built, run, and maintained for you, on duty 24/7.</p>
         <div class="hero-actions">
         <div class="cta-row">
           <a class="btn btn--primary" href="#book">Book the 20 minute demo call</a>
@@ -577,7 +582,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
             <button class="irow" id="row-brief" role="tab" aria-selected="true" aria-controls="msg-brief">
               <span class="idot" aria-hidden="true"></span>
               <span class="if">Mia</span>
-              <span class="is">Morning brief: 2 deadlines, 4 new intake, 3 replies drafted</span>
+              <span class="is">Morning brief: 2 deadlines, 3 replies drafted, 1 waiting on your OK</span>
               <span class="it">7:02 AM</span>
               <span class="ichev" aria-hidden="true">&rsaquo;</span>
             </button>
@@ -592,16 +597,15 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
           <div class="mail-msg on" id="msg-brief" role="tabpanel" aria-labelledby="row-brief">
             <div class="mail-head">
               <p class="mail-row"><span class="mail-k">From</span><span class="mail-v">Mia (your AI employee)</span></p>
-              <p class="mail-row"><span class="mail-k">Subject</span><span class="mail-v subj">Morning brief: 2 deadlines, 4 new intake, 3 replies drafted</span></p>
+              <p class="mail-row"><span class="mail-k">Subject</span><span class="mail-v subj">Morning brief: 2 deadlines, 3 replies drafted, 1 waiting on your OK</span></p>
             </div>
-            <div class="mail-body">
-              <p>Good morning. The Mercer discovery responses are due at 5:00 PM today and the Alvarez motion reply is due Thursday.</p>
-              <p>4 intake emails came in overnight and 2 of them are worth a call back today, both summarized in the brief. 3 routine replies are drafted and waiting in your Drafts folder for a lawyer's review.</p>
+            <div class="brief-crop" data-dlg="dlg-brief" aria-hidden="true">
+              <img src="assets/morning-brief.png" alt="" width="760" height="1600" loading="eager">
             </div>
-            <div class="chip-row">
-              <button class="chip chip-btn" data-dlg="dlg-replies">
+            <div class="chip-row" style="padding-top:16px">
+              <button class="chip chip-btn" data-dlg="dlg-brief">
                 <svg width="13" height="15" viewBox="0 0 13 15" aria-hidden="true"><path d="M1 0h7l4 4v10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1Z" fill="none" stroke="#212442" stroke-width="1.2"/><path d="M8 0v4h4" fill="none" stroke="#212442" stroke-width="1.2"/></svg>
-                Read the 3 drafted replies
+                Read the full brief
               </button>
             </div>
           </div>
@@ -623,7 +627,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
             </div>
           </div>
         </figure>
-        <p class="mail-cap">Click any of it. The redline and risk memo are real outputs from a published build, on a sample contract; the brief and replies show the same daily work, on sample matters.</p>
+        <p class="mail-cap">Click any of it. The brief, the redline, and the risk memo are real outputs from the published builds, on sample matters.</p>
         </div>
 
         <div class="hero-chain">
@@ -667,7 +671,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
         <h3>This is not for</h3>
         <ul>
           <li>Firms looking for a chatbot to play with.</li>
-          <li>Firms that cannot give her one point of contact. Mia needs a single person on your side to work with; everything else is handled.</li>
+          <li>Firms that cannot give me one point of contact. I need a single person at your firm to work with; everything else is handled.</li>
           <li>Firms that want the AI making the legal calls on its own. Everything she produces is reviewed and approved by your attorneys, by design.</li>
         </ul>
       </div>
@@ -705,7 +709,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
   <div class="wrap">
     <div class="chap rv"><span class="chap-i">3.0</span><span class="chap-t">The record</span><span class="chap-r"></span></div>
     <h2 class="h-sec rv" id="h-record">See it before you believe it.</h2>
-    <p class="lead rv">I build AI employees on camera, start to finish, and publish every build on YouTube. See how the work actually gets done before we ever talk.</p>
+    <p class="lead rv">I build legal AI employees on camera, start to finish, and publish every build on YouTube. See how the work actually gets done before we ever talk.</p>
     <figure class="daystrip rv" aria-label="One workday with Mia: the morning brief at 7:00, the demand letter at 10:40, the redline at 14:10.">
       <div class="exhibit-tag">
         <span class="tag">[ Exhibit B ]</span>
@@ -716,17 +720,17 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
           <p class="ds-t">07:00</p>
           <h3>The morning brief</h3>
           <p>In your inbox before you sit down: today's deadlines, new client intake, and drafted replies to the routine mail.</p>
-          <button class="ds-view" data-dlg="dlg-replies">Read 3 drafted replies</button>
+          <button class="ds-view" data-dlg="dlg-brief">Read a real brief</button>
         </li>
         <li>
           <p class="ds-t">10:40</p>
           <h3>The demand letter</h3>
-          <p>Drafted from the case file, waiting in the inbox for attorney review.</p>
+          <p>Drafted from the case file, waiting in your inbox for attorney review.</p>
         </li>
         <li>
           <p class="ds-t">14:10</p>
           <h3>The redline, returned</h3>
-          <p>The contract redline that takes an associate 3 to 6 hours comes back in Word with tracked changes, mostly done. The hours go back to billable matters.</p>
+          <p>The contract redline that used to take an associate 3 to 6 hours comes back in Word with tracked changes, mostly done. Those hours go back to your attorneys' billable matters.</p>
           <button class="ds-view" data-dlg="dlg-redline">View the tracked changes</button>
         </li>
       </ol>
@@ -998,46 +1002,14 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
 
 </main>
 
-<dialog class="dlg" id="dlg-replies" aria-labelledby="dlg-replies-t">
+<dialog class="dlg" id="dlg-brief" aria-labelledby="dlg-brief-t">
   <div class="dlg-head">
-    <span class="mono" id="dlg-replies-t">3 drafted replies &middot; waiting in your Drafts</span>
+    <span class="mono" id="dlg-brief-t">The morning brief &middot; a real one, in full</span>
     <button class="dlg-x" data-close aria-label="Close"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#212442" stroke-width="1.6"/></svg></button>
   </div>
   <div class="dlg-body">
-    <div class="reply">
-      <p class="r-meta"><span>Drafted by Mia</span><span class="r-tag">Waiting in Drafts</span></p>
-      <div class="r-head">
-        <p class="r-row"><span class="r-k">To</span><span class="r-v">Amara Chen</span></p>
-        <p class="r-row"><span class="r-k">Subject</span><span class="r-v rsub">RE: New client inquiry, severance agreement</span></p>
-      </div>
-      <p>Dear Ms. Chen,</p>
-      <p>Thank you for reaching out about the severance agreement you were offered. I can speak with you Thursday between 2:00 PM and 4:00 PM, or Friday morning; reply with the time that suits you and we will send a calendar invitation. If you can, forward the agreement itself and any deadline you were given, so I can read it before the call.</p>
-      <p>Kind regards,<br>Daniel Reyes</p>
-      <div class="src-row" aria-label="Files this draft was written from"><span class="src-l">Drafted from</span><span class="src-tag">Chen intake email</span><span class="src-tag">Daniel Reyes' calendar</span></div>
-    </div>
-    <div class="reply">
-      <p class="r-meta"><span>Drafted by Mia</span><span class="r-tag">Waiting in Drafts</span></p>
-      <div class="r-head">
-        <p class="r-row"><span class="r-k">To</span><span class="r-v">June Park (opposing counsel)</span></p>
-        <p class="r-row"><span class="r-k">Subject</span><span class="r-v rsub">RE: Mercer deposition scheduling</span></p>
-      </div>
-      <p>Dear Ms. Park,</p>
-      <p>Confirmed: June 18 at 10:00 AM at your offices for the Mercer deposition, and the court reporter is booked. The exhibit list follows in a separate email once I sign off on it.</p>
-      <p>Kind regards,<br>Daniel Reyes</p>
-      <div class="src-row" aria-label="Files this draft was written from"><span class="src-l">Drafted from</span><span class="src-tag">Park scheduling email</span><span class="src-tag">court reporter confirmation</span></div>
-    </div>
-    <div class="reply">
-      <p class="r-meta"><span>Drafted by Mia</span><span class="r-tag">Waiting in Drafts</span></p>
-      <div class="r-head">
-        <p class="r-row"><span class="r-k">To</span><span class="r-v">Rosa Alvarez</span></p>
-        <p class="r-row"><span class="r-k">Subject</span><span class="r-v rsub">RE: Your medical records request</span></p>
-      </div>
-      <p>Dear Ms. Alvarez,</p>
-      <p>The records custodian confirmed receipt of our request on Monday and quoted 5 business days for production. We expect your file early next week, and I will send word the day it arrives.</p>
-      <p>Kind regards,<br>Daniel Reyes</p>
-      <div class="src-row" aria-label="Files this draft was written from"><span class="src-l">Drafted from</span><span class="src-tag">records custodian email</span><span class="src-tag">Alvarez matter log</span></div>
-    </div>
-    <p class="dlg-note">Each draft is written from the matter's own emails and files, and the files it used are named under every draft. Sample matters shown, in the form the published builds produce. Every reply waits in the Drafts folder until a lawyer at your firm reads it and clicks Send; Mia never sends to a client.</p>
+    <img class="brief-full" src="assets/morning-brief.png" alt="The full morning brief email from the published build: 2 deadlines, 3 replies drafted and held, 1 decision waiting on the attorney's OK, with every item naming its source email and matter" width="760" height="1600" loading="lazy">
+    <p class="dlg-note">A real brief from the published build, on the build's sample firm. That firm named their employee Edward; your firm picks your employee's name. Every item names its source email and matter, the 3 routine replies are drafted and waiting in Drafts, and the 1 decision that needs a lawyer is flagged, never answered for you. <a href="#record" data-close>Watch this build on YouTube</a>.</p>
   </div>
 </dialog>
 
