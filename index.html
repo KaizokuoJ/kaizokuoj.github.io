@@ -45,6 +45,21 @@
   Carried from the build: booking CTAs scroll to the inline Calendly (locked URL in widget +
   fallback); [ EXHIBIT A ] kept on the hero artifact (lawyers' native evidence format, pairs
   with the honesty caption); all other spine lines verbatim.
+  THIRD OPERATOR PASS (2026-08-05, outcomes-first review; report: landing/reviews/
+  outcomes-first-review-2026-08-05.html; operator copy laws: specificity over cleverness
+  everywhere, no staccato-reveal sentences, copy numbers as numerals):
+  pain-first hero sub (Mia's verbs named, "she" antecedent fixed); eyebrow = finished-work
+  line (category stays in the H1); 1.0 opens on the too-many mirror; 3.0 lead sells the
+  outcomes, not "what AI can do"; claim 01 flip heading killed (pos canon); claims 9->7
+  (02 cut, guarantee keeps 4 homes, "tuned on your firm's own documents" moved to step 02;
+  09 folded into 04); Clio 2.4h/5h note under the paralegal anchor (the page's one market
+  stat, one home); [ EXHIBIT B ] workday strip in the record section (the 3-6h redline number
+  lives there only); RECORD MOVED BEFORE THE PRICE (operator GO 2026-08-05): arc is now
+  fit / process / 3.0 record / 4.0 retainer / 5.0 terms, proof lands before the price sheet,
+  #record anchor unchanged; mobile hero restack (exhibit above the fold, desktop unchanged); FAQ 3 "from
+  $2,500" -> "of $2,500"; 9.0 expect block de-duped from FAQ 5; "What lands" -> "What
+  arrives" (lint vague-verb). NDA-triage 20s/13-check figure NOT shipped: provenance
+  unproven as our own build (see review report, truth-gate cards).
 -->
 <html lang="en">
 <head>
@@ -52,7 +67,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
 <title>Night Docket. AI employees for law firms.</title>
-<meta name="description" content="Hire an AI employee for your law firm. Demand letters, contract redlines and intake, handled inside the tools your team already uses. Built, run and maintained for you. First one live within 48 hours.">
+<meta name="description" content="Demand letters drafted, contracts redlined in Word, client intake answered. The finished work arrives in your firm's email inbox, ready for attorney review. Your firm's first AI employee: built, run, and maintained for you, live within 48 hours.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20256%20256'%3E%3Cpath%20fill='%23f96a00'%20d='M125.66%205.78A118%20118%200%201%200%20249.18%20148.24A95.5%2095.5%200%201%201%20125.66%205.78Z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -198,6 +213,7 @@ html.jsm .rv.in{opacity:1;transform:none}
 /* ---------- section headings ---------- */
 h2.h-sec{font-size:clamp(1.9rem,3.4vw,2.65rem);line-height:1.15;max-width:22em}
 .lead{font-size:19px;line-height:1.6;color:var(--ink-2);margin-top:20px;max-width:38em}
+.mirror{font-size:19px;line-height:1.65;color:var(--ink-2);max-width:46em;margin-bottom:36px}
 
 /* ---------- fit ---------- */
 .fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;margin-top:56px}
@@ -269,6 +285,15 @@ h2.h-sec{font-size:clamp(1.9rem,3.4vw,2.65rem);line-height:1.15;max-width:22em}
 .rec-list li:first-child{border-top:1px solid var(--hair)}
 .rec-list b{font-family:var(--serif);font-weight:600;color:var(--ink);display:block;font-size:1.15rem;margin-bottom:5px}
 .rec-link{display:inline-block;margin-top:24px;font-size:14px;font-weight:500;color:var(--ink)}
+
+/* ---------- day strip (5.0 exhibit B) ---------- */
+.daystrip{margin:12px 0 64px}
+.daystrip ol{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:0 44px}
+.daystrip li{border-top:1px solid var(--hair);padding:22px 0 6px;position:relative}
+.daystrip li::before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;background:var(--ink)}
+.ds-t{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--accent-ink);text-transform:uppercase}
+.daystrip h3{font-size:1.2rem;font-weight:600;margin:10px 0 8px}
+.daystrip li p{font-size:15px;line-height:1.6}
 
 /* ---------- founder (6.0) ---------- */
 .op-grid{display:grid;grid-template-columns:minmax(0,300px) minmax(0,1fr);gap:72px;align-items:start}
@@ -359,7 +384,14 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
 
 /* ---------- responsive ---------- */
 @media (max-width:1023px){
-  .hero-grid{grid-template-columns:1fr;gap:56px}
+  .hero-grid{grid-template-columns:1fr;gap:44px}
+  .hero-grid>div{display:contents}
+  .hero-sub{order:1}
+  .hero-exhibit{order:2}
+  .hero-actions{order:3}
+  .hero-chain{order:4}
+  .hero-actions .cta-row{margin-top:0}
+  .hero-chain .chain{margin-top:0}
   .faq-grid{grid-template-columns:1fr;gap:40px}
   .faq-side{position:static;max-width:520px}
   .hero-sub{max-width:60ch}
@@ -380,6 +412,10 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
   .hero h1 span{display:inline}
   .hero h1 span:first-child::after{content:" "}
   .steps{grid-template-columns:1fr;gap:36px}
+  .daystrip ol{grid-template-columns:1fr;gap:0}
+  .daystrip li{border-top:0;border-bottom:1px solid var(--hair-soft);padding:18px 0 18px}
+  .daystrip li::before{top:23px}
+  .daystrip li{padding-left:26px}
   .fit-grid{grid-template-columns:1fr;gap:48px;margin-top:44px}
   .op-grid{grid-template-columns:1fr;gap:40px}
   .op-photo{max-width:280px}
@@ -422,11 +458,12 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
 <!-- ======================= HERO ======================= -->
 <section class="hero" aria-labelledby="h-hero">
   <div class="wrap">
-    <p class="eyebrow">AI employees for law firms</p>
+    <p class="eyebrow">The finished work, in your firm's inbox</p>
     <h1 id="h-hero"><span>Hire an AI employee</span><span>for your law firm.</span></h1>
     <div class="hero-grid">
       <div>
-        <p class="hero-sub">She drafts demand letters, redlines contracts in Word, and handles client intake. The finished work arrives in your email inbox, ready for attorney review. Built, run, and maintained for you, on duty 24/7, live in your firm within 48 hours.</p>
+        <p class="hero-sub">The contract redlines, demand letters, and client intake that eat your team's week: Mia drafts the letters, redlines the contracts in Word, and answers the client intake. The finished work arrives in your email inbox, ready for attorney review. Built, run, and maintained for you, on duty 24/7, live in your firm within 48 hours.</p>
+        <div class="hero-actions">
         <div class="cta-row">
           <a class="btn btn--primary" href="#book">Book the 20 minute demo call</a>
           <a class="btn btn--ghost" href="#record">Watch a build on YouTube</a>
@@ -435,11 +472,13 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
         <p class="factline">$2,500 a month flat, everything included &middot; live in 48 hours or month one is free</p>
         <!-- COPY-DELTA D10: hero founder row -->
         <div class="hero-op"><img src="assets/jordy.png" alt="" width="40" height="40"><p><b>Built and run by Jordy Backes.</b> You deal with the builder directly, not a sales team.</p></div>
+        </div>
       </div>
       <div>
+        <div class="hero-exhibit">
         <div class="exhibit-tag">
           <span class="tag">[ Exhibit A ]</span>
-          <span class="mono" style="color:var(--ink-3)">What lands in your inbox</span>
+          <span class="mono" style="color:var(--ink-3)">What arrives in your inbox</span>
         </div>
         <figure class="mail">
           <div class="mail-head">
@@ -459,7 +498,9 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
           </div>
         </figure>
         <p class="mail-cap">The attachments are real. Click them: an actual redline and risk memo from a published build, on a sample contract.</p>
+        </div>
 
+        <div class="hero-chain">
         <figure class="chain" aria-label="The review chain: drafted by Mia, reviewed and approved by a licensed attorney at your firm, sent by your firm.">
           <div class="chain-track" aria-hidden="true"></div>
           <ol>
@@ -475,6 +516,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
           <svg width="15" height="18" viewBox="0 0 15 18" aria-hidden="true"><path d="M7.5 1 14 3.5v5.2c0 4-2.8 6.8-6.5 8.3C3.8 15.5 1 12.7 1 8.7V3.5L7.5 1Z" fill="none" stroke="#212442" stroke-width="1.4"/><path d="M4.6 8.8l2 2 3.8-4" fill="none" stroke="#f96a00" stroke-width="1.5"/></svg>
           <span><b>Review-ready, never send-ready.</b> A licensed attorney at your firm makes every final call.</span>
         </p>
+        </div>
       </div>
     </div>
   </div>
@@ -484,6 +526,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
 <section aria-labelledby="h-fit">
   <div class="wrap">
     <div class="chap rv"><span class="chap-i">1.0</span><span class="chap-t">The fit</span><span class="chap-r"></span></div>
+    <p class="mirror rv">A small firm rarely has one big problem: it has too many routine NDAs waiting on one paralegal, too many mornings lost to the inbox before billable work starts, and too many engagement letters drafted from scratch every time.</p>
     <h2 class="h-sec rv" id="h-fit">Built for firms that want work handled. Your lawyers never learn a tool.</h2>
     <div class="fit-grid">
       <div class="fit-col rv">
@@ -520,7 +563,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
       <div class="step rv">
         <p class="step-i">Step 02</p>
         <h3>Live in 48 hours</h3>
-        <p>After kickoff, your AI employee is live inside your firm within 48 hours, or your first month is free. Mia starts with the highest-value job I map out from our call, plus the daily basics: a morning brief, inbox triage, follow-ups, deadlines.</p>
+        <p>After kickoff, your AI employee is live inside your firm within 48 hours, or your first month is free. Mia starts with the highest-value job I map out from our call, tuned on your firm's own documents, plus the daily basics: a morning brief, inbox triage, follow-ups, deadlines.</p>
       </div>
       <div class="step rv">
         <p class="step-i">Step 03</p>
@@ -531,57 +574,104 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
   </div>
 </section>
 
-<!-- ======================= 3.0 THE RETAINER ======================= -->
+<!-- ======================= 3.0 THE RECORD ======================= -->
+<section id="record" aria-labelledby="h-record">
+  <div class="wrap">
+    <div class="chap rv"><span class="chap-i">3.0</span><span class="chap-t">The record</span><span class="chap-r"></span></div>
+    <h2 class="h-sec rv" id="h-record">See it before you believe it.</h2>
+    <p class="lead rv">I build AI employees on camera, start to finish, and publish every build on YouTube. See how the work actually gets done before we ever talk.</p>
+    <figure class="daystrip rv" aria-label="One workday with Mia: the morning brief at 7:00, the demand letter at 10:40, the redline at 14:10.">
+      <div class="exhibit-tag">
+        <span class="tag">[ Exhibit B ]</span>
+        <span class="mono" style="color:var(--ink-3)">One workday, on the clock</span>
+      </div>
+      <ol>
+        <li>
+          <p class="ds-t">07:00</p>
+          <h3>The morning brief</h3>
+          <p>In your inbox before you sit down: today's deadlines, new client intake, and drafted replies to the routine mail.</p>
+        </li>
+        <li>
+          <p class="ds-t">10:40</p>
+          <h3>The demand letter</h3>
+          <p>Drafted from the case file, waiting in the inbox for attorney review.</p>
+        </li>
+        <li>
+          <p class="ds-t">14:10</p>
+          <h3>The redline, returned</h3>
+          <p>The contract redline that takes an associate 3 to 6 hours comes back in Word with tracked changes, mostly done. The hours go back to billable matters.</p>
+        </li>
+      </ol>
+      <figcaption class="mail-cap">The clock times are illustrative; every deliverable shown is from a published build you can watch below.</figcaption>
+    </figure>
+    <div class="rec-grid">
+      <div class="rv">
+        <div class="exhibit-tag">
+          <span class="mono" style="color:var(--ink-3)">The latest build, start to finish</span>
+        </div>
+        <div class="frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/5Eu2-Zbpk_I" title="The latest published build: an AI employee for a law firm, built start to finish" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="rv" style="--d:120ms">
+        <p class="mono" style="color:var(--ink-3);margin-bottom:14px">What the builds show</p>
+        <ul class="rec-list">
+          <li><b>The redline, returned</b>The contract back as a Word document with tracked changes, mostly done, for your attorneys to accept or reject.</li>
+          <li><b>The one page risk memo</b>Every flag on the contract, ranked and explained.</li>
+          <li><b>The demand letter</b>Drafted from the case file, ready for attorney review.</li>
+          <li><b>The morning brief</b>In your inbox before you sit down: today's deadlines, new client intake, and drafted replies to the routine mail that does not need a lawyer's judgment.</li>
+          <li><b>The answer, on demand</b>Email her a question about a matter, a deadline, or a client; the answer comes back from your firm's own files.</li>
+        </ul>
+        <!-- COPY-DELTA D5: navigation link label -->
+        <a class="rec-link" href="https://www.youtube.com/@jordy-agents" target="_blank" rel="noopener">More builds on the channel</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 4.0 THE RETAINER ======================= -->
 <section aria-labelledby="h-buys">
   <div class="wrap">
-    <div class="chap rv"><span class="chap-i">3.0</span><span class="chap-t">The retainer</span><span class="chap-r"></span></div>
+    <div class="chap rv"><span class="chap-i">4.0</span><span class="chap-t">The retainer</span><span class="chap-r"></span></div>
     <h2 class="h-sec rv" id="h-buys">What $2,500 a month actually buys.</h2>
-    <p class="lead rv">The whole point: your firm gets the best of what AI can do today, and nobody at the firm has to learn, touch, or handle any of it.</p>
+    <p class="lead rv">The whole point: the drafting, the triage, and the follow-ups come back to your firm finished, and nobody at the firm has to learn, touch, or handle the AI doing it.</p>
     <ol class="claims">
       <li class="claim rv"><span class="claim-n" aria-hidden="true">01</span>
-        <h3>A working employee, not a tool</h3>
+        <h3>A working employee in your inbox</h3>
         <p>Real work delivered by email, in the Word documents your team already opens. Nothing to install, nothing to learn, and nobody at the firm ever touches an AI tool.</p>
       </li>
       <li class="claim rv"><span class="claim-n" aria-hidden="true">02</span>
-        <h3>Built for your firm in 48 hours</h3>
-        <p>Live within 48 hours of kickoff doing the highest-value job we picked together, tuned on your firm's own documents, or your first month is free.</p>
-      </li>
-      <li class="claim rv"><span class="claim-n" aria-hidden="true">03</span>
         <h3>Watched so it never breaks alone</h3>
         <p>Mia is on duty 24/7, and so is her monitoring. If anything fails, an automated alert hits my phone that minute, and it is usually fixed before your team notices. In practice it is almost always me telling you, not the other way around.</p>
       </li>
-      <li class="claim rv"><span class="claim-n" aria-hidden="true">04</span>
+      <li class="claim rv"><span class="claim-n" aria-hidden="true">03</span>
         <h3>Always current</h3>
         <p>When better AI ships, Mia gets it. Upgrades, security, and improvements are included, continuously. Your firm stays at the front without reading a single AI newsletter.</p>
       </li>
-      <li class="claim rv"><span class="claim-n" aria-hidden="true">05</span>
+      <li class="claim rv"><span class="claim-n" aria-hidden="true">04</span>
         <h3>Unlimited requests</h3>
-        <p>Need a new workflow or a change? Email it to her like you would to any employee. Requests are unlimited, built one at a time, and typically live within 48 hours each. No change orders, no scoping meetings, no hourly meter.</p>
+        <p>Need her to take on a new job, or change how she does one? Email it to her like you would ask any employee. Requests are unlimited, built one at a time, and typically live within 48 hours each. Every change arrives with a short personal video from me: what changed and what it does for your firm. No change orders, no scoping meetings, no hourly meter.</p>
       </li>
-      <li class="claim rv"><span class="claim-n" aria-hidden="true">06</span>
+      <li class="claim rv"><span class="claim-n" aria-hidden="true">05</span>
         <h3>One flat number</h3>
         <p>Usage, infrastructure, maintenance, monitoring: all included. No surprise bills, no credits, no meters running.</p>
       </li>
-      <li class="claim rv"><span class="claim-n" aria-hidden="true">07</span>
+      <li class="claim rv"><span class="claim-n" aria-hidden="true">06</span>
         <h3>Your attorneys stay in charge</h3>
         <p>Review-ready, never send-ready. A licensed attorney at your firm approves everything before it counts. Mia does the work; your firm keeps the judgment.</p>
       </li>
-      <li class="claim rv"><span class="claim-n" aria-hidden="true">08</span>
+      <li class="claim rv"><span class="claim-n" aria-hidden="true">07</span>
         <h3>A colleague with a memory</h3>
-        <p>Her own email address, your firm's name for her, and a memory of how your firm works that gets better every week she is employed.</p>
-      </li>
-      <li class="claim rv"><span class="claim-n" aria-hidden="true">09</span>
-        <h3>Updates you can watch</h3>
-        <p>Every new workflow, fix, or improvement arrives with a short personal video from me: what changed and what it does for your firm, delivered to your inbox.</p>
+        <p>Her own email address, your firm's name for her, and a memory of how your firm works that gets better every week she is employed. Your partners never explain the firm twice: she remembers the matters, the positions, and how you like things done.</p>
       </li>
     </ol>
   </div>
 </section>
 
-<!-- ======================= 4.0 THE TERMS (dark band) ======================= -->
+<!-- ======================= 5.0 THE TERMS (dark band) ======================= -->
 <section class="band--dark" aria-labelledby="h-terms">
   <div class="wrap">
-    <div class="chap rv"><span class="chap-i">4.0</span><span class="chap-t">The terms</span><span class="chap-r"></span></div>
+    <div class="chap rv"><span class="chap-i">5.0</span><span class="chap-t">The terms</span><span class="chap-r"></span></div>
     <h2 class="sr" id="h-terms">The terms</h2>
     <div class="terms-grid">
       <div class="sheet rv">
@@ -593,6 +683,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
         <p class="note">No hourly billing, no surprise usage fees.</p>
         <!-- COPY-DELTA D11: pre-approved paralegal anchor -->
         <p class="note anchor">A fraction of the paralegal you have been trying to hire, on duty every day.</p>
+        <p class="note" style="margin-top:14px">Per Clio's 2025 Legal Trends Report, the average lawyer collects payment on only 2.4 billable hours a day, and 5 hours go unbilled. Mia takes over the routine share of those hours: the intake replies, the follow-ups, the document drafting.</p>
         <div class="gbox">
           <p class="inc-l">The guarantee</p>
           <p>Your first AI employee is live in your firm within 48 hours of kickoff, or your first month is free.</p>
@@ -620,37 +711,6 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
   </div>
 </section>
 
-<!-- ======================= 5.0 THE RECORD ======================= -->
-<section id="record" aria-labelledby="h-record">
-  <div class="wrap">
-    <div class="chap rv"><span class="chap-i">5.0</span><span class="chap-t">The record</span><span class="chap-r"></span></div>
-    <h2 class="h-sec rv" id="h-record">See it before you believe it.</h2>
-    <p class="lead rv">I build AI employees on camera, start to finish, and publish every build on YouTube. See how the work actually gets done before we ever talk.</p>
-    <div class="rec-grid">
-      <div class="rv">
-        <div class="exhibit-tag">
-          <span class="mono" style="color:var(--ink-3)">The latest build, start to finish</span>
-        </div>
-        <div class="frame">
-          <iframe src="https://www.youtube-nocookie.com/embed/5Eu2-Zbpk_I" title="The latest published build: an AI employee for a law firm, built start to finish" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-      </div>
-      <div class="rv" style="--d:120ms">
-        <p class="mono" style="color:var(--ink-3);margin-bottom:14px">What the builds show</p>
-        <ul class="rec-list">
-          <li><b>The redline, returned</b>The contract back as a Word document with tracked changes your attorneys accept or reject.</li>
-          <li><b>The one page risk memo</b>Every flag on the contract, ranked and explained.</li>
-          <li><b>The demand letter</b>Drafted from the case file, ready for attorney review.</li>
-          <li><b>The morning brief</b>In your inbox before you sit down: today's deadlines, new client intake, and drafted replies to the routine mail that does not need a lawyer's judgment.</li>
-          <li><b>The answer, on demand</b>Email her a question about a matter, a deadline, or a client; the answer comes back from your firm's own files.</li>
-        </ul>
-        <!-- COPY-DELTA D5: navigation link label -->
-        <a class="rec-link" href="https://www.youtube.com/@jordy-agents" target="_blank" rel="noopener">More builds on the channel</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ======================= 6.0 THE OPERATOR ======================= -->
 <section aria-labelledby="h-op">
   <div class="wrap">
@@ -663,7 +723,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
       </div>
       <div class="rv" style="--d:100ms">
         <p class="op-name">Jordy Backes <span>&middot; Founder, Night Docket</span></p>
-        <p class="op-bio"><b>Building software and systems for businesses since 2017.</b> <span>Ran a web development and conversion agency for three years, and since 2025 I work exclusively on AI employees for law firms. I build yours, I run it, and I keep it working.</span></p>
+        <p class="op-bio"><b>Building software and systems for businesses since 2017.</b> <span>Ran a web development and conversion agency for 3 years, and since 2025 I work exclusively on AI employees for law firms. I build yours, I run it, and I keep it working.</span></p>
         <!-- COPY-DELTA D4: pre-approved positioning pull-quote -->
         <blockquote class="op-quote">
           &ldquo;You now have an AI employee, and I make sure it <em>actually works</em>.&rdquo;
@@ -713,7 +773,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
       </details>
       <details open class="rv">
         <summary>What does it cost?</summary>
-        <p class="a">A flat monthly retainer from $2,500. No hourly billing, no surprise usage fees. Month to month, cancel with 30 days notice. And the guarantee: your first AI employee is live within 48 hours of kickoff, or your first month is free. If you ever leave, the playbooks, files, and everything she produced stay with your firm. No lock-in.</p>
+        <p class="a">A flat monthly retainer of $2,500. No hourly billing, no surprise usage fees. Month to month, cancel with 30 days notice. And the guarantee: your first AI employee is live within 48 hours of kickoff, or your first month is free. If you ever leave, the playbooks, files, and everything she produced stay with your firm. No lock-in.</p>
       </details>
       <details class="rv">
         <summary>Do we need technical people?</summary>
@@ -721,7 +781,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
       </details>
       <details class="rv">
         <summary>What actually happens on the call?</summary>
-        <p class="a">Twenty minutes. You tell me the work that eats your team's week. I show you an AI employee doing that kind of work, live. You leave with a clear picture of the first employee worth hiring, what she would do in her first month, and what it costs. No slides, no obligation.</p>
+        <p class="a">The call is 20 minutes: you tell me the work that eats your team's week, and I show you an AI employee doing that kind of work, live. You leave with a clear picture of the first employee worth hiring, what she would do in her first month, and what it costs. No slides, no obligation.</p>
       </details>
       <details class="rv">
         <summary>What happens after we say yes?</summary>
@@ -763,7 +823,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
       <p class="cal-fall">Calendar not loading? <a href="https://calendly.com/backes-jordy/20min?utm_source=landing" target="_blank" rel="noopener">Open the booking page</a></p>
     </div>
     <!-- COPY-DELTA D6: direct-booking sentence prepended (review fix: the expectation manager names who they meet) -->
-    <p class="expect rv"><span class="mono">What happens on the call</span>You meet Jordy Backes, the founder. There is no sales team. Twenty minutes. You tell me the work that eats your team's week. I show you an AI employee doing that kind of work, live. You leave with a clear picture of the first employee worth hiring, what she would do in her first month, and what it costs. No slides, no obligation.</p>
+    <p class="expect rv"><span class="mono">What happens on the call</span>You meet Jordy Backes, the founder. There is no sales team. You name the work that eats your team's week when you book, and for the next 20 minutes I run an AI employee on that kind of work in front of you. You leave with the map of the first employee worth hiring and what it costs, whether or not we ever work together. No slides, no obligation.</p>
     <div class="gsign rv">
       <p>Your first AI employee is live in your firm within 48 hours of kickoff, or your first month is free.</p>
       <p class="gk">Kickoff means payment received and access provided.</p>
