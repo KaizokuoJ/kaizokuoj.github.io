@@ -60,6 +60,20 @@
   $2,500" -> "of $2,500"; 9.0 expect block de-duped from FAQ 5; "What lands" -> "What
   arrives" (lint vague-verb). NDA-triage 20s/13-check figure NOT shipped: provenance
   unproven as our own build (see review report, truth-gate cards).
+  FOURTH OPERATOR PASS (2026-08-05, email-first + artifact UX; operator direction: the
+  email assistant is the universal need, lead with it; artifacts must be viewable without
+  downloads): hero sub leads with the morning brief + drafted replies (redline/demand
+  letters second; the embedded build video IS the email-assistant build, so proof aligns);
+  Exhibit A is now a 2-message inbox (morning brief 7:02 default-open + redline 2:10;
+  subjects visible without any click); artifact overlays replace forced downloads (native
+  <dialog>: drafted replies authored on sample matters in build-output form, redline
+  preview quoting 3 of the 15 real tracked changes extracted from sample-redline.docx
+  verbatim, risk memo iframed; .docx download demoted to secondary link inside the
+  overlay); [ EXHIBIT C ] answer-on-demand email thread added to the record section
+  (partner question 4:36 -> Mia answer 4:37 w/ source tags, sample matter declared);
+  workday strip nodes 07:00/14:10 gained view links to the same overlays; deep-link
+  #dlg-<id> auto-opens an overlay. Chip/JS fallbacks: no-JS keeps real hrefs (docx
+  download, memo tab).
 -->
 <html lang="en">
 <head>
@@ -67,7 +81,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
 <title>Night Docket. AI employees for law firms.</title>
-<meta name="description" content="Demand letters drafted, contracts redlined in Word, client intake answered. The finished work arrives in your firm's email inbox, ready for attorney review. Your firm's first AI employee: built, run, and maintained for you, live within 48 hours.">
+<meta name="description" content="The morning brief and drafted replies waiting in your inbox before your team sits down, contracts redlined in Word, demand letters drafted from the case file, all ready for attorney review. Your firm's first AI employee: built, run, and maintained for you, live within 48 hours.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20256%20256'%3E%3Cpath%20fill='%23f96a00'%20d='M125.66%205.78A118%20118%200%201%200%20249.18%20148.24A95.5%2095.5%200%201%201%20125.66%205.78Z'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -286,7 +300,79 @@ h2.h-sec{font-size:clamp(1.9rem,3.4vw,2.65rem);line-height:1.15;max-width:22em}
 .rec-list b{font-family:var(--serif);font-weight:600;color:var(--ink);display:block;font-size:1.15rem;margin-bottom:5px}
 .rec-link{display:inline-block;margin-top:24px;font-size:14px;font-weight:500;color:var(--ink)}
 
-/* ---------- day strip (5.0 exhibit B) ---------- */
+/* ---------- inbox exhibit (hero) ---------- */
+.inbox-rows{border-bottom:1px solid var(--hair-soft)}
+.irow{display:grid;grid-template-columns:auto auto minmax(0,1fr) auto auto;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:0;border-left:2px solid transparent;padding:13px 20px 13px 22px;cursor:pointer;font-family:var(--sans);min-height:44px}
+.irow+.irow{border-top:1px solid var(--hair-soft)}
+.irow .idot{width:7px;height:7px;border-radius:50%;background:var(--ink)}
+.irow .if{font-size:13.5px;font-weight:600;color:var(--ink)}
+.irow .is{font-size:13.5px;font-weight:600;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.irow .it{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:var(--ink-4);white-space:nowrap}
+.irow .ichev{font-family:var(--mono);font-size:13px;color:var(--ink-4)}
+.irow:hover .ichev{color:var(--ink)}
+.irow[aria-selected="true"]{background:var(--mint);border-left-color:var(--ink)}
+.irow[aria-selected="true"] .is{color:var(--ink-2);font-weight:400}
+.irow[aria-selected="true"] .idot{background:transparent}
+.irow[aria-selected="true"] .ichev{visibility:hidden}
+.mail-msg{display:none}
+.mail-msg.on{display:block}
+.mail-body p+p{margin-top:10px}
+.chip-btn{cursor:pointer;font-family:var(--sans)}
+/* ---------- overlays ---------- */
+.dlg{border:1px solid var(--hair);border-radius:6px;padding:0;margin:auto;max-width:680px;width:min(94vw,680px);background:var(--paper);color:var(--ink-3)}
+.dlg::backdrop{background:rgba(20,20,20,.55)}
+.dlg-head{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:14px 20px;border-bottom:1px solid var(--hair);position:sticky;top:0;background:var(--paper)}
+.dlg-head .mono{color:var(--ink-3)}
+.dlg-x{background:none;border:1px solid var(--hair);border-radius:3px;width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;flex:none}
+.dlg-x:hover{background:var(--mint)}
+.dlg-body{padding:22px 24px 26px;max-height:72vh;overflow:auto}
+.dlg-note{font-size:13px;line-height:1.55;color:var(--ink-3);margin-top:18px;padding-top:14px;border-top:1px solid var(--hair-soft);max-width:none}
+.dlg-note a{color:var(--ink);font-weight:500}
+/* redline preview */
+.doc{background:#fff;border:1px solid var(--hair);border-radius:4px;padding:22px 24px;font-size:15px;line-height:1.7;color:#1a1a1a}
+.doc .chg{padding:14px 0}
+.doc .chg+.chg{border-top:1px solid var(--hair-soft)}
+.doc .chg-l{font-family:var(--mono);font-size:10.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3);margin-bottom:8px}
+.doc del{color:#b3261e;text-decoration:line-through;text-decoration-thickness:1.2px}
+.doc ins{color:#0b57d0;text-decoration:underline;text-underline-offset:3px}
+.doc .arr{color:var(--ink-4);padding:0 6px}
+/* drafted replies */
+.reply{border:1px solid var(--hair);border-radius:4px;background:#fff;padding:16px 18px}
+.reply+.reply{margin-top:14px}
+.reply .r-meta{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);display:flex;justify-content:space-between;gap:12px;margin-bottom:11px}
+.reply .r-meta .r-tag{color:var(--accent-ink)}
+.r-head{display:grid;gap:5px;padding-bottom:11px;border-bottom:1px solid var(--hair-soft);margin-bottom:11px}
+.r-row{display:grid;grid-template-columns:56px 1fr;gap:10px;align-items:baseline}
+.r-k{font-family:var(--mono);font-size:10px;letter-spacing:.08em;color:var(--ink-3);text-transform:uppercase}
+.r-v{font-size:13.5px;color:var(--ink-2)}
+.r-v.rsub{font-weight:600;color:var(--ink)}
+.reply p{font-size:14.5px;line-height:1.6;color:var(--ink-2);max-width:none}
+.reply p+p{margin-top:8px}
+.reply .src-row{margin-top:12px}
+/* memo iframe */
+.memo-frame{width:100%;height:62vh;border:1px solid var(--hair);border-radius:4px;background:#fff}
+/* thread exhibit (3.0) */
+.thread{max-width:680px;margin-top:72px}
+.thread .mail{box-shadow:0 18px 40px -30px rgba(33,36,66,.22)}
+.tmsg{padding:18px 26px 20px}
+.tmsg+.tmsg{border-top:1px solid var(--hair-soft)}
+.tmsg .t-meta{display:flex;justify-content:space-between;gap:12px;align-items:baseline;margin-bottom:8px}
+.tmsg .t-from{font-size:13.5px;font-weight:600;color:var(--ink)}
+.tmsg .t-from span{color:var(--ink-3);font-weight:400}
+.tmsg .t-time{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;color:var(--ink-4)}
+.t-head{padding-bottom:9px;border-bottom:1px solid var(--hair-soft);margin-bottom:10px}
+.tmsg--mia .t-head{border-bottom-color:var(--hair)}
+.tmsg p{font-size:15px;line-height:1.62;max-width:none}
+.tmsg--mia{background:var(--mint)}
+.src-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;align-items:center}
+.src-l{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.src-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--ink-2);border:1px solid var(--hair);border-radius:3px;padding:6px 10px;background:#fff}
+.src-tag::before{content:"";width:6px;height:6px;background:var(--orange);flex:none}
+/* day strip view links */
+.ds-view{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink);text-decoration:underline;text-underline-offset:3px;cursor:pointer;background:none;border:0;padding:0}
+.ds-view:hover{color:var(--accent-ink)}
+
+/* ---------- day strip (exhibit B) ---------- */
 .daystrip{margin:12px 0 64px}
 .daystrip ol{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:0 44px}
 .daystrip li{border-top:1px solid var(--hair);padding:22px 0 6px;position:relative}
@@ -424,6 +510,12 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
   .inc ul{grid-template-columns:1fr}
   .mail-head,.mail-body{padding-left:18px;padding-right:18px}
   .chip-row{padding-left:18px;padding-right:18px}
+  .irow{padding:12px 18px 12px 16px}
+  .irow .if{display:none}
+  .dlg-body{padding:16px 16px 20px;max-height:78vh}
+  .doc{padding:16px 14px}
+  .tmsg{padding:16px 18px}
+  .memo-frame{height:70vh}
   .lbl{max-width:116px;font-size:10px}
   .chain-track{left:12%;right:12%}
   .claim{padding:24px 0 26px}
@@ -462,14 +554,14 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
     <h1 id="h-hero"><span>Hire an AI employee</span><span>for your law firm.</span></h1>
     <div class="hero-grid">
       <div>
-        <p class="hero-sub">The contract redlines, demand letters, and client intake that eat your team's week: Mia drafts the letters, redlines the contracts in Word, and answers the client intake. The finished work arrives in your email inbox, ready for attorney review. Built, run, and maintained for you, on duty 24/7, live in your firm within 48 hours.</p>
+        <p class="hero-sub">Every morning before your team sits down, Mia has read the firm's inbox: the morning brief lists today's deadlines and new client intake, and the routine replies are already drafted, waiting on a lawyer's send. She also redlines contracts in Word and drafts demand letters from the case file. Any other workflow your firm needs, you email her the request and I build it into her, typically live within 48 hours; requests are unlimited. Built, run, and maintained for you, on duty 24/7.</p>
         <div class="hero-actions">
         <div class="cta-row">
           <a class="btn btn--primary" href="#book">Book the 20 minute demo call</a>
           <a class="btn btn--ghost" href="#record">Watch a build on YouTube</a>
         </div>
         <!-- COPY-DELTA D2: compressed price + guarantee fact line; full locked wording at 4.0 and 9.0 -->
-        <p class="factline">$2,500 a month flat, everything included &middot; live in 48 hours or month one is free</p>
+        <p class="factline">$2,500 a month flat, everything included &middot; unlimited custom workflows &middot; live in 48 hours or month one is free</p>
         <!-- COPY-DELTA D10: hero founder row -->
         <div class="hero-op"><img src="assets/jordy.png" alt="" width="40" height="40"><p><b>Built and run by Jordy Backes.</b> You deal with the builder directly, not a sales team.</p></div>
         </div>
@@ -481,23 +573,57 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
           <span class="mono" style="color:var(--ink-3)">What arrives in your inbox</span>
         </div>
         <figure class="mail">
-          <div class="mail-head">
-            <p class="mail-row"><span class="mail-k">From</span><span class="mail-v">Mia (your AI employee)</span></p>
-            <p class="mail-row"><span class="mail-k">Subject</span><span class="mail-v subj">Redline ready: Merrivale Bluepine NDA</span></p>
+          <div class="inbox-rows" role="tablist" aria-label="Two messages from Mia">
+            <button class="irow" id="row-brief" role="tab" aria-selected="true" aria-controls="msg-brief">
+              <span class="idot" aria-hidden="true"></span>
+              <span class="if">Mia</span>
+              <span class="is">Morning brief: 2 deadlines, 4 new intake, 3 replies drafted</span>
+              <span class="it">7:02 AM</span>
+              <span class="ichev" aria-hidden="true">&rsaquo;</span>
+            </button>
+            <button class="irow" id="row-redline" role="tab" aria-selected="false" aria-controls="msg-redline">
+              <span class="idot" aria-hidden="true"></span>
+              <span class="if">Mia</span>
+              <span class="is">Redline ready: Merrivale Bluepine NDA</span>
+              <span class="it">2:10 PM</span>
+              <span class="ichev" aria-hidden="true">&rsaquo;</span>
+            </button>
           </div>
-          <p class="mail-body">Attached: the contract with tracked changes and a one page risk memo. Two clauses need your call, both flagged. Ready for attorney review.</p>
-          <div class="chip-row">
-            <a class="chip" href="assets/sample-redline.docx" download>
-              <svg width="13" height="15" viewBox="0 0 13 15" aria-hidden="true"><path d="M1 0h7l4 4v10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1Z" fill="none" stroke="#212442" stroke-width="1.2"/><path d="M8 0v4h4" fill="none" stroke="#212442" stroke-width="1.2"/></svg>
-              Merrivale-NDA-redline.docx
-            </a>
-            <a class="chip" href="assets/sample-risk-memo.html" target="_blank" rel="noopener">
-              <svg width="13" height="15" viewBox="0 0 13 15" aria-hidden="true"><path d="M1 0h7l4 4v10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1Z" fill="none" stroke="#212442" stroke-width="1.2"/><path d="M8 0v4h4" fill="none" stroke="#212442" stroke-width="1.2"/></svg>
-              risk-memo (one page)
-            </a>
+          <div class="mail-msg on" id="msg-brief" role="tabpanel" aria-labelledby="row-brief">
+            <div class="mail-head">
+              <p class="mail-row"><span class="mail-k">From</span><span class="mail-v">Mia (your AI employee)</span></p>
+              <p class="mail-row"><span class="mail-k">Subject</span><span class="mail-v subj">Morning brief: 2 deadlines, 4 new intake, 3 replies drafted</span></p>
+            </div>
+            <div class="mail-body">
+              <p>Good morning. The Mercer discovery responses are due at 5:00 PM today and the Alvarez motion reply is due Thursday.</p>
+              <p>4 intake emails came in overnight and 2 of them are worth a call back today, both summarized in the brief. 3 routine replies are drafted and waiting in your Drafts folder for a lawyer's review.</p>
+            </div>
+            <div class="chip-row">
+              <button class="chip chip-btn" data-dlg="dlg-replies">
+                <svg width="13" height="15" viewBox="0 0 13 15" aria-hidden="true"><path d="M1 0h7l4 4v10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1Z" fill="none" stroke="#212442" stroke-width="1.2"/><path d="M8 0v4h4" fill="none" stroke="#212442" stroke-width="1.2"/></svg>
+                Read the 3 drafted replies
+              </button>
+            </div>
+          </div>
+          <div class="mail-msg" id="msg-redline" role="tabpanel" aria-labelledby="row-redline">
+            <div class="mail-head">
+              <p class="mail-row"><span class="mail-k">From</span><span class="mail-v">Mia (your AI employee)</span></p>
+              <p class="mail-row"><span class="mail-k">Subject</span><span class="mail-v subj">Redline ready: Merrivale Bluepine NDA</span></p>
+            </div>
+            <p class="mail-body">Attached: the contract with tracked changes and a one page risk memo. Two clauses need your call, both flagged. Ready for attorney review.</p>
+            <div class="chip-row">
+              <a class="chip" href="assets/sample-redline.docx" data-dlg="dlg-redline" download>
+                <svg width="13" height="15" viewBox="0 0 13 15" aria-hidden="true"><path d="M1 0h7l4 4v10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1Z" fill="none" stroke="#212442" stroke-width="1.2"/><path d="M8 0v4h4" fill="none" stroke="#212442" stroke-width="1.2"/></svg>
+                View the tracked changes
+              </a>
+              <a class="chip" href="assets/sample-risk-memo.html" data-dlg="dlg-memo" target="_blank" rel="noopener">
+                <svg width="13" height="15" viewBox="0 0 13 15" aria-hidden="true"><path d="M1 0h7l4 4v10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1Z" fill="none" stroke="#212442" stroke-width="1.2"/><path d="M8 0v4h4" fill="none" stroke="#212442" stroke-width="1.2"/></svg>
+                risk-memo (one page)
+              </a>
+            </div>
           </div>
         </figure>
-        <p class="mail-cap">The attachments are real. Click them: an actual redline and risk memo from a published build, on a sample contract.</p>
+        <p class="mail-cap">Click any of it. The redline and risk memo are real outputs from a published build, on a sample contract; the brief and replies show the same daily work, on sample matters.</p>
         </div>
 
         <div class="hero-chain">
@@ -526,7 +652,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
 <section aria-labelledby="h-fit">
   <div class="wrap">
     <div class="chap rv"><span class="chap-i">1.0</span><span class="chap-t">The fit</span><span class="chap-r"></span></div>
-    <p class="mirror rv">A small firm rarely has one big problem: it has too many routine NDAs waiting on one paralegal, too many mornings lost to the inbox before billable work starts, and too many engagement letters drafted from scratch every time.</p>
+    <p class="mirror rv">A small firm rarely has one big problem: it has too many routine NDAs waiting on one paralegal, too many mornings that start with answering email instead of billable work, and too many engagement letters drafted from scratch every time.</p>
     <h2 class="h-sec rv" id="h-fit">Built for firms that want work handled. Your lawyers never learn a tool.</h2>
     <div class="fit-grid">
       <div class="fit-col rv">
@@ -590,6 +716,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
           <p class="ds-t">07:00</p>
           <h3>The morning brief</h3>
           <p>In your inbox before you sit down: today's deadlines, new client intake, and drafted replies to the routine mail.</p>
+          <button class="ds-view" data-dlg="dlg-replies">Read 3 drafted replies</button>
         </li>
         <li>
           <p class="ds-t">10:40</p>
@@ -600,6 +727,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
           <p class="ds-t">14:10</p>
           <h3>The redline, returned</h3>
           <p>The contract redline that takes an associate 3 to 6 hours comes back in Word with tracked changes, mostly done. The hours go back to billable matters.</p>
+          <button class="ds-view" data-dlg="dlg-redline">View the tracked changes</button>
         </li>
       </ol>
       <figcaption class="mail-cap">The clock times are illustrative; every deliverable shown is from a published build you can watch below.</figcaption>
@@ -626,6 +754,41 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
         <a class="rec-link" href="https://www.youtube.com/@jordy-agents" target="_blank" rel="noopener">More builds on the channel</a>
       </div>
     </div>
+    <div class="thread rv">
+      <div class="exhibit-tag">
+        <span class="tag">[ Exhibit C ]</span>
+        <span class="mono" style="color:var(--ink-3)">Ask her anything about a matter</span>
+      </div>
+      <figure class="mail">
+        <div class="tmsg">
+          <div class="t-meta">
+            <p class="t-from">Daniel Reyes <span>(Partner) &rarr; Mia</span></p>
+            <p class="t-time">4:36 PM</p>
+          </div>
+          <div class="t-head">
+            <p class="r-row"><span class="r-k">Subject</span><span class="r-v rsub">Alvarez demand letter</span></p>
+          </div>
+          <p>Mia, before I sign off on the Alvarez demand letter: how did you get to $48,900, and why is there no interest on the medical bills?</p>
+        </div>
+        <div class="tmsg tmsg--mia">
+          <div class="t-meta">
+            <p class="t-from">Mia <span>&rarr; Daniel Reyes</span></p>
+            <p class="t-time">4:37 PM</p>
+          </div>
+          <div class="t-head">
+            <p class="r-row"><span class="r-k">Subject</span><span class="r-v rsub">RE: Alvarez demand letter</span></p>
+          </div>
+          <p>The total is the medical invoices in the file, $31,400 across Riverside Imaging and Dr. Osei, plus the $17,500 wage-loss letter from her employer. Interest is left out because your firm-positions file says demand letters go out without interest unless a partner adds it. Every figure in the letter names its source document, so the check is one click.</p>
+          <div class="src-row" aria-label="Sources named in the answer">
+            <span class="src-l">Sources</span>
+            <span class="src-tag">alvarez-invoices.pdf</span>
+            <span class="src-tag">wage-loss letter</span>
+            <span class="src-tag">firm-positions.md</span>
+          </div>
+        </div>
+      </figure>
+      <p class="mail-cap">Your lawyers write to her the way they write to a colleague, and the answer is back in 1 minute, from your firm's own files, before the decision gets made. Sample matter shown; the build above runs the same answers.</p>
+    </div>
   </div>
 </section>
 
@@ -650,11 +813,11 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
       </li>
       <li class="claim rv"><span class="claim-n" aria-hidden="true">04</span>
         <h3>Unlimited requests</h3>
-        <p>Need her to take on a new job, or change how she does one? Email it to her like you would ask any employee. Requests are unlimited, built one at a time, and typically live within 48 hours each. Every change arrives with a short personal video from me: what changed and what it does for your firm. No change orders, no scoping meetings, no hourly meter.</p>
+        <p>Need a new custom workflow for your firm, or a change to one she already runs? Email it to her like you would ask any employee. Requests are unlimited, and I build each one out myself, one at a time, typically live within 48 hours. Every change arrives with a short personal video from me: what changed and what it does for your firm. No change orders, no scoping meetings, no hourly meter.</p>
       </li>
       <li class="claim rv"><span class="claim-n" aria-hidden="true">05</span>
         <h3>One flat number</h3>
-        <p>Usage, infrastructure, maintenance, monitoring: all included. No surprise bills, no credits, no meters running.</p>
+        <p>The $2,500 covers everything on this page: the AI usage, the infrastructure, the monitoring, the maintenance, the upgrades, the unlimited build requests, and me running it all. No surprise bills, no credits, no meters running.</p>
       </li>
       <li class="claim rv"><span class="claim-n" aria-hidden="true">06</span>
         <h3>Your attorneys stay in charge</h3>
@@ -835,6 +998,84 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
 
 </main>
 
+<dialog class="dlg" id="dlg-replies" aria-labelledby="dlg-replies-t">
+  <div class="dlg-head">
+    <span class="mono" id="dlg-replies-t">3 drafted replies &middot; waiting in your Drafts</span>
+    <button class="dlg-x" data-close aria-label="Close"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#212442" stroke-width="1.6"/></svg></button>
+  </div>
+  <div class="dlg-body">
+    <div class="reply">
+      <p class="r-meta"><span>Drafted by Mia</span><span class="r-tag">Waiting in Drafts</span></p>
+      <div class="r-head">
+        <p class="r-row"><span class="r-k">To</span><span class="r-v">Amara Chen</span></p>
+        <p class="r-row"><span class="r-k">Subject</span><span class="r-v rsub">RE: New client inquiry, severance agreement</span></p>
+      </div>
+      <p>Dear Ms. Chen,</p>
+      <p>Thank you for reaching out about the severance agreement you were offered. I can speak with you Thursday between 2:00 PM and 4:00 PM, or Friday morning; reply with the time that suits you and we will send a calendar invitation. If you can, forward the agreement itself and any deadline you were given, so I can read it before the call.</p>
+      <p>Kind regards,<br>Daniel Reyes</p>
+      <div class="src-row" aria-label="Files this draft was written from"><span class="src-l">Drafted from</span><span class="src-tag">Chen intake email</span><span class="src-tag">Daniel Reyes' calendar</span></div>
+    </div>
+    <div class="reply">
+      <p class="r-meta"><span>Drafted by Mia</span><span class="r-tag">Waiting in Drafts</span></p>
+      <div class="r-head">
+        <p class="r-row"><span class="r-k">To</span><span class="r-v">June Park (opposing counsel)</span></p>
+        <p class="r-row"><span class="r-k">Subject</span><span class="r-v rsub">RE: Mercer deposition scheduling</span></p>
+      </div>
+      <p>Dear Ms. Park,</p>
+      <p>Confirmed: June 18 at 10:00 AM at your offices for the Mercer deposition, and the court reporter is booked. The exhibit list follows in a separate email once I sign off on it.</p>
+      <p>Kind regards,<br>Daniel Reyes</p>
+      <div class="src-row" aria-label="Files this draft was written from"><span class="src-l">Drafted from</span><span class="src-tag">Park scheduling email</span><span class="src-tag">court reporter confirmation</span></div>
+    </div>
+    <div class="reply">
+      <p class="r-meta"><span>Drafted by Mia</span><span class="r-tag">Waiting in Drafts</span></p>
+      <div class="r-head">
+        <p class="r-row"><span class="r-k">To</span><span class="r-v">Rosa Alvarez</span></p>
+        <p class="r-row"><span class="r-k">Subject</span><span class="r-v rsub">RE: Your medical records request</span></p>
+      </div>
+      <p>Dear Ms. Alvarez,</p>
+      <p>The records custodian confirmed receipt of our request on Monday and quoted 5 business days for production. We expect your file early next week, and I will send word the day it arrives.</p>
+      <p>Kind regards,<br>Daniel Reyes</p>
+      <div class="src-row" aria-label="Files this draft was written from"><span class="src-l">Drafted from</span><span class="src-tag">records custodian email</span><span class="src-tag">Alvarez matter log</span></div>
+    </div>
+    <p class="dlg-note">Each draft is written from the matter's own emails and files, and the files it used are named under every draft. Sample matters shown, in the form the published builds produce. Every reply waits in the Drafts folder until a lawyer at your firm reads it and clicks Send; Mia never sends to a client.</p>
+  </div>
+</dialog>
+
+<dialog class="dlg" id="dlg-redline" aria-labelledby="dlg-redline-t">
+  <div class="dlg-head">
+    <span class="mono" id="dlg-redline-t">The redline &middot; Merrivale Bluepine NDA</span>
+    <button class="dlg-x" data-close aria-label="Close"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#212442" stroke-width="1.6"/></svg></button>
+  </div>
+  <div class="dlg-body">
+    <div class="doc">
+      <div class="chg">
+        <p class="chg-l">The confidentiality term</p>
+        <p><del>seven (7) years</del><span class="arr">&rarr;</span><ins>three (3) years</ins></p>
+      </div>
+      <div class="chg">
+        <p class="chg-l">The window to return materials</p>
+        <p><del>within five (5) business days</del><span class="arr">&rarr;</span><ins>within ten (10) business days</ins></p>
+      </div>
+      <div class="chg">
+        <p class="chg-l">What counts as confidential</p>
+        <p><del>and whether or not marked, designated, or otherwise identified as confidential</del><span class="arr">&rarr;</span><ins>and that is marked or identified as confidential at the time of disclosure</ins></p>
+      </div>
+    </div>
+    <p class="dlg-note">3 of the 15 tracked changes in the returned document, quoted exactly. This is a real output from a published build, on a sample contract. <a href="assets/sample-redline.docx" download>Download the Word file</a> to review every change in your own Word, or <a href="assets/sample-risk-memo.html" target="_blank" rel="noopener">read the one page risk memo</a> that came with it.</p>
+  </div>
+</dialog>
+
+<dialog class="dlg" id="dlg-memo" aria-labelledby="dlg-memo-t">
+  <div class="dlg-head">
+    <span class="mono" id="dlg-memo-t">The risk memo &middot; one page</span>
+    <button class="dlg-x" data-close aria-label="Close"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#212442" stroke-width="1.6"/></svg></button>
+  </div>
+  <div class="dlg-body">
+    <iframe class="memo-frame" data-src="assets/sample-risk-memo.html" title="The one page risk memo, a real output from a published build"></iframe>
+    <p class="dlg-note">A real output from a published build, on a sample contract. <a href="assets/sample-risk-memo.html" target="_blank" rel="noopener">Open it in its own tab</a> if you prefer.</p>
+  </div>
+</dialog>
+
 <footer class="site">
   <div class="wrap">
     <div class="foot-row">
@@ -889,6 +1130,42 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
     });
   }, {threshold:.5});
   document.querySelectorAll(".chain").forEach(function(el){ co.observe(el); });
+})();
+</script>
+<script>
+(function(){
+  var rows = document.querySelectorAll(".irow");
+  rows.forEach(function(row){
+    row.addEventListener("click", function(){
+      rows.forEach(function(r){
+        var on = r === row;
+        r.setAttribute("aria-selected", on ? "true" : "false");
+        var msg = document.getElementById(r.getAttribute("aria-controls"));
+        if (msg) msg.classList.toggle("on", on);
+      });
+    });
+  });
+
+  var openDlg = function(id){
+    var d = document.getElementById(id);
+    if (!d || !d.showModal) return false;
+    var f = d.querySelector("iframe[data-src]");
+    if (f && !f.src) f.src = f.getAttribute("data-src");
+    d.showModal();
+    return true;
+  };
+  document.querySelectorAll("[data-dlg]").forEach(function(el){
+    el.addEventListener("click", function(e){
+      if (openDlg(el.getAttribute("data-dlg"))) e.preventDefault();
+    });
+  });
+  document.querySelectorAll("dialog.dlg").forEach(function(d){
+    d.querySelectorAll("[data-close]").forEach(function(b){
+      b.addEventListener("click", function(){ d.close(); });
+    });
+    d.addEventListener("click", function(e){ if (e.target === d) d.close(); });
+  });
+  if (location.hash.indexOf("#dlg-") === 0) openDlg(location.hash.slice(1));
 })();
 </script>
 <script>
