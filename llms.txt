@@ -4,7 +4,6 @@ Night Docket is an independent publication about AI employees for law firms. It 
 
 ## Key hubs (placeholders: these sections are being built and fill in over time)
 
-- https://nightdocket.com/learn/ : plain answers to the questions firms ask before adopting AI
 - https://nightdocket.com/workflows/ : one piece of firm work, end to end, with samples
 - https://nightdocket.com/compare/ : tools run head to head on the same legal task
 - https://nightdocket.com/newsletter/ : the email digest and its archive
