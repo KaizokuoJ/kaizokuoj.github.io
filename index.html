@@ -50,7 +50,7 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:92px}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.faq summary::after,.nav,.vplay{transition:none}.vcover:hover .vplay,.vcover:focus-visible .vplay{transform:translate(-50%,-50%)}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.faq summary::after,.nav,.vplay{transition:none}.vcover:hover .vplay,.vcover:focus-visible .vplay{transform:none}}
 @media print{.band--dark,footer.site{background:#fff !important;color:#000}.band--dark h2,.band--dark h3,.band--dark p,.band--dark li{color:#000 !important}.frame,.cal-card,dialog,.nav .btn{display:none !important}html.jsm .rv{opacity:1;transform:none}}
 body{background:var(--paper);color:var(--ink-3);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 img{max-width:100%;height:auto;display:block}
@@ -214,6 +214,93 @@ html:not(.ib-js) .ib-hint{display:none}
 .crop{display:block;background:#fff;padding:15px 22px 12px}
 .crop p,.crop div{max-width:none}
 .crop table{border-spacing:0}
+
+/* ---------- the intake email, open in the hero: the agents' own email, its top and its A to Z ---------- */
+.az{padding:14px 22px 12px;font-family:var(--mail);color:#1f2328}
+.az p{max-width:none}
+.az-head{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:0 11px;align-items:center}
+.az-av{width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;font:600 12px/34px var(--sans);text-align:center}
+.az-from{font-size:14px;line-height:1.35;color:#1f2328}
+.az-from b{display:block;font-weight:600}
+.az-from span{display:block;font-size:12.5px;color:#6e7781}
+.az-time{align-self:start;padding-top:2px;font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--ink-4);white-space:nowrap}
+.ib-msg .az-subj{font-size:18px;font-weight:700;line-height:1.3;color:#1f2328;margin:12px 0 0}
+.az-att{display:inline-flex;align-items:center;gap:8px;margin-top:9px;padding:5px 11px 5px 7px;border:1px solid #d8dee4;border-radius:5px;background:#fafbfc;font-size:13px;line-height:1.3;color:#1f2328}
+.az-att svg{flex:none}
+a.az-att{text-decoration:none;cursor:pointer}
+a.az-att:hover span{text-decoration:underline}
+.az-wait{margin-top:11px;padding:8px 12px 9px;background:#fff4e5;border-left:4px solid #b35900;border-radius:0 5px 5px 0;font-size:14px;line-height:1.45;color:#1f2328}
+.az-wait b{display:block;font-size:11px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:#9a4d00;margin-bottom:1px}
+.az-count{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:12px;border:1px solid #d8dee4;border-radius:8px;background:#f6f8fa}
+.az-count p{margin:0;padding:10px 6px 9px;text-align:center;max-width:none}
+.az-count p + p{border-left:1px solid #d8dee4}
+.az-count b{display:block;font-size:24px;font-weight:700;line-height:1.1;color:#1f2328}
+.az-count b.az-n--o{color:#b35900}
+.az-count span{display:block;padding-top:4px;font-size:11px;font-weight:400;letter-spacing:.5px;text-transform:uppercase;color:#6e7781;line-height:1.3}
+.az-k{margin:16px 0 0;padding-bottom:6px;border-bottom:2px solid #d8dee4;font-size:11.5px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:#1f2328}
+.az-trail{list-style:none}
+.az-trail li{display:grid;grid-template-columns:72px 7px minmax(0,1fr) auto;gap:0 10px;align-items:start;padding:7px 0;border-bottom:1px solid #d8dee4}
+.az-when{font-size:11.5px;line-height:1.35;color:#6e7781}
+.az-when span{display:block}
+.az-dot{width:7px;height:7px;border-radius:50%;background:#1a7f37;margin-top:6px}
+.az-dot--o{background:#b35900}
+.az-what{font-size:13.5px;font-weight:600;line-height:1.38;color:#1f2328}
+.az-clio{justify-self:end;font-size:11px;font-weight:600;line-height:1.3;color:#0b5cad;background:#eef4fb;border-radius:10px;padding:3px 9px;white-space:nowrap}
+.az-foot{margin-top:9px;font-size:12px;line-height:1.45;color:#6e7781}
+.ib-link{font-size:14px;font-weight:500;color:var(--ink)}
+a.sr:focus{position:fixed;top:12px;left:12px;z-index:60;width:auto;height:auto;clip:auto;overflow:visible;padding:10px 16px;background:#fff;border:1px solid var(--ink);border-radius:3px;white-space:normal}
+@media (max-width:640px){.ib-row{padding-top:8px;padding-bottom:9px}.ib-subj{font-size:14.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}}
+@media (min-width:641px){.ib-row{padding-top:8px;padding-bottom:9px}.ib-hint{padding-top:7px;padding-bottom:7px}}
+@media (max-width:640px){
+  .az{padding:14px 16px 12px}
+  .ib-msg .az-subj{font-size:17px}
+  .az-day{display:none}
+  .az-trail li{grid-template-columns:7px minmax(0,1fr);grid-template-areas:"dot when" ". what" ". clio";gap:1px 10px;padding:8px 0}
+  .az-dot{grid-area:dot;margin-top:5px}
+  .az-when{grid-area:when}
+  .az-when span{display:inline}
+  .az-when span + span::before{content:" \00b7  "}
+  .az-what{grid-area:what;font-size:14.5px}
+  .az-clio{grid-area:clio;justify-self:start;margin-top:4px}
+}
+
+/* ---------- 2.1: the pipeline in Clio, stage by stage ---------- */
+.pipe{margin-top:30px;padding:22px 24px 20px;background:#fff;border:1px solid var(--hair);border-radius:8px}
+.pipe p{max-width:none}
+.pipe-k{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+.pipe-row{list-style:none;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0 24px;margin-top:16px;align-items:start}
+.pipe-st{display:flex;flex-direction:column}
+.pipe-why{font-size:13px;line-height:1.35;color:var(--ink-3);min-height:3.6em;display:flex;align-items:flex-end;padding-bottom:7px}
+.pipe-box{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;min-height:56px;padding:8px 8px;border:1px solid var(--hair);border-radius:6px;background:var(--mint);font-weight:600;font-size:14.5px;line-height:1.25;color:var(--ink)}
+.pipe-st + .pipe-st .pipe-box::before{content:"\2192";position:absolute;left:-21px;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:15px;color:var(--ink-4)}
+.pipe-rem{margin-top:10px;padding:7px 9px 8px 10px;border:1px solid var(--hair-soft);border-left:3px solid var(--orange);border-radius:0 4px 4px 0;background:#fff;font-size:12.5px;line-height:1.4;color:var(--ink-2)}
+.pipe-rem b{display:block;margin-top:3px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:400;color:var(--accent-ink)}
+.pipe-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:4px 24px}
+.pipe-0{font-size:14px;color:var(--ink-2)}
+.pipe-0 b{font-family:var(--serif);font-size:1.45rem;font-weight:400;color:var(--ink);margin-right:5px}
+.st-art--top{grid-row:1 / span 6}
+.art-body .you{padding:7px 10px;background:var(--m-wait);border-left:3px solid var(--m-orange);margin-bottom:12px}
+.art-body .qs{margin:3px 0 0 18px}
+.art-body .qs li + li{margin-top:6px}
+.art-body .qs span{display:block;font-size:12.5px;color:var(--m-grey);line-height:1.45}
+.tpost--in{background:#fafbfc}
+.tav--p{background:var(--orange);color:var(--dark)}
+.nw{white-space:nowrap}
+.panel-more{margin-top:30px;padding-top:18px;border-top:1px solid var(--hair-soft);max-width:none}
+.panel-more a{font-weight:600;font-size:15.5px;color:var(--ink)}
+.person .pl a{color:var(--ink)}
+@media (max-width:899px){
+  .pipe-row{grid-template-columns:1fr;gap:0;margin-top:12px}
+  .pipe-st{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);grid-template-areas:"box why" "rem rem";gap:0 14px;align-items:center;padding-bottom:18px}
+  .pipe-st:last-child{padding-bottom:0}
+  .pipe-box{grid-area:box;min-height:42px;padding:6px 8px;font-size:14px}
+  .pipe-why{grid-area:why;min-height:0;padding-bottom:0;font-size:13.5px}
+  .pipe-rem{grid-area:rem;margin-top:8px}
+  .pipe-st + .pipe-st .pipe-box::before{content:"\2193";left:50%;top:-18px;transform:translateX(-50%)}
+}
+@media (max-width:640px){
+  .pipe{padding:18px 14px 16px;margin-top:24px}
+}
 
 /* ---------- the review chain ---------- */
 .hero-chain{margin-top:72px}
@@ -469,12 +556,12 @@ h2.h-sec{font-size:clamp(1.9rem,3.4vw,2.65rem);line-height:1.15;max-width:22em}
 .frame iframe{position:absolute;inset:0;display:block;width:100%;height:100%;border:0}
 .vcover{position:absolute;inset:0;display:block;color:#fff;text-decoration:none;cursor:pointer;background:#141414}
 .vcover img{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;object-fit:cover}
-.vplay{position:absolute;left:50%;top:50%;width:68px;height:48px;transform:translate(-50%,-50%);filter:drop-shadow(0 4px 14px rgba(0,0,0,.35));transition:transform .2s ease}
+.vplay{position:absolute;right:7%;bottom:20%;width:68px;height:48px;transform:none;filter:drop-shadow(0 4px 14px rgba(0,0,0,.35));transition:transform .2s ease}
 .vplay svg{display:block;width:100%;height:100%}
 .vplay-bg{fill:#f00;transition:fill .2s ease}
 .vdur{position:absolute;right:10px;bottom:10px;padding:3px 6px;border-radius:4px;background:rgba(0,0,0,.8);color:#fff;font:500 13px/1.25 var(--sans);letter-spacing:.02em;pointer-events:none}
 .vcover:hover .vplay-bg,.vcover:focus-visible .vplay-bg{fill:#d40000}
-.vcover:hover .vplay,.vcover:focus-visible .vplay{transform:translate(-50%,-50%) scale(1.06)}
+.vcover:hover .vplay,.vcover:focus-visible .vplay{transform:scale(1.06)}
 .vcover:focus-visible{outline:none}
 .vcover:focus-visible::after{content:"";position:absolute;inset:6px;border:3px solid var(--orange);border-radius:5px;pointer-events:none}
 .chip-row{display:flex;flex-wrap:wrap;gap:10px;padding:16px 0 0}
@@ -524,7 +611,7 @@ h2.h-sec{font-size:clamp(1.9rem,3.4vw,2.65rem);line-height:1.15;max-width:22em}
 .calendly-inline-widget:empty::before{content:"LOADING THE CALENDAR";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--ink-3)}
 .cal-fall{padding:14px 22px;border-top:1px solid var(--hair);font-size:14px;color:var(--ink-3);max-width:none}
 .cal-fall a{color:var(--ink);font-weight:500}
-.expect{margin-top:36px;font-size:15.5px;line-height:1.65;color:var(--paper-inv);max-width:62ch}
+.expect{margin-top:30px;font-size:15.5px;line-height:1.65;color:var(--paper-inv);max-width:62ch}
 .expect .mono{display:block;color:var(--orange);margin-bottom:10px}
 .expect-list{list-style:none;display:grid;gap:8px}
 .expect-list li{position:relative;padding-left:20px;color:var(--paper-inv)}
@@ -638,7 +725,6 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
   .rc-dot{top:3px;left:-8px;transform:none}
   .rc .stamp{display:none}
   .trust-row{justify-content:flex-start;gap:16px}
-  .wf-links{display:none}
   .panel{padding:26px 16px 28px;margin-top:40px;border-radius:6px}
   .panel + .panel{margin-top:44px}
   .st{padding-left:40px}
@@ -667,6 +753,33 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
 }
 @media (max-width:359px){
 }
+
+/* ---------- layout B: the inbox beside the headline ---------- */
+@media (min-width:1120px){
+  .hero--b .hero-grid{grid-template-columns:minmax(0,10fr) minmax(0,11fr);grid-template-areas:"head ex" "body ex";grid-template-rows:auto 1fr;gap:0 56px;margin-top:4px}
+  .hero--b .hero-head{grid-area:head}
+  .hero--b .hero-body{grid-area:body}
+  .hero--b .hero-ex{grid-area:ex}
+  .hero--b h1{font-size:clamp(2.2rem,3.5vw,2.7rem)}
+  .hero--b .hero-sub{margin-top:20px}
+  .hero--b .cta-row{margin-top:22px;gap:2px 14px}
+  .hero--b .factline{margin-top:14px}
+  .hero--b .hero-op{margin-top:12px}
+}
+@media (max-width:1119px){
+  .hero--b .hero-grid{margin-top:0}
+  .hero--b .hero-exhibit{margin-top:22px}
+}
+@media (max-width:640px){
+  .hero--b .hero-exhibit{margin-top:10px}
+}
+
+/* ---------- layout C: B, with one paragraph and the second action as a link ---------- */
+.hero-more{display:inline-flex;align-items:center;min-height:48px;font:500 15.5px/1.3 var(--sans);color:var(--ink);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.hero-more:hover{text-decoration-thickness:2px}
+@media (pointer:fine){.hero-more{min-height:40px}}
+@media (max-width:1119px){.hero-actions .hero-more{order:4;margin-top:6px}}
+@media (max-width:640px){.hero-actions .hero-more{order:6}}
 </style>
 </head>
 <body>
@@ -688,64 +801,87 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
 <main>
 
 <!-- ======================= HERO ======================= -->
-<section class="hero" aria-labelledby="h-hero">
+<section class="hero hero--b" aria-labelledby="h-hero">
   <div class="wrap">
-    <p class="eyebrow">AI agents for law firms</p>
-    <h1 id="h-hero" class="vc-h1"><span>Your lawyers never learn an AI tool.</span><span>The drafted documents just show up in their email.</span></h1>
-    <p class="hero-key"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#212442" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#f96a00" stroke-width="1.9"/></svg>Nothing about how your team works changes.</p>
     <div class="hero-grid">
-      <div>
+      <div class="hero-head">
+        <p class="eyebrow">AI agents for law firms</p>
+        <h1 id="h-hero" class="vc-h1"><span>Your lawyers never learn an AI tool.</span><span>The drafted documents just show up in their email.</span></h1>
+        <p class="hero-key"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#212442" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#f96a00" stroke-width="1.9"/></svg>Nothing about how your team works changes.</p>
+      </div>
+      <div class="hero-body">
         <div class="hero-sub">
-          <p>A chat window asks every lawyer to get good at prompting on top of a full caseload. The AI agents I build work for your whole firm, and I run them:</p>
-          <ul class="hero-list">
-            <li>Your team emails them the work the way they would email a colleague</li>
-            <li>The drafted documents come back review-ready, in the thread and in Word</li>
-            <li>Whatever the work is at your firm, I build them to run it</li>
-          </ul>
+          <p>A chat window asks every lawyer to get good at prompting on top of a full caseload. The AI agents I build work for your whole firm. If your team can hand the work to a colleague by email, I can build an agent to prepare it.</p>
         </div>
         <div class="hero-actions">
           <div class="cta-row">
             <a class="btn btn--primary" href="#book">Book the 30 minute demo call</a>
-            <a class="btn btn--ghost" href="#work">See what the agents do, step by step</a>
+            <a class="hero-more" href="#work">See what the agents do, step by step&nbsp;&darr;</a>
           </div>
           <p class="factline"><span class="fk">[ The terms ]</span><span class="fv">Flat 5,000 USD a month. First agent live within 48 hours of kickoff, or month one is refunded.</span></p>
           <div class="hero-op"><img src="assets/jordy.png" alt="" width="40" height="40"><p><b>Built and run by Jordy Backes.</b> The setup is one person&rsquo;s job, and that person is me: I run the agents and keep them working.</p></div>
         </div>
       </div>
-      <div>
+      <div class="hero-ex">
         <div class="hero-exhibit" id="sample-email">
           <div class="exhibit-tag">
             <span class="mono">What arrives in your team&rsquo;s inbox <span class="ex-note">(examples, not the whole menu)</span></span>
             <span class="sample">Sample</span>
           </div>
-          <figure class="mail ib" aria-label="A sample inbox with three emails from the firm&rsquo;s agents: the morning brief, a contract redline ready for review, and a retainer filled in for the lawyer&rsquo;s OK. Click an email to open it.">
+          <figure class="mail ib" aria-label="A sample inbox with three emails from the firm&rsquo;s agents: an engagement letter ready for the lawyer&rsquo;s OK, with the intake behind it from A to Z, a contract redline ready for review, and the morning brief. Click an email to open it.">
             <p class="ib-hint"><svg width="13" height="16" viewBox="0 0 13 16" aria-hidden="true"><path d="M1.6 1.4v11.3l2.9-2.6 2 4.6 2.1-.9-2-4.5h4L1.6 1.4Z" fill="#fff" stroke="#212442" stroke-width="1.3" stroke-linejoin="round"/></svg><span><span class="ib-hint-fine">Click</span><span class="ib-hint-touch">Tap</span> an email to open it</span></p>
             <div class="ib-rows" role="tablist" aria-label="Three sample emails" aria-orientation="vertical">
-              <button class="ib-row" type="button" id="ib-tab-brief" role="tab" aria-selected="true" aria-controls="ib-brief" tabindex="0">
+              <button class="ib-row" type="button" id="ib-tab-intake" role="tab" aria-selected="true" aria-controls="ib-intake" tabindex="0">
                 <span class="ib-dot" aria-hidden="true"></span>
-                <span class="ib-from">Inbox agent</span>
-                <span class="ib-time">7:02 AM</span>
-                <span class="ib-subj">Morning brief: 2 deadlines, 3 replies drafted, 1 needs you today</span>
+                <span class="ib-from">Intake agent</span>
+                <span class="ib-time"><svg class="ib-clip" width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><path d="M10.6 4.4 5.3 9.7a1.6 1.6 0 0 0 2.3 2.3l5.6-5.6a3 3 0 0 0-4.2-4.2L3.3 7.9a4.4 4.4 0 0 0 6.2 6.2l4.6-4.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>4:14 AM</span>
+                <span class="ib-subj">Claire Donnelly, family: engagement letter ready for your OK</span>
                 <span class="ib-chev" aria-hidden="true">&rsaquo;</span>
               </button>
               <button class="ib-row is-unread" type="button" id="ib-tab-redline" role="tab" aria-selected="false" aria-controls="ib-redline" tabindex="-1">
                 <span class="ib-dot" aria-hidden="true"></span>
                 <span class="ib-from">Drafting agent</span>
-                <span class="ib-time"><svg class="ib-clip" width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><path d="M10.6 4.4 5.3 9.7a1.6 1.6 0 0 0 2.3 2.3l5.6-5.6a3 3 0 0 0-4.2-4.2L3.3 7.9a4.4 4.4 0 0 0 6.2 6.2l4.6-4.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>2:10 PM</span>
+                <span class="ib-time"><svg class="ib-clip" width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><path d="M10.6 4.4 5.3 9.7a1.6 1.6 0 0 0 2.3 2.3l5.6-5.6a3 3 0 0 0-4.2-4.2L3.3 7.9a4.4 4.4 0 0 0 6.2 6.2l4.6-4.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Thu 2:10 PM</span>
                 <span class="ib-subj">Redline ready: Merrivale Bluepine NDA</span>
                 <span class="ib-chev" aria-hidden="true">&rsaquo;</span>
               </button>
-              <button class="ib-row is-unread" type="button" id="ib-tab-intake" role="tab" aria-selected="false" aria-controls="ib-intake" tabindex="-1">
+              <button class="ib-row" type="button" id="ib-tab-brief" role="tab" aria-selected="false" aria-controls="ib-brief" tabindex="-1">
                 <span class="ib-dot" aria-hidden="true"></span>
-                <span class="ib-from">Intake agent</span>
-                <span class="ib-time"><svg class="ib-clip" width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><path d="M10.6 4.4 5.3 9.7a1.6 1.6 0 0 0 2.3 2.3l5.6-5.6a3 3 0 0 0-4.2-4.2L3.3 7.9a4.4 4.4 0 0 0 6.2 6.2l4.6-4.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>3:15 PM</span>
-                <span class="ib-subj">Retainer for Aline Moreau, ready for your OK</span>
+                <span class="ib-from">Inbox agent</span>
+                <span class="ib-time">Thu 7:02 AM</span>
+                <span class="ib-subj">Morning brief: 2 deadlines, 3 replies drafted, 1 needs you today</span>
                 <span class="ib-chev" aria-hidden="true">&rsaquo;</span>
               </button>
             </div>
-            <div class="ib-msg" id="ib-brief" role="tabpanel" aria-labelledby="ib-tab-brief">
+            <div class="ib-msg" id="ib-intake" role="tabpanel" aria-labelledby="ib-tab-intake">
+              <!-- ===== THE TOP OF THE INTAKE EMAIL ===== -->
+              <div class="az">
+                <div class="az-head">
+                  <span class="az-av" aria-hidden="true">IA</span>
+                  <p class="az-from"><b>Intake agent</b><span>To: Joanne Pryce, head of family law</span></p>
+                  <p class="az-time"><span class="az-day">Fri Oct 23, </span>4:14 AM</p>
+                </div>
+                <p class="crop-title az-subj" role="heading" aria-level="2">Claire Donnelly, family: engagement letter ready for your OK</p>
+                <a class="az-att" href="assets/sample-intake-email.html" data-dlg="dlg-intake"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x=".5" y=".5" width="15" height="15" rx="2.5" fill="#185abd"/><path d="M3.6 4.6l1.4 6.8 1.9-5.2 1.1 3.4 1.1-3.4 1.9 5.2 1.4-6.8" fill="none" stroke="#fff" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round" transform="translate(-.4 0)"/></svg><span>Engagement letter, Claire Donnelly.docx</span></a>
+                <p class="az-wait"><b>Waiting for your review and approval</b>You: Open the letter, review it, and reply Approved or the changes you want to make.</p>
+                <div class="az-count"><p><b class="az-n--o">1</b><span>left for you</span></p><p><b>1</b><span>reminder</span></p><p><b>0</b><span>pipeline updates by your team</span></p></div>
+                <p class="az-k">What happened, A to Z</p>
+                <ol class="az-trail">
+                  <li><span class="az-when"><span>Mon Oct 19</span><span>9:14 AM</span></span><span class="az-dot" aria-hidden="true"></span><span class="az-what">Picked up from the web form</span><span class="az-clio">Clio: New inquiry</span></li>
+                  <li><span class="az-when"><span>Mon Oct 19</span><span>9:15 AM</span></span><span class="az-dot" aria-hidden="true"></span><span class="az-what">Conflict check: no match</span></li>
+                  <li><span class="az-when"><span>Mon Oct 19</span><span>2:40 PM</span></span><span class="az-dot" aria-hidden="true"></span><span class="az-what">Callback booked for Tuesday, October 20, 11:00&nbsp;AM</span><span class="az-clio">Clio: Callback booked</span></li>
+                  <li><span class="az-when"><span>Wed Oct 21</span><span>8:00 AM</span></span><span class="az-dot az-dot--o" aria-hidden="true"></span><span class="az-what">Reminder to the intake team: no call recorded in Clio</span></li>
+                  <li><span class="az-when"><span>Wed Oct 21</span><span>10:05 AM</span></span><span class="az-dot" aria-hidden="true"></span><span class="az-what">Consultation booked with you, Thu Oct 22, 2&nbsp;pm</span><span class="az-clio">Clio: Consultation booked</span></li>
+                  <li><span class="az-when"><span>Fri Oct 23</span><span>4:06 AM</span></span><span class="az-dot" aria-hidden="true"></span><span class="az-what">Consultation call made Thu Oct 22, 2&nbsp;pm; your note Fri Oct 23, 4:06&nbsp;AM</span><span class="az-clio">Clio: Consultation call made</span></li>
+                  <li><span class="az-when"><span>Fri Oct 23</span><span>4:06 AM</span></span><span class="az-dot az-dot--o" aria-hidden="true"></span><span class="az-what">Engagement letter filled, waiting on you</span></li>
+                </ol>
+              </div>
+              <!-- ===== END OF THE TOP OF THE INTAKE EMAIL ===== -->
+              <div class="ib-more"><a class="btn btn--ink" href="assets/sample-intake-email.html" data-dlg="dlg-intake">Open the full email</a><a class="ib-link" href="#intake">How the intake works, step by step&nbsp;&darr;</a></div>
+            </div>
+            <div class="ib-msg" id="ib-brief" role="tabpanel" aria-labelledby="ib-tab-brief" hidden>
               <!-- ===== THE TOP OF THE MORNING BRIEF ===== -->
-              <div class="crop ib-brief" style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;color:#26262a;line-height:1.45;font-size:15px"><p class="crop-title" role="heading" aria-level="2" style="font-size:19px;font-weight:700;color:#26262a;line-height:1.3;margin:6px 0 8px 0;">Morning brief, Wednesday, September 23</p><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;">
+              <div class="crop ib-brief" style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;color:#26262a;line-height:1.45;font-size:15px"><p class="crop-title" role="heading" aria-level="2" style="font-size:19px;font-weight:700;color:#26262a;line-height:1.3;margin:6px 0 8px 0;">Morning brief, Thursday, October 22</p><table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;">
 <tr><td style="padding:0;">
   <table role="presentation" data-ux="outcome" width="576" cellpadding="0" cellspacing="0" style="width:100%;min-width:100%;border:1px solid #e3e3df;border-radius:8px;background:#fafaf8;">
   <tr>
@@ -801,28 +937,6 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
               <!-- ===== END OF THE TOP OF THE REDLINE EMAIL ===== -->
               <div class="ib-more"><a class="btn btn--ink" href="assets/sample-redline.html" data-dlg="dlg-redline">See the tracked changes</a></div>
             </div>
-            <div class="ib-msg" id="ib-intake" role="tabpanel" aria-labelledby="ib-tab-intake" hidden>
-              <div class="ir" style="font-family:-apple-system,Segoe UI,Helvetica,Arial,sans-serif;">
-                <p class="crop-title" role="heading" aria-level="2" style="font-size:19px;font-weight:700;color:#26262a;line-height:1.3;margin:6px 0 8px 0;">Retainer for Aline Moreau, ready for your OK</p>
-                <p class="ir-k ir-k--wait">Step 5 &middot; waits on you</p>
-                <ol class="ir-steps ir-now">
-                  <li class="ir-st">
-                    <p class="ir-t"><span class="agent">Agent</span>Your retainer template, filled in from your consultation note</p>
-                    <p class="ir-att"><svg class="ib-clip" width="13" height="13" viewBox="0 0 16 16" aria-hidden="true"><path d="M10.6 4.4 5.3 9.7a1.6 1.6 0 0 0 2.3 2.3l5.6-5.6a3 3 0 0 0-4.2-4.2L3.3 7.9a4.4 4.4 0 0 0 6.2 6.2l4.6-4.6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg><span>Retainer for Aline Moreau (Word)</span></p>
-                    <p class="ir-wait"><span class="odot" aria-hidden="true"></span><span>Review it, then reply &ldquo;Approved&rdquo;, or the change.</span></p>
-                  </li>
-                </ol>
-                <p class="ir-k">Steps 1 to 4 &middot; done</p>
-                <ol class="ir-steps ir-done">
-                  <li class="ir-st"><p class="ir-t"><span class="agent">Agent</span>New inquiry picked up from your booking page</p><p class="ir-pipe"><span class="pchip"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.2 4.6A4.3 4.3 0 0 0 2.4 3.4M1.8 7.4a4.3 4.3 0 0 0 7.8 1.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round"/><path d="M2.3 1.2v2.5h2.5M9.7 10.8V8.3H7.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Pipeline updated in Clio Grow: added to Intake</span></p></li>
-                  <li class="ir-st"><p class="ir-t"><span class="agent">Agent</span>Checked against your open matters in Clio: no possible conflict found</p></li>
-                  <li class="ir-st"><p class="ir-t"><span class="agent">Agent</span>Callback brief emailed to whoever makes the call, for Monday 2:00&nbsp;PM</p></li>
-                  <li class="ir-st ir-st--p"><p class="ir-t"><span class="odot" aria-hidden="true"></span>Whoever made the callback replied &ldquo;Fit&rdquo;; the agent booked your consultation</p><p class="ir-pipe"><span class="pchip"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.2 4.6A4.3 4.3 0 0 0 2.4 3.4M1.8 7.4a4.3 4.3 0 0 0 7.8 1.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round"/><path d="M2.3 1.2v2.5h2.5M9.7 10.8V8.3H7.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Pipeline updated in Clio Grow: Intake &rarr; Consultation booked</span></p></li>
-                </ol>
-                <p class="ir-next">After your OK, whoever sends your retainers sends it for her signature, as today. Once she signs, the matter opens in Clio.</p>
-              </div>
-              <div class="ib-more"><a class="btn btn--ink" href="#intake">See the intake workflow, step by step &darr;</a></div>
-            </div>
           </figure>
         </div>
       </div>
@@ -838,7 +952,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
       <div class="trust-row">
         <p class="trustline">
           <svg width="15" height="18" viewBox="0 0 15 18" aria-hidden="true"><path d="M7.5 1 14 3.5v5.2c0 4-2.8 6.8-6.5 8.3C3.8 15.5 1 12.7 1 8.7V3.5L7.5 1Z" fill="none" stroke="#212442" stroke-width="1.4"/><path d="M4.6 8.8l2 2 3.8-4" fill="none" stroke="#f96a00" stroke-width="1.5"/></svg>
-          <span><b>The agents run in our own Microsoft Azure,</b> or in your firm&rsquo;s own if you prefer. Every action the agents take is logged, and you can see the log any time.</span>
+          <span><b>The agents run in our own Microsoft Azure,</b> or in your firm&rsquo;s own if you prefer. Every action the agents take is logged, and you can see the log any time. <a href="#h-data">How your client data is kept</a></span>
         </p>
       </div>
     </div>
@@ -850,7 +964,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
   <div class="wrap">
     <div class="chap rv"><span class="chap-i">1.0</span><span class="chap-t">The fit</span><span class="chap-r"></span></div>
     <h2 class="h-sec rv" id="h-fit">Built for firms where the routine work eats the billable day.</h2>
-    <p class="fit-lead rv">The work your team would hand the agents is already piling up: too many hours keeping the intake pipeline clean and up to date, too many callbacks and unsigned retainers chased by hand, and too many demand letters written from scratch every time.</p>
+    <p class="fit-lead rv">The work your team would hand the agents is already piling up: too many hours keeping the intake pipeline clean and up to date, too many callbacks and unsigned engagement letters chased by hand, and too many demand letters written from scratch every time.</p>
     <div class="fit-grid">
       <div class="fit-col rv">
         <h3>This is for you if</h3>
@@ -880,17 +994,28 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
     <p class="wk-intro rv">Two examples, not the menu. I find the recurring work that costs your team the most hours each week, and we start there.</p>
     <p class="wk-note rv">Both are based on real sample runs, with fictional names. At kickoff, each is built around your firm: your steps, your templates, your jurisdiction, and what stays a personal touch or runs on its own.</p>
     <ul class="wf-links rv" aria-label="The two examples">
-      <li><a class="wf-link" href="#intake"><span class="wf-i">2.1</span><span class="wf-x"><span class="wf-t">Intake</span><span class="wf-s">From the first inquiry to the signed retainer</span></span><span class="wf-arrow" aria-hidden="true">&darr;</span></a></li>
+      <li><a class="wf-link" href="#intake"><span class="wf-i">2.1</span><span class="wf-x"><span class="wf-t">Intake</span><span class="wf-s">From the first inquiry to the signed engagement letter</span></span><span class="wf-arrow" aria-hidden="true">&darr;</span></a></li>
       <li><a class="wf-link" href="#drafting"><span class="wf-i">2.2</span><span class="wf-x"><span class="wf-t">Drafting</span><span class="wf-s">From the client&rsquo;s file to the signed demand letter</span></span><span class="wf-arrow" aria-hidden="true">&darr;</span></a></li>
     </ul>
 
     <!-- ===== 2.1 INTAKE ===== -->
     <article class="panel rv" id="intake" aria-labelledby="h-intake">
       <div class="sub-chap"><span class="chap-i">2.1</span><span class="chap-t">Intake</span><span class="chap-r"></span></div>
-      <h3 class="panel-h" id="h-intake">From the first inquiry to the signed retainer</h3>
+      <h3 class="panel-h" id="h-intake">From the first inquiry to the signed engagement letter</h3>
       <div class="strip">
-        <p class="strip-a"><span class="agent">Agent</span><span><b>The intake agent does the admin,</b> from the first inquiry to the open matter.</span></p>
-        <p class="strip-p"><span class="odot" aria-hidden="true"></span><span><b>Your team keeps the personal touch:</b> every call and every email to a client. If you want, the agent drafts those emails for your team to review and send.</span></p>
+        <p class="strip-a"><span class="agent">Agent</span><span><b>The intake agents do the admin,</b> from the first inquiry to the open matter, and keep every card in Clio current.</span></p>
+        <p class="strip-p"><span class="odot" aria-hidden="true"></span><span><b>Your team&rsquo;s part:</b> the calls, a one-line reply after each call, one consult note, one OK, one Send. The agents only write to people at your firm, so any email to a client is drafted for your team to send.</span></p>
+      </div>
+      <div class="pipe">
+        <div class="pipe-head"><p class="pipe-k">Your intake pipeline in Clio, kept current by the agents</p><p class="pipe-0"><b>0</b> cards moved by hand in the sample run</p></div>
+        <ol class="pipe-row">
+          <li class="pipe-st"><span class="pipe-why">An inquiry arrives</span><span class="pipe-box">New inquiry</span></li>
+          <li class="pipe-st"><span class="pipe-why">The callback is booked</span><span class="pipe-box">Callback booked</span><span class="pipe-rem">No call recorded: your team is reminded<b>3 missed callbacks caught in the sample run</b></span></li>
+          <li class="pipe-st"><span class="pipe-why">Your team&rsquo;s one line after the call</span><span class="pipe-box">Consultation booked</span></li>
+          <li class="pipe-st"><span class="pipe-why">The lawyer&rsquo;s consult note</span><span class="pipe-box">Consultation call made</span></li>
+          <li class="pipe-st"><span class="pipe-why">Your team sends the letter</span><span class="pipe-box">Engagement letter</span><span class="pipe-rem">Still unsigned: your team is reminded<b>2 unsigned letters chased in the sample run</b></span></li>
+          <li class="pipe-st"><span class="pipe-why">The signed letter comes back</span><span class="pipe-box">Hired</span></li>
+        </ol>
       </div>
       <div class="ex-grid">
         <div>
@@ -901,86 +1026,83 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
           <ol class="flow flow--io">
             <li class="st">
               <div class="st-h"><span class="agent">Agent</span><p class="st-t">Every new inquiry picked up, from each of your sources</p></div>
-              <p class="st-d">From your website form, booking page, shared inboxes and phone notes.</p>
-              <p class="st-pipe"><span class="pchip"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.2 4.6A4.3 4.3 0 0 0 2.4 3.4M1.8 7.4a4.3 4.3 0 0 0 7.8 1.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round"/><path d="M2.3 1.2v2.5h2.5M9.7 10.8V8.3H7.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Pipeline updated in Clio Grow: added to Intake</span></p>
+              <p class="st-d">Your website form and calendar, your shared inboxes and reception&rsquo;s phone notes.</p>
+              <p class="st-pipe"><span class="pchip"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.2 4.6A4.3 4.3 0 0 0 2.4 3.4M1.8 7.4a4.3 4.3 0 0 0 7.8 1.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round"/><path d="M2.3 1.2v2.5h2.5M9.7 10.8V8.3H7.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Clio: New inquiry</span></p>
             </li>
             <li class="st">
-              <div class="st-h"><span class="agent">Agent</span><p class="st-t">Every inquiry checked against your open matters in Clio first</p></div>
-              <div class="person"><p class="who"><span class="odot" aria-hidden="true"></span>A possible conflict: nothing is drafted, and a person decides</p></div>
+              <div class="st-h"><span class="agent">Agent</span><p class="st-t">Checked for conflicts in Clio, before anything is written</p></div>
+              <p class="st-d">Every inquiry in an area your firm handles is checked. One outside your practice areas gets a call sheet with a referral, for the decline call.</p>
+              <div class="person"><p class="who"><span class="odot" aria-hidden="true"></span>A possible conflict: on hold for the head of the group, with the managing partner copied</p><p class="pl">Nothing is drafted, the agents tell no one else, and the card in Clio shows only the name.</p></div>
             </li>
             <li class="st">
-              <div class="st-h st-h--out"><span class="agent">Agent</span><p class="st-t">A callback brief, emailed to whoever makes the call</p></div>
-              <figure class="st-art">
+              <div class="st-h"><span class="agent">Agent</span><p class="st-t">A callback brief, emailed to whoever makes the call</p></div>
+              <p class="st-d">What they need, from their own message, and the questions your intake rules ask.</p>
+              <p class="st-pipe"><span class="pchip"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.2 4.6A4.3 4.3 0 0 0 2.4 3.4M1.8 7.4a4.3 4.3 0 0 0 7.8 1.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round"/><path d="M2.3 1.2v2.5h2.5M9.7 10.8V8.3H7.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Clio: Callback booked</span></p>
+              <figure class="st-art st-art--top">
                 <div class="art">
-                  <div class="art-top"><span class="ml-app">Outlook</span><span class="sample">Illustration</span></div>
-                  <div class="art-head">
-                    <p class="mail-row"><span class="mail-k">From</span><span class="mail-v">Intake agent</span></p>
-                    <p class="mail-row"><span class="mail-k">Subject</span><span class="mail-v subj">Callback brief: Aline Moreau, Monday 2:00 PM</span></p>
-                  </div>
+                  <div class="art-top"><span class="ml-app">Outlook &middot; another potential client</span><span class="sample">From the sample run</span></div>
                   <div class="art-body">
+                    <p class="you"><b>You:</b> Call her Monday at 9:00&nbsp;AM at <span class="nw">(614) 555-0177</span>. Ask the five questions below, then reply to this mail with one line.</p>
                     <dl>
-                      <div><dt>Who they are</dt><dd>Aline Moreau, booked on your booking page</dd></div>
-                      <div><dt>What they need</dt><dd>A parenting schedule after a separation. Nothing is agreed in writing yet.</dd></div>
-                      <div><dt>Any date they named</dt><dd>None</dd></div>
-                      <div><dt>What to ask on the callback</dt><dd><ul><li>Whether anything is agreed, in writing or not</li><li>Where the children live now</li><li>Whether another lawyer has acted for her</li></ul></dd></div>
+                      <div><dt>What Kayla Brennan needs</dt><dd>A written parenting schedule for her two children (9 and 6). She and her ex split up last year and have been going week to week, and that is no longer working.</dd></div>
+                      <div><dt>What to ask on the call &middot; question 3 of 5</dt><dd><ol class="qs"><li value="3">Which county she and the children live in.<span>The family group takes central and western Ohio; western counties go to Nathan Oyelaran in Dayton first.</span></li></ol></dd></div>
                     </dl>
-                    <p class="reply">After the call, reply &ldquo;Fit&rdquo; or &ldquo;Not a fit&rdquo;.</p>
                   </div>
                 </div>
               </figure>
             </li>
             <li class="st st--p">
-              <div class="st-h"><p class="st-t">Fit or not, by reply after the callback</p></div>
+              <div class="st-h"><p class="st-t">After the call: one line, in Teams or by email</p></div>
               <div class="person">
-                <p class="who"><span class="odot" aria-hidden="true"></span>Whoever makes the callback</p>
-                <p class="pl">Calls them at the time they booked</p>
-                <p class="pl ar">Replies &ldquo;Fit&rdquo; or &ldquo;Not a fit&rdquo; in Outlook or Teams</p>
-                <p class="pl ar">&ldquo;Fit&rdquo;: the agent books the lawyer&rsquo;s consultation.</p>
-                <p class="pl ar">&ldquo;Not a fit&rdquo;: the agent prepares the call sheet for the decline call.</p>
+                <p class="who"><span class="odot" aria-hidden="true"></span>Whoever made the call</p>
+                <p class="pl">Replies &ldquo;1 fit&rdquo;, &ldquo;2 not a fit&rdquo; or &ldquo;3 not called yet&rdquo;</p>
+                <p class="pl ar">&ldquo;1 fit&rdquo; books the lawyer&rsquo;s consultation in Clio&rsquo;s calendar, and the lawyer gets a consult prep by email.</p>
               </div>
-              <p class="st-pipe"><span class="pchip"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.2 4.6A4.3 4.3 0 0 0 2.4 3.4M1.8 7.4a4.3 4.3 0 0 0 7.8 1.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round"/><path d="M2.3 1.2v2.5h2.5M9.7 10.8V8.3H7.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Pipeline updated in Clio Grow: Intake &rarr; Consultation booked, or Not hired</span></p>
-              <p class="stall"><b>If it stalls</b>No &ldquo;Fit&rdquo; or &ldquo;Not a fit&rdquo; by the end of the booked time: your intake team is reminded in Outlook or Teams.</p>
-              <figure class="st-art">
+              <p class="st-pipe"><span class="pchip"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.2 4.6A4.3 4.3 0 0 0 2.4 3.4M1.8 7.4a4.3 4.3 0 0 0 7.8 1.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round"/><path d="M2.3 1.2v2.5h2.5M9.7 10.8V8.3H7.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Clio: Consultation booked</span></p>
+              <p class="stall"><b>If it stalls</b>No call recorded by the next morning: your intake team is reminded in Teams, each morning until a call is recorded.</p>
+              <figure class="st-art st-art--top">
                 <div class="art">
-                  <div class="art-top"><span class="ml-app">Teams &middot; Intake channel</span><span class="sample">Illustration</span></div>
+                  <div class="art-top"><span class="ml-app">Teams &middot; Intake channel</span><span class="sample">Sample</span></div>
                   <div class="tpost">
                     <span class="tav" aria-hidden="true">IA</span>
-                    <div><p class="tname">Intake agent<span>Monday</span></p><p class="ttext">Moreau (family): the callback booked for 2:00 PM today has no &ldquo;Fit&rdquo; or &ldquo;Not a fit&rdquo; yet. Reply once you have called.</p></div>
+                    <div><p class="tname">Intake agent<span>Wednesday, 8:00 AM</span></p><p class="ttext">Donnelly (family) booked a callback for Tuesday, October 20, 11:00 AM. No call is recorded in Clio. Reply 1 fit (group, fee type, the consultation&rsquo;s date, time and lawyer), 2 not a fit (reason), 3 not called yet (when).</p></div>
+                  </div>
+                  <div class="tpost tpost--in">
+                    <span class="tav tav--p" aria-hidden="true">TV</span>
+                    <div><p class="tname">Terrence Vaughn<span>Wednesday</span></p><p class="ttext">1 fit, family, flat fee, consultation Thursday, October 22, 2 pm, Joanne Pryce</p></div>
+                  </div>
+                  <div class="tpost tpost--in">
+                    <span class="tav" aria-hidden="true">IA</span>
+                    <div><p class="tname">Intake agent<span>Wednesday</span></p><p class="ttext">Noted: 1 fit, family, flat fee, consultation Thursday, October 22, 2 pm, Joanne Pryce.</p></div>
                   </div>
                 </div>
               </figure>
             </li>
             <li class="st">
-              <div class="st-h"><span class="agent">Agent</span><p class="st-t">Your retainer template, filled in from the lawyer&rsquo;s consultation note</p></div>
-              <p class="st-d">The fee and the deposit, taken from the note.</p>
+              <div class="st-h"><span class="agent">Agent</span><p class="st-t">Your engagement letter template, filled in from the lawyer&rsquo;s consult note</p></div>
+              <p class="rule"><b>The rule</b>Anything the note doesn&rsquo;t say stays blank for the lawyer. Nothing is guessed.</p>
+              <p class="st-pipe"><span class="pchip"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.2 4.6A4.3 4.3 0 0 0 2.4 3.4M1.8 7.4a4.3 4.3 0 0 0 7.8 1.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round"/><path d="M2.3 1.2v2.5h2.5M9.7 10.8V8.3H7.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Clio: Consultation call made</span></p>
               <div class="person">
                 <p class="who"><span class="odot" aria-hidden="true"></span>The lawyer</p>
-                <p class="pl">Reviews it</p>
+                <p class="pl">Reviews it, from the <a href="#sample-email">email at the top of this page</a></p>
                 <p class="pl ar">Replies &ldquo;Approved&rdquo;, or the change, in Outlook</p>
               </div>
               <div class="person">
-                <p class="who"><span class="odot" aria-hidden="true"></span>Whoever sends your retainers today</p>
-                <p class="pl">Sends it for your client&rsquo;s signature, as today</p>
+                <p class="who"><span class="odot" aria-hidden="true"></span>Your intake team</p>
+                <p class="pl">Reviews the cover email, drafted in your shared mailbox, and presses Send</p>
               </div>
-              <p class="st-pipe"><span class="pchip"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.2 4.6A4.3 4.3 0 0 0 2.4 3.4M1.8 7.4a4.3 4.3 0 0 0 7.8 1.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round"/><path d="M2.3 1.2v2.5h2.5M9.7 10.8V8.3H7.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Pipeline updated in Clio Grow: Consultation booked &rarr; Retainer sent</span></p>
-              <p class="stall"><b>If it stalls</b>Still unsigned after the days you set: your intake team is reminded in Outlook or Teams, and follows up with the client.</p>
-              <figure class="st-art">
-                <div class="art">
-                  <div class="art-top"><span class="ml-app">Teams &middot; Intake channel</span><span class="sample">Illustration</span></div>
-                  <div class="tpost">
-                    <span class="tav" aria-hidden="true">IA</span>
-                    <div><p class="tname">Intake agent<span>Friday</span></p><p class="ttext">Moreau (family) was sent the retainer on Wednesday. No signature is recorded yet: time to follow up with the client.</p></div>
-                  </div>
-                </div>
-              </figure>
+              <p class="st-pipe"><span class="pchip"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.2 4.6A4.3 4.3 0 0 0 2.4 3.4M1.8 7.4a4.3 4.3 0 0 0 7.8 1.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round"/><path d="M2.3 1.2v2.5h2.5M9.7 10.8V8.3H7.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Clio: Engagement letter</span></p>
+              <p class="stall"><b>If it stalls</b>Still unsigned after the days you set: your intake team is reminded in Teams.</p>
             </li>
             <li class="st">
-              <div class="st-h"><span class="agent">Agent</span><p class="st-t">Once the client signs: the matter opens in Clio</p><span class="done">Done</span></div>
-              <p class="st-pipe"><span class="pchip"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.2 4.6A4.3 4.3 0 0 0 2.4 3.4M1.8 7.4a4.3 4.3 0 0 0 7.8 1.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round"/><path d="M2.3 1.2v2.5h2.5M9.7 10.8V8.3H7.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Pipeline updated in Clio Grow: Retainer sent &rarr; Hired</span></p>
+              <div class="st-h"><span class="agent">Agent</span><p class="st-t">Once the signed letter is back: the card moves to Hired, and the matter opens in Clio</p><span class="done">Done</span></div>
+              <p class="st-d">Every step left a note on the card, so the whole intake is in one place, and your monthly intake numbers can be counted straight from Clio.</p>
+              <p class="st-pipe"><span class="pchip"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M10.2 4.6A4.3 4.3 0 0 0 2.4 3.4M1.8 7.4a4.3 4.3 0 0 0 7.8 1.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round"/><path d="M2.3 1.2v2.5h2.5M9.7 10.8V8.3H7.2" fill="none" stroke="#4a4e69" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>Clio: Hired</span></p>
             </li>
           </ol>
         </div>
       </div>
+      <p class="panel-more"><a href="/videos/client-intake-video/">Watch this intake run, A to Z, in the build video&nbsp;&rarr;</a></p>
     </article>
 
     <!-- ===== 2.2 DRAFTING ===== -->
@@ -1138,7 +1260,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
         <p class="step-i">Step 03</p>
         <h3>Built one at a time</h3>
         <p>A new agent starts once your team uses the one before it.</p>
-        <p>Changes and new requests: send them by email, and I build one every 48 business hours.</p>
+        <p>Changes and new requests: send them by email, and I build one of them every 48 business hours.</p>
       </div>
     </div>
   </div>
@@ -1149,7 +1271,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
   <div class="wrap">
     <div class="chap rv"><span class="chap-i">5.0</span><span class="chap-t">The retainer</span><span class="chap-r"></span></div>
     <h2 class="h-sec rv" id="h-buys">What 5,000 USD a month actually buys.</h2>
-    <p class="lead rv">Your intake pipeline kept up to date, no callback or unsigned retainer forgotten, and the drafts written, month after month. Building the agents, watching them and keeping them current is my job, not your firm&rsquo;s.</p>
+    <p class="lead rv">Your intake pipeline kept up to date, no callback or unsigned engagement letter forgotten, and the drafts written, month after month. Building the agents, watching them and keeping them current is my job, not your firm&rsquo;s.</p>
     <ul class="buys-top" aria-label="Included in the retainer">
       <li class="buy rv"><svg class="buy-ck" width="26" height="26" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#212442" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#f96a00" stroke-width="1.9"/></svg><h3>The work comes back ready for review</h3><p>Your team forwards the work from its own Outlook. The draft comes back in the same thread.</p></li>
       <li class="buy rv" style="--d:80ms"><svg class="buy-ck" width="26" height="26" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#212442" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#f96a00" stroke-width="1.9"/></svg><h3>Your best lawyer&rsquo;s standard, for everyone</h3><p>Each agent drafts from the letters and agreements your best lawyer in that area has already signed. A first-year gets the same draft a partner would.</p></li>
@@ -1162,7 +1284,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
         <li><svg width="14" height="14" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#6b7089" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#6b7089" stroke-width="1.9"/></svg><span><b>A memory of your firm:</b> grows with use, kept for your firm only</span></li>
         <li><svg width="14" height="14" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#6b7089" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#6b7089" stroke-width="1.9"/></svg><span><b>Tuned on your real work:</b> the first 2 weeks of each agent</span></li>
         <li><svg width="14" height="14" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#6b7089" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#6b7089" stroke-width="1.9"/></svg><span><b>Better AI, as it ships:</b> your agents get it, with security updates and maintenance included</span></li>
-        <li><svg width="14" height="14" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#6b7089" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#6b7089" stroke-width="1.9"/></svg><span><b>Upgrades you never asked for:</b> built from how your firm uses the agents</span></li>
+        <li><svg width="14" height="14" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#6b7089" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#6b7089" stroke-width="1.9"/></svg><span><b>Upgrades you never had to ask for:</b> built from how your firm uses the agents</span></li>
         <li><svg width="14" height="14" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#6b7089" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#6b7089" stroke-width="1.9"/></svg><span><b>A weekly email from me:</b> how often your team acted on each agent&rsquo;s work, and how often your lawyers approved its drafts without changes</span></li>
         <li><svg width="14" height="14" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#6b7089" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#6b7089" stroke-width="1.9"/></svg><span><b>Every action logged:</b> you can see the log any time</span></li>
         <li><svg width="14" height="14" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#6b7089" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#6b7089" stroke-width="1.9"/></svg><span><b>Your attorneys approve every legal document before it goes out</b></span></li>
@@ -1188,7 +1310,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
           <ul class="sheet-list">
             <li>Cancel with 30 days&rsquo; notice.</li>
             <li class="own">Everything I build for you is yours to keep, forever.</li>
-            <li>If you ever leave, you keep the playbooks, the files and everything the agents produced. No lock-in.</li>
+            <li>If you ever leave, you keep the playbooks the agents work from, the files and everything the agents produced. No lock-in.</li>
           </ul>
         </div>
         <div class="gbox">
@@ -1230,7 +1352,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
         <p class="op-name">Jordy Backes <span>&middot; Founder, Night Docket</span></p>
         <p class="op-bio"><b>I have built software and systems for businesses since 2017.</b> <span>I founded and ran a software engineering agency for 4.5 years, and since 2026 I work exclusively on AI agents for law firms.</span></p>
         <p class="op-early">Your firm would be among the first on this retainer.</p>
-        <p class="op-quote">You now have AI agents, and I make sure they <em>actually work</em>.</p>
+        <p class="op-quote">Your firm gets AI agents, and I make sure they <em>actually work</em>.</p>
         <div class="op-quotes rv">
           <p class="op-label">From my previous agency. Different service, same operator.</p>
           <div class="opq"><blockquote>&ldquo;We have seen a noticeable impact on our business. This was easy ROI and the results reached far beyond just making our money back. I feel like I finally have time to focus on my company.&rdquo;</blockquote><p class="opq-attr"><img src="assets/rec-matti.png" alt="" width="40" height="40" class="opq-face opq-face--m"><span><b>Matti Lamminsalo</b> &middot; Founder, Ivalo</span></p></div>
@@ -1245,10 +1367,10 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
       <div class="rec-one rv">
         <!-- ===== THE BUILD VIDEO ===== -->
         <div class="frame" id="build-video" data-embed="live">
-          <a class="vcover" href="https://www.youtube.com/watch?v=CVgDd4TOr3Q" target="_blank" rel="noopener" role="button" data-embed-src="https://www.youtube-nocookie.com/embed/CVgDd4TOr3Q?autoplay=1" aria-label="Play the latest build, start to finish, 39 minutes">
-            <img src="assets/build-video-thumbnail.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+          <a class="vcover" href="https://www.youtube.com/watch?v=cE3cBCxkwvI" target="_blank" rel="noopener" role="button" data-embed-src="https://www.youtube-nocookie.com/embed/cE3cBCxkwvI?autoplay=1" aria-label="Play the latest build, start to finish, 53 minutes">
+            <img src="assets/build-video-thumbnail-intake.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
             <span class="vplay" aria-hidden="true"><svg width="68" height="48" viewBox="0 0 68 48"><path class="vplay-bg" d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"/><path d="M45 24 27 14v20z" fill="#fff"/></svg></span>
-            <span class="vdur" aria-hidden="true">39:29</span>
+            <span class="vdur" aria-hidden="true">53:09</span>
           </a>
         </div>
         <div class="chip-row">
@@ -1290,10 +1412,10 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
         <div class="a">
           <ul>
             <li>5,000 USD a month, flat.</li>
+            <li>Your total is 5,000 USD a month, unless you approve more Azure use in your own environment.</li>
             <li>In our Azure: AI usage is included.</li>
             <li>In your firm&rsquo;s own Azure: Microsoft bills your firm directly for what runs there for you, including my Microsoft 365 seat and the Cloud PC I work from in your environment; I credit up to 250 USD of that bill each month; anything above that only with your approval.</li>
-            <li>Your total is 5,000 USD a month, unless you approve more Azure use in your own environment.</li>
-            <li>Month to month, cancel with 30 days&rsquo; notice.</li>
+                        <li>Month to month, cancel with 30 days&rsquo; notice.</li>
           </ul>
         </div>
       </details>
@@ -1346,6 +1468,14 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
       <h2 id="h-book">Find out what your firm&rsquo;s first AI agent should do.</h2>
       <p class="book-sub">30 minutes, with me.</p>
     </div>
+    <div class="expect rv"><span class="mono">What happens on the call</span>
+      <ul class="expect-list">
+        <li>You meet Jordy Backes, the founder. There is no sales team.</li>
+        <li>When you book, you can name a few recurring tasks that take the most hours.</li>
+        <li>On the call: the agent workflow built from them, and the emails and documents it drafted, then your questions.</li>
+        <li>After the call, you get it in writing: what I would build first, and why.</li>
+      </ul>
+    </div>
     <div class="cal-card rv">
       <div class="cal-head">
         <span class="mono cal-dot">The 30 minute call</span>
@@ -1356,14 +1486,6 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
       <p class="cal-fall">Calendar not loading? <a href="https://calendly.com/backes-jordy/20min?utm_source=landing" target="_blank" rel="noopener">Open the booking page</a></p>
     </div>
     <p class="cal-alt rv">Or <a href="https://www.linkedin.com/in/jordybackes/" target="_blank" rel="noopener">message me on LinkedIn</a>.</p>
-    <div class="expect rv"><span class="mono">What happens on the call</span>
-      <ul class="expect-list">
-        <li>You meet Jordy Backes, the founder. There is no sales team.</li>
-        <li>When you book, you can name a few recurring tasks that take the most hours.</li>
-        <li>On the call: the agent workflow built from them, and the emails and documents it drafted, then your questions.</li>
-        <li>After the call, you get it in writing: what I would build first, and why.</li>
-      </ul>
-    </div>
     <div class="gsign rv">
       <p>Your first AI agent is live in your firm within 48 hours of kickoff, or your first month is refunded.</p>
       <p class="gk">Kickoff means payment received and access provided.</p>
@@ -1374,6 +1496,13 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
 
 </main>
 
+<dialog class="dlg" id="dlg-intake" aria-labelledby="dlg-intake-t">
+  <div class="dlg-head">
+    <span class="mono" id="dlg-intake-t">The full email, with the letter&rsquo;s terms &middot; Sample</span>
+    <span class="dlg-r"><a class="dlg-tab" href="assets/sample-intake-email.html" target="_blank" rel="noopener">Open in its own tab</a><button class="dlg-x" type="button" data-close aria-label="Close"><svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M1 1l10 10M11 1L1 11" stroke="#212442" stroke-width="1.6"/></svg></button></span>
+  </div>
+  <iframe class="letter-frame" name="intake-frame" data-src="assets/sample-intake-email.html" title="The intake agents&rsquo; email to the lawyer, a sample"></iframe>
+</dialog>
 <dialog class="dlg" id="dlg-redline" aria-labelledby="dlg-redline-t">
   <div class="dlg-head">
     <span class="mono" id="dlg-redline-t">The redline &middot; Merrivale Bluepine NDA &middot; Sample</span>
@@ -1512,10 +1641,13 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
       pick(rows[j], true);
     });
   });
-  /* back from a full email (a reload on some phones): the email that was open opens again */
+  /* a link to the sample inbox opens the intake email, the one the page's text is about */
+  document.querySelectorAll('a[href="#sample-email"]').forEach(function(a){ a.addEventListener("click", function(){ pick(rows[0], false); }); });
+  /* back from a full email (a reload on some phones): the email that was open opens again, on a back or forward visit only */
   try {
     var kept = sessionStorage.getItem("ib-open"), was = kept && document.getElementById(kept);
-    if (was && rows.indexOf(was) > 0) pick(was, false);
+    var nv = window.performance && performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+    if (was && rows.indexOf(was) > 0 && nv && nv.type === "back_forward") pick(was, false);
   } catch (err) {}
 })();
 </script>
