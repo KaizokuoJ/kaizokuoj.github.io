@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="color-scheme" content="light">
 <title>Night Docket. AI agents for law firms.</title>
-<meta name="description" content="Your lawyers never learn an AI tool. The drafted documents just show up in their email. AI agents for law firms, built and run by Jordy Backes.">
+<meta name="description" content="Your lawyers never learn an AI tool. The drafted documents just show up in their email. AI agents, Claude setup and training, and AI consulting for law firms, built and run by Jordy Backes.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20256%20256'%3E%3Cpath%20fill='%23f96a00'%20d='M125.66%205.78A118%20118%200%201%200%20249.18%20148.24A95.5%2095.5%200%201%201%20125.66%205.78Z'/%3E%3C/svg%3E">
 <link rel="canonical" href="https://nightdocket.com/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://nightdocket.com/">
 <meta property="og:title" content="Night Docket. AI agents for law firms.">
-<meta property="og:description" content="Your lawyers never learn an AI tool. The drafted documents just show up in their email. AI agents for law firms, built and run by Jordy Backes.">
+<meta property="og:description" content="Your lawyers never learn an AI tool. The drafted documents just show up in their email. AI agents, Claude setup and training, and AI consulting for law firms, built and run by Jordy Backes.">
 <meta property="og:image" content="https://nightdocket.com/assets/og-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -780,6 +780,127 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
 @media (pointer:fine){.hero-more{min-height:40px}}
 @media (max-width:1119px){.hero-actions .hero-more{order:4;margin-top:6px}}
 @media (max-width:640px){.hero-actions .hero-more{order:6}}
+
+/* ---------- the read page's hero: the headline full width, the inbox beside the paragraph ---------- */
+.hero--v .hero-grid{margin-top:26px}
+@media (min-width:1120px){
+  .hero--v h1{font-size:clamp(2.15rem,4.4vw,3.05rem)}
+  .hero--v .hero-grid{grid-template-columns:minmax(0,10fr) minmax(0,12fr);gap:24px 56px}
+}
+.hero--v .cta-row{flex-direction:column;align-items:flex-start;gap:12px}
+.hero--v .factline{margin-top:26px}
+@media (max-width:1119px){
+  .hero--v .hero-grid{margin-top:22px}
+  .hero--v .hero-sub{order:1;margin-top:0}
+  .hero--v .hero-actions .btn--primary{order:2;margin-top:22px}
+  .hero--v .hero-exhibit{order:3;margin-top:34px}
+  .hero--v .hero-actions .btn--ghost{order:4;margin-top:26px}
+  .hero--v .factline{order:5;margin-top:22px}
+  .hero--v .hero-op{order:6;margin-top:18px}
+}
+@media (max-width:640px){
+  .hero--v .hero-grid{margin-top:18px}
+  .hero--v .hero-sub{font-size:17px}
+}
+
+/* ---------- the other two services: one line under the headline ---------- */
+.also{margin-top:14px;font-size:15.5px;line-height:1.55;color:var(--ink-3);max-width:none}
+.also a{color:var(--ink);font-weight:600;text-underline-offset:3px;text-decoration-thickness:1px}
+.also a:hover{text-decoration-thickness:2px}
+@media (max-width:640px){
+  .also{margin-top:12px;font-size:15px}
+  .hero--v .hero-op{order:0;margin-top:0}
+  .hero--v .hero-sub{margin-top:18px}
+}
+
+/* ---------- the three services: their own section ---------- */
+.ways{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:44px}
+.way{display:flex;flex-direction:column;background:#fff;border:1px solid var(--hair);border-radius:8px;padding:26px 26px 24px;scroll-margin-top:96px}
+.way--main{border:2px solid var(--ink);padding:25px 25px 23px}
+.way-tag{align-self:flex-start;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--ink);border:1px solid var(--ink);border-radius:3px;padding:3px 7px;margin-bottom:14px;line-height:1.35}
+.way-tag--q{background:transparent;color:var(--ink-3);border-color:var(--hair)}
+.way h3{font-family:var(--serif);font-weight:400;font-size:1.55rem;line-height:1.2;color:var(--ink)}
+.way-d{margin-top:10px;font-size:15.5px;line-height:1.6;color:var(--ink-2);max-width:none}
+.way ul{list-style:none;margin-top:16px;display:grid;gap:9px}
+.way ul li{position:relative;padding-left:20px;font-size:15px;line-height:1.5;color:var(--ink-2)}
+.way ul li::before{content:"";position:absolute;left:2px;top:8px;width:7px;height:7px;background:var(--ink)}
+.way-for{margin-top:auto;padding-top:20px;font-size:14.5px;line-height:1.5;color:var(--ink-2);max-width:none}
+.way-for b{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:400;color:var(--accent-ink);margin-bottom:3px}
+.ways-foot{margin-top:34px;display:flex;flex-wrap:wrap;align-items:center;gap:18px 28px}
+.ways-foot p{font-family:var(--serif);font-size:1.3rem;line-height:1.4;color:var(--ink);max-width:34em}
+@media (max-width:899px){
+  .ways{grid-template-columns:1fr;gap:14px;margin-top:32px}
+  .ways-foot .btn{width:100%}
+}
+
+/* ---------- the two examples: their numbers first, every step one click away ---------- */
+.outs{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:22px}
+.outs li{background:#fff;border:1px solid var(--hair-soft);border-radius:6px;padding:14px 16px 13px}
+.outs b{display:block;font-family:var(--serif);font-weight:400;font-size:2rem;line-height:1.05;color:var(--ink)}
+.outs span{display:block;margin-top:5px;font-size:14px;line-height:1.4;color:var(--ink-2)}
+.outs li.outs--warm{background:var(--warm);border-color:var(--warm-rule)}
+.outs li.outs--warm b{color:var(--accent-ink)}
+.outs-k{margin-top:10px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+details.more{margin-top:24px;border-top:1px solid var(--hair-soft)}
+details.more>summary{list-style:none;cursor:pointer;display:inline-flex;align-items:center;gap:10px;min-height:48px;padding-top:8px;font:600 15.5px/1.3 var(--sans);color:var(--ink)}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::after{content:"+";font-family:var(--mono);font-size:17px;line-height:1;color:var(--ink-3)}
+details.more[open]>summary::after{content:"\2212"}
+details.more>summary:hover{text-decoration:underline;text-underline-offset:4px}
+@media (max-width:640px){
+  .outs{grid-template-columns:1fr;gap:8px}
+  .outs li{display:flex;align-items:baseline;gap:12px;padding:10px 14px}
+  .outs b{font-size:1.5rem;min-width:1.5em}
+  .outs span{margin-top:0}
+}
+
+/* ---------- the terms: the fee is set on the call ---------- */
+.price--w{font-size:clamp(2.2rem,4.4vw,3.3rem)}
+
+/* ---------- third version: a leaner hero ---------- */
+.hero--v .hero-sub{font-size:18px;line-height:1.6;max-width:30em}
+.hero--v .ib-more .btn--ink{background:none;border:0;color:var(--ink);padding:0;min-height:44px;width:auto;justify-content:flex-start;font:600 15px/1.3 var(--sans);text-decoration:underline;text-underline-offset:4px;text-decoration-thickness:1px}
+.hero--v .ib-more .btn--ink:hover{background:none;text-decoration-thickness:2px}
+.hero--v .ib-more{padding-top:8px;padding-bottom:8px}
+.hero-exhibit .exhibit-tag .sample{border:0;padding:0;font-size:12px;letter-spacing:.06em}
+.cta-note{font-size:14.5px;line-height:1.5;color:var(--ink-3);max-width:30em}
+.hero--v .cta-row{gap:10px}
+.hero--v .hero-op{margin-top:26px;gap:14px}
+.hero--v .hero-op img{width:68px;height:68px}
+.hero--v .hero-op p{font-size:14.5px;color:var(--ink-2)}
+.svc-line{margin-top:22px;font-size:14.5px;line-height:1.5;color:var(--ink-3);max-width:none}
+.svc-line b{color:var(--ink);font-weight:600;margin-right:4px}
+.svc-line--low{margin-top:24px;padding-top:16px;border-top:1px solid var(--hair);max-width:32em}
+.svc-line a{color:var(--ink);font-weight:600;text-underline-offset:3px;text-decoration-thickness:1px;white-space:nowrap}
+.svc-line a:hover{text-decoration-thickness:2px}
+.svc-sep{margin:0 7px;color:var(--ink-4)}
+.ex-cap{margin-top:12px;font-size:14.5px;line-height:1.5;color:var(--ink-3);max-width:none}
+.trustline{font-size:15.5px}
+.fit-for{margin-top:16px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent-ink);max-width:none}
+.fit-for + .fit-lead{margin-top:14px}
+.way-for{padding-top:16px}
+.terms3{list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.band--dark .term{background:var(--paper);border:1px solid var(--hair);border-radius:6px;padding:28px 28px 26px}
+.band--dark .term h3{font-family:var(--serif);font-weight:400;font-size:1.6rem;line-height:1.2;color:var(--ink)}
+.band--dark .term p{margin-top:12px;font-size:15.5px;line-height:1.6;color:var(--ink-2);max-width:none}
+.band--dark .term b{color:var(--ink);font-weight:600}
+.band--dark .term p.term-k{margin-top:8px;font-size:13.5px;color:var(--ink-3)}
+@media (max-width:899px){.terms3{grid-template-columns:1fr;gap:14px}}
+@media (max-width:1119px){
+  .hero--v .hero-sub{order:1;margin-top:0;max-width:34em}
+  .hero--v .hero-actions .btn--primary{order:2;margin-top:22px}
+  .hero--v .cta-note{order:3;margin-top:10px}
+  .hero--v .hero-op{order:4;margin-top:22px}
+  .hero--v .svc-line{order:5;margin-top:18px}
+  .hero--v .hero-exhibit{order:6;margin-top:34px}
+}
+@media (max-width:640px){
+  .hero--v .hero-sub{font-size:17px;margin-top:16px}
+  .hero--v .hero-op img{width:64px;height:64px}
+  .svc-line b{display:block;margin:0 0 3px}
+  .hero--v .hero-op{order:0;margin-top:0}
+  .hero--v .ib-subj{white-space:normal;overflow:visible;text-overflow:clip}
+}
 </style>
 </head>
 <body>
@@ -801,31 +922,31 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
 <main>
 
 <!-- ======================= HERO ======================= -->
-<section class="hero hero--b" aria-labelledby="h-hero">
+<section class="hero hero--v" aria-labelledby="h-hero">
   <div class="wrap">
-    <div class="hero-grid">
-      <div class="hero-head">
-        <p class="eyebrow">AI agents for law firms</p>
+    <div class="hero-top">
+      <p class="eyebrow">AI agents for law firms</p>
         <h1 id="h-hero" class="vc-h1"><span>Your lawyers never learn an AI tool.</span><span>The drafted documents just show up in their email.</span></h1>
-        <p class="hero-key"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#212442" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#f96a00" stroke-width="1.9"/></svg>Nothing about how your team works changes.</p>
-      </div>
+        <p class="hero-key"><svg width="20" height="20" viewBox="0 0 18 18" aria-hidden="true"><path d="M3.4 9.6l3.5 3.5 7.7-8" fill="none" stroke="#f96a00" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>Nothing about how your team works changes.</p>
+    </div>
+    <div class="hero-grid">
       <div class="hero-body">
         <div class="hero-sub">
-          <p>A chat window asks every lawyer to get good at prompting on top of a full caseload. The AI agents I build work for your whole firm. If your team can hand the work to a colleague by email, I can build an agent to prepare it.</p>
+          <p>I build AI agents for your whole firm. Your team emails them the work, as they would a colleague, and the draft comes back in the same thread, in Word.</p>
         </div>
         <div class="hero-actions">
           <div class="cta-row">
             <a class="btn btn--primary" href="#book">Book the 30 minute demo call</a>
-            <a class="hero-more" href="#work">See what the agents do, step by step&nbsp;&darr;</a>
+            <p class="cta-note">When you book, you can name a few recurring tasks. On the call, you see the agent workflow built from them.</p>
           </div>
-          <p class="factline"><span class="fk">[ The terms ]</span><span class="fv">Flat 5,000 USD a month. First agent live within 48 hours of kickoff, or month one is refunded.</span></p>
-          <div class="hero-op"><img src="assets/jordy.png" alt="" width="40" height="40"><p><b>Built and run by Jordy Backes.</b> The setup is one person&rsquo;s job, and that person is me: I run the agents and keep them working.</p></div>
+          <div class="hero-op"><img src="assets/jordy.png" alt="" width="56" height="56"><p><b>Built and run by Jordy Backes.</b> The setup is one person&rsquo;s job, and that person is me: I run the agents and keep them working.</p></div>
+          <p class="svc-line svc-line--low"><b>Rather use Claude yourselves?</b> <a href="#claude">Claude setup and training</a><span class="svc-sep" aria-hidden="true">&middot;</span><a href="#consulting">AI consulting</a></p>
         </div>
       </div>
       <div class="hero-ex">
         <div class="hero-exhibit" id="sample-email">
           <div class="exhibit-tag">
-            <span class="mono">What arrives in your team&rsquo;s inbox <span class="ex-note">(examples, not the whole menu)</span></span>
+            <span class="mono">What arrives in your team&rsquo;s inbox</span>
             <span class="sample">Sample</span>
           </div>
           <figure class="mail ib" aria-label="A sample inbox with three emails from the firm&rsquo;s agents: an engagement letter ready for the lawyer&rsquo;s OK, with the intake behind it from A to Z, a contract redline ready for review, and the morning brief. Click an email to open it.">
@@ -864,20 +985,9 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
                 <p class="crop-title az-subj" role="heading" aria-level="2">Claire Donnelly, family: engagement letter ready for your OK</p>
                 <a class="az-att" href="assets/sample-intake-email.html" data-dlg="dlg-intake"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect x=".5" y=".5" width="15" height="15" rx="2.5" fill="#185abd"/><path d="M3.6 4.6l1.4 6.8 1.9-5.2 1.1 3.4 1.1-3.4 1.9 5.2 1.4-6.8" fill="none" stroke="#fff" stroke-width="1.25" stroke-linejoin="round" stroke-linecap="round" transform="translate(-.4 0)"/></svg><span>Engagement letter, Claire Donnelly.docx</span></a>
                 <p class="az-wait"><b>Waiting for your review and approval</b>You: Open the letter, review it, and reply Approved or the changes you want to make.</p>
-                <div class="az-count"><p><b class="az-n--o">1</b><span>left for you</span></p><p><b>1</b><span>reminder</span></p><p><b>0</b><span>pipeline updates by your team</span></p></div>
-                <p class="az-k">What happened, A to Z</p>
-                <ol class="az-trail">
-                  <li><span class="az-when"><span>Mon Oct 19</span><span>9:14 AM</span></span><span class="az-dot" aria-hidden="true"></span><span class="az-what">Picked up from the web form</span><span class="az-clio">Clio: New inquiry</span></li>
-                  <li><span class="az-when"><span>Mon Oct 19</span><span>9:15 AM</span></span><span class="az-dot" aria-hidden="true"></span><span class="az-what">Conflict check: no match</span></li>
-                  <li><span class="az-when"><span>Mon Oct 19</span><span>2:40 PM</span></span><span class="az-dot" aria-hidden="true"></span><span class="az-what">Callback booked for Tuesday, October 20, 11:00&nbsp;AM</span><span class="az-clio">Clio: Callback booked</span></li>
-                  <li><span class="az-when"><span>Wed Oct 21</span><span>8:00 AM</span></span><span class="az-dot az-dot--o" aria-hidden="true"></span><span class="az-what">Reminder to the intake team: no call recorded in Clio</span></li>
-                  <li><span class="az-when"><span>Wed Oct 21</span><span>10:05 AM</span></span><span class="az-dot" aria-hidden="true"></span><span class="az-what">Consultation booked with you, Thu Oct 22, 2&nbsp;pm</span><span class="az-clio">Clio: Consultation booked</span></li>
-                  <li><span class="az-when"><span>Fri Oct 23</span><span>4:06 AM</span></span><span class="az-dot" aria-hidden="true"></span><span class="az-what">Consultation call made Thu Oct 22, 2&nbsp;pm; your note Fri Oct 23, 4:06&nbsp;AM</span><span class="az-clio">Clio: Consultation call made</span></li>
-                  <li><span class="az-when"><span>Fri Oct 23</span><span>4:06 AM</span></span><span class="az-dot az-dot--o" aria-hidden="true"></span><span class="az-what">Engagement letter filled, waiting on you</span></li>
-                </ol>
               </div>
               <!-- ===== END OF THE TOP OF THE INTAKE EMAIL ===== -->
-              <div class="ib-more"><a class="btn btn--ink" href="assets/sample-intake-email.html" data-dlg="dlg-intake">Open the full email</a><a class="ib-link" href="#intake">How the intake works, step by step&nbsp;&darr;</a></div>
+              <div class="ib-more"><a class="btn btn--ink" href="assets/sample-intake-email.html" data-dlg="dlg-intake">Open the full email</a></div>
             </div>
             <div class="ib-msg" id="ib-brief" role="tabpanel" aria-labelledby="ib-tab-brief" hidden>
               <!-- ===== THE TOP OF THE MORNING BRIEF ===== -->
@@ -938,6 +1048,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
               <div class="ib-more"><a class="btn btn--ink" href="assets/sample-redline.html" data-dlg="dlg-redline">See the tracked changes</a></div>
             </div>
           </figure>
+          <p class="ex-cap">If your team can hand the work to a colleague by email, I can build an agent to prepare it.</p>
         </div>
       </div>
     </div>
@@ -945,14 +1056,14 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
     <div class="hero-chain">
       <p class="mono rchain-k" id="rchain-k">Every legal document the agents draft</p>
       <ol class="rchain" aria-labelledby="rchain-k">
-        <li class="rc rc--a"><span class="rc-dot" aria-hidden="true"></span><p class="rc-t">Drafted by an AI agent that knows your firm</p><p class="rc-d">From your SOPs, your templates and the documents your best lawyer in that area has already signed</p></li>
-        <li class="rc rc--p"><span class="stamp" aria-hidden="true"><span class="stamp-word">APPROVED</span><span class="stamp-sub">by your attorney</span></span><span class="rc-dot" aria-hidden="true"></span><p class="rc-t">Reviewed by your attorney</p><p class="rc-d">By reply, in the same email</p></li>
-        <li class="rc rc--f"><span class="rc-dot" aria-hidden="true"></span><p class="rc-t">Sent by your firm</p><p class="rc-d">The same way you send it today</p></li>
+        <li class="rc rc--a"><span class="rc-dot" aria-hidden="true"></span><p class="rc-t">Drafted by an AI agent that knows your firm</p></li>
+        <li class="rc rc--p"><span class="stamp" aria-hidden="true"><span class="stamp-word">APPROVED</span><span class="stamp-sub">by your attorney</span></span><span class="rc-dot" aria-hidden="true"></span><p class="rc-t">Reviewed by your attorney</p></li>
+        <li class="rc rc--f"><span class="rc-dot" aria-hidden="true"></span><p class="rc-t">Sent by your firm</p></li>
       </ol>
       <div class="trust-row">
         <p class="trustline">
           <svg width="15" height="18" viewBox="0 0 15 18" aria-hidden="true"><path d="M7.5 1 14 3.5v5.2c0 4-2.8 6.8-6.5 8.3C3.8 15.5 1 12.7 1 8.7V3.5L7.5 1Z" fill="none" stroke="#212442" stroke-width="1.4"/><path d="M4.6 8.8l2 2 3.8-4" fill="none" stroke="#f96a00" stroke-width="1.5"/></svg>
-          <span><b>The agents run in our own Microsoft Azure,</b> or in your firm&rsquo;s own if you prefer. Every action the agents take is logged, and you can see the log any time. <a href="#h-data">How your client data is kept</a></span>
+          <span><b>The agents run in our own Microsoft Azure,</b> or in your firm&rsquo;s own if you prefer. <a href="#h-data">How your client data is kept</a></span>
         </p>
       </div>
     </div>
@@ -960,52 +1071,71 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
 </section>
 
 <!-- ======================= 1.0 THE FIT ======================= -->
-<section id="fit" aria-labelledby="h-fit">
+<section id="fit" aria-labelledby="h-fit" style="padding-top:0">
   <div class="wrap">
     <div class="chap rv"><span class="chap-i">1.0</span><span class="chap-t">The fit</span><span class="chap-r"></span></div>
     <h2 class="h-sec rv" id="h-fit">Built for firms where the routine work eats the billable day.</h2>
-    <p class="fit-lead rv">The work your team would hand the agents is already piling up: too many hours keeping the intake pipeline clean and up to date, too many callbacks and unsigned engagement letters chased by hand, and too many demand letters written from scratch every time.</p>
-    <div class="fit-grid">
-      <div class="fit-col rv">
-        <h3>This is for you if</h3>
-        <ul>
-          <li>Your firm has about 20 or more staff.</li>
-          <li>Partners or staff are the bottleneck on repetitive drafting, client intake and follow-ups.</li>
-          <li>You want the agents working where your team already works: Outlook, Word, Teams and Clio.</li>
-        </ul>
-      </div>
-      <div class="fit-col fit-col--not rv" style="--d:90ms">
-        <h3>This is not for</h3>
-        <ul>
-          <li>Firms that want to experiment with AI themselves. The retainer is for firms that want the finished work arriving instead.</li>
-          <li>Firms that cannot give me one point of contact. The setup stays my job; I just need one person at your firm to work with while I build, and a few emails are enough.</li>
-          <li>Firms that want the AI making the legal calls on its own. Every legal document the agents draft is reviewed and approved by your attorneys, by design.</li>
-        </ul>
-      </div>
+    <p class="fit-for rv">For small, boutique and mid-size law firms</p>
+    <p class="fit-lead rv">The work your team would hand the agents is already piling up: too many mornings that start with answering email instead of billable work, too many callbacks and unsigned engagement letters chased by hand, and too many demand letters written from scratch every time.</p>
+  </div>
+</section>
+
+<!-- ======================= 2.0 THE ADOPTION ======================= -->
+<section id="adoption" aria-labelledby="h-adopt" style="padding-top:0">
+  <div class="wrap">
+    <div class="chap rv"><span class="chap-i">2.0</span><span class="chap-t">The adoption</span><span class="chap-r"></span></div>
+    <p class="ad-kick rv">One of the biggest hurdles for AI at law firms: getting people to change how they work.</p>
+    <p class="ad-tag rv">ILTA Technology Survey 2025 &middot; 580 law firms</p>
+    <h2 class="h-sec rv" id="h-adopt">So nothing about how your team works has to change.</h2>
+    <p class="ad-lead rv">The agents work like a colleague, inside the Outlook, Word and Teams your team already uses:</p>
+    <ul class="tiles" data-stagger>
+      <li class="tile rv">
+        <p class="tile-k"><svg class="app-ic" width="28" height="28" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="ic-ol-a" x1="28.5" y1="25" x2="28.5" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#35b8f1"/><stop offset="1" stop-color="#28a8ea"/></linearGradient><linearGradient id="ic-ol-b" x1="5.822" y1="11.568" x2="20.178" y2="36.432" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1784d9"/><stop offset=".5" stop-color="#107ad5"/><stop offset="1" stop-color="#0a63c9"/></linearGradient></defs><path d="M45 25a.96.96 0 0 0-.458-.825h-.005l-.018-.01-14.9-8.82a2.026 2.026 0 0 0-.2-.119 2 2 0 0 0-1.834 0 2.026 2.026 0 0 0-.2.119l-14.9 8.82-.018.01a.971.971 0 0 0 .023 1.663l14.9 8.82a2.241 2.241 0 0 0 .2.119 2 2 0 0 0 1.834 0 2.241 2.241 0 0 0 .2-.119l14.9-8.82A.959.959 0 0 0 45 25z" fill="#0a2767"/><path fill="#0364b8" d="M14.222 19.111H24v8.963h-9.778zM43 10V5.9A1.858 1.858 0 0 0 41.187 4H15.813A1.858 1.858 0 0 0 14 5.9V10l15 4z"/><path fill="#0078d4" d="M14 10h10v9H14z"/><path fill="#28a8ea" d="M34 10H24v9l10 9h9v-9l-9-9z"/><path fill="#0078d4" d="M24 19h10v9H24z"/><path fill="#0364b8" d="M24 28h10v9H24z"/><path fill="#14447d" d="M14.222 28.074H24v8.148h-9.778z"/><path fill="#0078d4" d="M34 28h9v9h-9z"/><path d="M44.542 25.783l-.019.01-14.9 8.38c-.065.04-.131.078-.2.112a2.077 2.077 0 0 1-.808.2l-.814-.476a2.033 2.033 0 0 1-.2-.115l-15.1-8.618h-.007L12 25v16.964A2.05 2.05 0 0 0 14.063 44h28.906c.017 0 .032-.008.05-.008a2.531 2.531 0 0 0 .7-.146A2.019 2.019 0 0 0 44 43.7c.067-.038.182-.121.182-.121A2.019 2.019 0 0 0 45 41.964V25a.9.9 0 0 1-.458.783z" fill="url(#ic-ol-a)"/><path d="M44.2 24.933v1.04L28.62 36.7 12.49 25.283a.01.01 0 0 0-.01-.01l-1.48-.89v-.75l.61-.01 1.29.74.03.01.11.07s15.16 8.65 15.2 8.67l.58.34c.05-.02.1-.04.16-.06.03-.02 15.05-8.47 15.05-8.47z" fill="#0a2767" opacity=".5"/><path d="M44.542 25.783l-.019.011-14.9 8.38c-.065.04-.131.078-.2.112a2.089 2.089 0 0 1-1.834 0 2.264 2.264 0 0 1-.2-.112l-14.9-8.38-.018-.011A.9.9 0 0 1 12 25v16.964A2.049 2.049 0 0 0 14.062 44h28.876A2.049 2.049 0 0 0 45 41.964V25a.9.9 0 0 1-.458.783z" fill="#1490df"/><path d="M29.84 34.05l-.223.125a2.183 2.183 0 0 1-.2.113 2.071 2.071 0 0 1-.786.208L34.3 41.2l9.889 2.383a2.038 2.038 0 0 0 .627-.783z" opacity=".1"/><path d="M30.85 33.482l-1.233.693a2.183 2.183 0 0 1-.2.113 2.071 2.071 0 0 1-.786.208l2.656 7.323 12.905 1.761A2.022 2.022 0 0 0 45 41.964v-.219z" opacity=".05"/><path d="M14.09 44h28.845a2.074 2.074 0 0 0 1.235-.4L27.8 34.011a2.033 2.033 0 0 1-.2-.115l-15.1-8.618h-.007L12 25v16.906A2.092 2.092 0 0 0 14.09 44z" fill="#28a8ea"/><path d="M26 13.833v21.33a1.838 1.838 0 0 1-1.15 1.7 1.723 1.723 0 0 1-.68.14H12V13h2v-1h10.17A1.837 1.837 0 0 1 26 13.833z" opacity=".1"/><path d="M25 14.833v21.33a1.629 1.629 0 0 1-.15.7A1.822 1.822 0 0 1 23.17 38H12V13h11.17a1.679 1.679 0 0 1 .83.21 1.818 1.818 0 0 1 1 1.623z" opacity=".2"/><path d="M25 14.833v19.33A1.846 1.846 0 0 1 23.17 36H12V13h11.17a1.679 1.679 0 0 1 .83.21 1.818 1.818 0 0 1 1 1.623z" opacity=".2"/><path d="M24 14.833v19.33A1.839 1.839 0 0 1 22.17 36H12V13h10.17A1.831 1.831 0 0 1 24 14.833z" opacity=".2"/><rect x="2" y="13" width="22" height="22" rx="1.833" fill="url(#ic-ol-b)"/><path d="M7.729 20.688a5.332 5.332 0 0 1 2.094-2.313 6.33 6.33 0 0 1 3.327-.834 5.892 5.892 0 0 1 3.079.791 5.284 5.284 0 0 1 2.037 2.21 7.133 7.133 0 0 1 .714 3.25 7.528 7.528 0 0 1-.735 3.4 5.41 5.41 0 0 1-2.1 2.287 6.126 6.126 0 0 1-3.194.812 6.02 6.02 0 0 1-3.147-.8 5.366 5.366 0 0 1-2.064-2.214 6.963 6.963 0 0 1-.722-3.211 7.733 7.733 0 0 1 .711-3.378zm2.232 5.43a3.461 3.461 0 0 0 1.178 1.522 3.077 3.077 0 0 0 1.84.554 3.223 3.223 0 0 0 1.964-.572 3.315 3.315 0 0 0 1.144-1.522 5.908 5.908 0 0 0 .365-2.123 6.463 6.463 0 0 0-.344-2.15A3.4 3.4 0 0 0 15 20.241a3.043 3.043 0 0 0-1.947-.6 3.175 3.175 0 0 0-1.883.559 3.49 3.49 0 0 0-1.2 1.535 6.1 6.1 0 0 0-.008 4.385z" fill="#fff"/><path fill="#50d9ff" d="M34 10h9v9h-9z"/></svg>Outlook</p>
+        <p class="tile-t">Your team emails them the work. The draft comes back in the same thread.</p>
+      </li>
+      <li class="tile rv">
+        <p class="tile-k"><svg class="app-ic" width="28" height="28" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="ic-wd-a" x1="5.822" y1="11.568" x2="20.178" y2="36.432" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2368c4"/><stop offset=".5" stop-color="#1a5dbe"/><stop offset="1" stop-color="#1146ac"/></linearGradient></defs><path d="M43.167 4H13.833A1.833 1.833 0 0 0 12 5.833V14l17 5 16-5V5.833A1.833 1.833 0 0 0 43.167 4z" fill="#41a5ee"/><path fill="#2b7cd3" d="M45 14H12v10l17 3 16-3V14z"/><path fill="#185abd" d="M12 24v10l16 2 17-2V24H12z"/><path d="M13.833 44h29.334A1.833 1.833 0 0 0 45 42.167V34H12v8.167A1.833 1.833 0 0 0 13.833 44z" fill="#103f91"/><path d="M24.167 12H12v25h12.167A1.839 1.839 0 0 0 26 35.167V13.833A1.839 1.839 0 0 0 24.167 12z" opacity=".1"/><path d="M23.167 13H12v25h11.167A1.839 1.839 0 0 0 25 36.167V14.833A1.839 1.839 0 0 0 23.167 13z" opacity=".2"/><path d="M23.167 13H12v23h11.167A1.839 1.839 0 0 0 25 34.167V14.833A1.839 1.839 0 0 0 23.167 13z" opacity=".2"/><path d="M22.167 13H12v23h10.167A1.839 1.839 0 0 0 24 34.167V14.833A1.839 1.839 0 0 0 22.167 13z" opacity=".2"/><rect x="2" y="13" width="22" height="22" rx="1.833" fill="url(#ic-wd-a)"/><path d="M9.522 27.058c.036.283.06.529.071.74h.042q.024-.3.1-.723t.137-.715l1.928-8.318h2.493l2 8.193a12.133 12.133 0 0 1 .249 1.546h.033a11.853 11.853 0 0 1 .208-1.5l1.595-8.243h2.269l-2.802 11.92h-2.651l-1.9-7.894c-.055-.227-.118-.524-.187-.889s-.112-.632-.129-.8h-.033q-.033.291-.129.864t-.154.848l-1.786 7.869H8.18L5.363 18.042h2.31l1.737 8.335c.039.171.076.399.112.681z" fill="#fff"/></svg>Word</p>
+        <p class="tile-t">Documents arrive as Word files, ready to review.</p>
+      </li>
+      <li class="tile rv">
+        <p class="tile-k"><svg class="app-ic" width="28" height="28" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="ic-tm-a" x1="5.822" y1="11.568" x2="20.178" y2="36.432" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5a62c3"/><stop offset=".5" stop-color="#4d55bd"/><stop offset="1" stop-color="#3940ab"/></linearGradient></defs><path d="M31.993 19H43.1a1.9 1.9 0 0 1 1.9 1.9v10.117A6.983 6.983 0 0 1 38.017 38h-.033A6.983 6.983 0 0 1 31 31.017V19.993a.993.993 0 0 1 .993-.993z" fill="#5059c9"/><circle cx="39.5" cy="12.5" r="4.5" fill="#5059c9"/><circle cx="25.5" cy="10.5" r="6.5" fill="#7b83eb"/><path d="M34.167 19H15.833A1.88 1.88 0 0 0 14 20.923v11.539A11.279 11.279 0 0 0 25 44a11.279 11.279 0 0 0 11-11.538V20.923A1.88 1.88 0 0 0 34.167 19z" fill="#7b83eb"/><path d="M26 19v16.17a1.841 1.841 0 0 1-1.14 1.69 1.772 1.772 0 0 1-.69.14h-9.29c-.13-.33-.25-.66-.35-1a12.179 12.179 0 0 1-.53-3.54V20.92A1.877 1.877 0 0 1 15.83 19z" opacity=".1"/><path d="M25 19v17.17a1.772 1.772 0 0 1-.14.69A1.841 1.841 0 0 1 23.17 38h-7.82c-.17-.33-.33-.66-.47-1s-.25-.66-.35-1a12.179 12.179 0 0 1-.53-3.54V20.92A1.877 1.877 0 0 1 15.83 19z" opacity=".2"/><path d="M25 19v15.17A1.844 1.844 0 0 1 23.17 36h-8.64a12.179 12.179 0 0 1-.53-3.54V20.92A1.877 1.877 0 0 1 15.83 19z" opacity=".2"/><path d="M24 19v15.17A1.844 1.844 0 0 1 22.17 36h-7.64a12.179 12.179 0 0 1-.53-3.54V20.92A1.877 1.877 0 0 1 15.83 19z" opacity=".2"/><path d="M26 13.83v3.15c-.17.01-.33.02-.5.02s-.33-.01-.5-.02a5.489 5.489 0 0 1-1-.16A6.5 6.5 0 0 1 19.5 13a5.556 5.556 0 0 1-.32-1h4.99A1.837 1.837 0 0 1 26 13.83z" opacity=".1"/><path d="M25 14.83v2.15a5.489 5.489 0 0 1-1-.16A6.5 6.5 0 0 1 19.5 13h3.67A1.837 1.837 0 0 1 25 14.83z" opacity=".2"/><path d="M25 14.83v2.15a5.489 5.489 0 0 1-1-.16A6.5 6.5 0 0 1 19.5 13h3.67A1.837 1.837 0 0 1 25 14.83z" opacity=".2"/><path d="M24 14.83v1.99A6.5 6.5 0 0 1 19.5 13h2.67A1.837 1.837 0 0 1 24 14.83z" opacity=".2"/><rect x="2" y="13" width="22" height="22" rx="1.833" fill="url(#ic-tm-a)"/><path d="M17.824 19.978h-3.665v9.98h-2.335v-9.98H8.176v-1.936h9.648z" fill="#fff"/></svg>Teams</p>
+        <p class="tile-t">Reminders arrive in your team&rsquo;s channel, like a message from a colleague.</p>
+      </li>
+    </ul>
+    <div class="req rv">
+      <p class="req-lead">After each agent goes live, I keep improving it until both are true:</p>
+      <ul class="req-list">
+        <li class="req-i"><p class="req-t"><svg class="req-ck" width="22" height="22" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#212442" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#f96a00" stroke-width="1.9"/></svg><span>Your team actually uses it</span></p><p class="req-m"><span class="req-k">In my weekly email</span>How often your team acted on each agent&rsquo;s work</p></li>
+        <li class="req-i"><p class="req-t"><svg class="req-ck" width="22" height="22" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#212442" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#f96a00" stroke-width="1.9"/></svg><span>What it drafts is what your best lawyer in that area would sign</span></p><p class="req-m"><span class="req-k">In my weekly email</span>How often your lawyers approved its drafts without changes</p></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- ======================= 2.0 THE WORK ======================= -->
+<!-- ======================= 3.0 THE WORK ======================= -->
 <section class="band--mint" id="work" aria-labelledby="h-work">
   <div class="wrap">
-    <div class="chap rv"><span class="chap-i">2.0</span><span class="chap-t">The work</span><span class="chap-r"></span></div>
-    <h2 class="h-sec rv" id="h-work">What the agents do, and where a person at your firm decides.</h2>
+    <div class="chap rv"><span class="chap-i">3.0</span><span class="chap-t">The work</span><span class="chap-r"></span></div>
+    <h2 class="h-sec rv" id="h-work">What the agents hand back, and where a person at your firm decides.</h2>
     <p class="wk-intro rv">Two examples, not the menu. I find the recurring work that costs your team the most hours each week, and we start there.</p>
     <p class="wk-note rv">Both are based on real sample runs, with fictional names. At kickoff, each is built around your firm: your steps, your templates, your jurisdiction, and what stays a personal touch or runs on its own.</p>
-    <ul class="wf-links rv" aria-label="The two examples">
-      <li><a class="wf-link" href="#intake"><span class="wf-i">2.1</span><span class="wf-x"><span class="wf-t">Intake</span><span class="wf-s">From the first inquiry to the signed engagement letter</span></span><span class="wf-arrow" aria-hidden="true">&darr;</span></a></li>
-      <li><a class="wf-link" href="#drafting"><span class="wf-i">2.2</span><span class="wf-x"><span class="wf-t">Drafting</span><span class="wf-s">From the client&rsquo;s file to the signed demand letter</span></span><span class="wf-arrow" aria-hidden="true">&darr;</span></a></li>
-    </ul>
 
-    <!-- ===== 2.1 INTAKE ===== -->
+    <!-- ===== 3.1 INTAKE ===== -->
     <article class="panel rv" id="intake" aria-labelledby="h-intake">
-      <div class="sub-chap"><span class="chap-i">2.1</span><span class="chap-t">Intake</span><span class="chap-r"></span></div>
+      <div class="sub-chap"><span class="chap-i">3.1</span><span class="chap-t">Intake</span><span class="chap-r"></span></div>
       <h3 class="panel-h" id="h-intake">From the first inquiry to the signed engagement letter</h3>
       <div class="strip">
-        <p class="strip-a"><span class="agent">Agent</span><span><b>The intake agents do the admin,</b> from the first inquiry to the open matter, and keep every card in Clio current.</span></p>
-        <p class="strip-p"><span class="odot" aria-hidden="true"></span><span><b>Your team&rsquo;s part:</b> the calls, a one-line reply after each call, one consult note, one OK, one Send. The agents only write to people at your firm, so any email to a client is drafted for your team to send.</span></p>
+        <p class="strip-a"><span class="agent">Agent</span><span><b>The intake agents do the admin,</b> from the first inquiry to the open matter, and keep your Clio pipeline current.</span></p>
+        <p class="strip-p"><span class="odot" aria-hidden="true"></span><span><b>Your team&rsquo;s part:</b> the calls, then a few replies in Outlook or Teams: one line after each call, the lawyer&rsquo;s consult note and OK, and pressing Send. The agents only write to people at your firm, so any email to a client is drafted for your team to send.</span></p>
       </div>
+      <ul class="outs" aria-label="From the sample run">
+        <li><b>3</b><span>missed callbacks caught</span></li>
+        <li><b>2</b><span>unsigned letters chased</span></li>
+        <li><b>0</b><span>pipeline cards moved by hand</span></li>
+      </ul>
+      <p class="outs-k">In the sample run</p>
+      <details class="more">
+        <summary>See every step of this intake</summary>
       <div class="pipe">
         <div class="pipe-head"><p class="pipe-k">Your intake pipeline in Clio, kept current by the agents</p><p class="pipe-0"><b>0</b> cards moved by hand in the sample run</p></div>
         <ol class="pipe-row">
@@ -1102,17 +1232,26 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
           </ol>
         </div>
       </div>
+      </details>
       <p class="panel-more"><a href="/videos/client-intake-video/">Watch this intake run, A to Z, in the build video&nbsp;&rarr;</a></p>
     </article>
 
-    <!-- ===== 2.2 DRAFTING ===== -->
+    <!-- ===== 3.2 DRAFTING ===== -->
     <article class="panel rv" id="drafting" aria-labelledby="h-drafting">
-      <div class="sub-chap"><span class="chap-i">2.2</span><span class="chap-t">Drafting</span><span class="chap-r"></span></div>
+      <div class="sub-chap"><span class="chap-i">3.2</span><span class="chap-t">Drafting</span><span class="chap-r"></span></div>
       <h3 class="panel-h" id="h-drafting">From the client&rsquo;s file to the signed demand letter</h3>
       <div class="strip">
         <p class="strip-a"><span class="agent">Agent</span><span><b>The drafting agent:</b> reads the whole file, checks the law, argues the case as opposing counsel would, then drafts the letter.</span></p>
         <p class="strip-p"><span class="odot" aria-hidden="true"></span><span><b>Your lawyer:</b> every legal decision, made by reply, and the signature.</span></p>
       </div>
+      <ul class="outs" aria-label="From the sample run">
+        <li><b>13</b><span>documents read in full</span></li>
+        <li><b>17</b><span>cases cited, each opened at its official source</span></li>
+        <li class="outs--warm"><b>10</b><span>decisions only the lawyer can make</span></li>
+      </ul>
+      <p class="outs-k">In the sample run</p>
+      <details class="more">
+        <summary>See every step of this letter</summary>
       <div class="dr">
         <div class="dr-head" aria-hidden="true"><span class="mono">In the sample run</span></div>
         <ol class="flow">
@@ -1197,6 +1336,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
           </li>
         </ol>
       </div>
+      </details>
     </article>
 
     <div class="bridge rv">
@@ -1206,40 +1346,8 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
   </div>
 </section>
 
-<!-- ======================= 3.0 THE ADOPTION ======================= -->
-<section id="adoption" aria-labelledby="h-adopt">
-  <div class="wrap">
-    <div class="chap rv"><span class="chap-i">3.0</span><span class="chap-t">The adoption</span><span class="chap-r"></span></div>
-    <p class="ad-kick rv">One of the biggest hurdles for AI at law firms: getting people to change how they work.</p>
-    <p class="ad-tag rv">ILTA Technology Survey 2025 &middot; 580 law firms</p>
-    <h2 class="h-sec rv" id="h-adopt">So nothing about how your team works has to change.</h2>
-    <p class="ad-lead rv">The agents work like a colleague, inside the Outlook, Word and Teams your team already uses:</p>
-    <ul class="tiles" data-stagger>
-      <li class="tile rv">
-        <p class="tile-k"><svg class="app-ic" width="28" height="28" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="ic-ol-a" x1="28.5" y1="25" x2="28.5" y2="44" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#35b8f1"/><stop offset="1" stop-color="#28a8ea"/></linearGradient><linearGradient id="ic-ol-b" x1="5.822" y1="11.568" x2="20.178" y2="36.432" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#1784d9"/><stop offset=".5" stop-color="#107ad5"/><stop offset="1" stop-color="#0a63c9"/></linearGradient></defs><path d="M45 25a.96.96 0 0 0-.458-.825h-.005l-.018-.01-14.9-8.82a2.026 2.026 0 0 0-.2-.119 2 2 0 0 0-1.834 0 2.026 2.026 0 0 0-.2.119l-14.9 8.82-.018.01a.971.971 0 0 0 .023 1.663l14.9 8.82a2.241 2.241 0 0 0 .2.119 2 2 0 0 0 1.834 0 2.241 2.241 0 0 0 .2-.119l14.9-8.82A.959.959 0 0 0 45 25z" fill="#0a2767"/><path fill="#0364b8" d="M14.222 19.111H24v8.963h-9.778zM43 10V5.9A1.858 1.858 0 0 0 41.187 4H15.813A1.858 1.858 0 0 0 14 5.9V10l15 4z"/><path fill="#0078d4" d="M14 10h10v9H14z"/><path fill="#28a8ea" d="M34 10H24v9l10 9h9v-9l-9-9z"/><path fill="#0078d4" d="M24 19h10v9H24z"/><path fill="#0364b8" d="M24 28h10v9H24z"/><path fill="#14447d" d="M14.222 28.074H24v8.148h-9.778z"/><path fill="#0078d4" d="M34 28h9v9h-9z"/><path d="M44.542 25.783l-.019.01-14.9 8.38c-.065.04-.131.078-.2.112a2.077 2.077 0 0 1-.808.2l-.814-.476a2.033 2.033 0 0 1-.2-.115l-15.1-8.618h-.007L12 25v16.964A2.05 2.05 0 0 0 14.063 44h28.906c.017 0 .032-.008.05-.008a2.531 2.531 0 0 0 .7-.146A2.019 2.019 0 0 0 44 43.7c.067-.038.182-.121.182-.121A2.019 2.019 0 0 0 45 41.964V25a.9.9 0 0 1-.458.783z" fill="url(#ic-ol-a)"/><path d="M44.2 24.933v1.04L28.62 36.7 12.49 25.283a.01.01 0 0 0-.01-.01l-1.48-.89v-.75l.61-.01 1.29.74.03.01.11.07s15.16 8.65 15.2 8.67l.58.34c.05-.02.1-.04.16-.06.03-.02 15.05-8.47 15.05-8.47z" fill="#0a2767" opacity=".5"/><path d="M44.542 25.783l-.019.011-14.9 8.38c-.065.04-.131.078-.2.112a2.089 2.089 0 0 1-1.834 0 2.264 2.264 0 0 1-.2-.112l-14.9-8.38-.018-.011A.9.9 0 0 1 12 25v16.964A2.049 2.049 0 0 0 14.062 44h28.876A2.049 2.049 0 0 0 45 41.964V25a.9.9 0 0 1-.458.783z" fill="#1490df"/><path d="M29.84 34.05l-.223.125a2.183 2.183 0 0 1-.2.113 2.071 2.071 0 0 1-.786.208L34.3 41.2l9.889 2.383a2.038 2.038 0 0 0 .627-.783z" opacity=".1"/><path d="M30.85 33.482l-1.233.693a2.183 2.183 0 0 1-.2.113 2.071 2.071 0 0 1-.786.208l2.656 7.323 12.905 1.761A2.022 2.022 0 0 0 45 41.964v-.219z" opacity=".05"/><path d="M14.09 44h28.845a2.074 2.074 0 0 0 1.235-.4L27.8 34.011a2.033 2.033 0 0 1-.2-.115l-15.1-8.618h-.007L12 25v16.906A2.092 2.092 0 0 0 14.09 44z" fill="#28a8ea"/><path d="M26 13.833v21.33a1.838 1.838 0 0 1-1.15 1.7 1.723 1.723 0 0 1-.68.14H12V13h2v-1h10.17A1.837 1.837 0 0 1 26 13.833z" opacity=".1"/><path d="M25 14.833v21.33a1.629 1.629 0 0 1-.15.7A1.822 1.822 0 0 1 23.17 38H12V13h11.17a1.679 1.679 0 0 1 .83.21 1.818 1.818 0 0 1 1 1.623z" opacity=".2"/><path d="M25 14.833v19.33A1.846 1.846 0 0 1 23.17 36H12V13h11.17a1.679 1.679 0 0 1 .83.21 1.818 1.818 0 0 1 1 1.623z" opacity=".2"/><path d="M24 14.833v19.33A1.839 1.839 0 0 1 22.17 36H12V13h10.17A1.831 1.831 0 0 1 24 14.833z" opacity=".2"/><rect x="2" y="13" width="22" height="22" rx="1.833" fill="url(#ic-ol-b)"/><path d="M7.729 20.688a5.332 5.332 0 0 1 2.094-2.313 6.33 6.33 0 0 1 3.327-.834 5.892 5.892 0 0 1 3.079.791 5.284 5.284 0 0 1 2.037 2.21 7.133 7.133 0 0 1 .714 3.25 7.528 7.528 0 0 1-.735 3.4 5.41 5.41 0 0 1-2.1 2.287 6.126 6.126 0 0 1-3.194.812 6.02 6.02 0 0 1-3.147-.8 5.366 5.366 0 0 1-2.064-2.214 6.963 6.963 0 0 1-.722-3.211 7.733 7.733 0 0 1 .711-3.378zm2.232 5.43a3.461 3.461 0 0 0 1.178 1.522 3.077 3.077 0 0 0 1.84.554 3.223 3.223 0 0 0 1.964-.572 3.315 3.315 0 0 0 1.144-1.522 5.908 5.908 0 0 0 .365-2.123 6.463 6.463 0 0 0-.344-2.15A3.4 3.4 0 0 0 15 20.241a3.043 3.043 0 0 0-1.947-.6 3.175 3.175 0 0 0-1.883.559 3.49 3.49 0 0 0-1.2 1.535 6.1 6.1 0 0 0-.008 4.385z" fill="#fff"/><path fill="#50d9ff" d="M34 10h9v9h-9z"/></svg>Outlook</p>
-        <p class="tile-t">Your team emails them the work. The draft comes back in the same thread.</p>
-      </li>
-      <li class="tile rv">
-        <p class="tile-k"><svg class="app-ic" width="28" height="28" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="ic-wd-a" x1="5.822" y1="11.568" x2="20.178" y2="36.432" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2368c4"/><stop offset=".5" stop-color="#1a5dbe"/><stop offset="1" stop-color="#1146ac"/></linearGradient></defs><path d="M43.167 4H13.833A1.833 1.833 0 0 0 12 5.833V14l17 5 16-5V5.833A1.833 1.833 0 0 0 43.167 4z" fill="#41a5ee"/><path fill="#2b7cd3" d="M45 14H12v10l17 3 16-3V14z"/><path fill="#185abd" d="M12 24v10l16 2 17-2V24H12z"/><path d="M13.833 44h29.334A1.833 1.833 0 0 0 45 42.167V34H12v8.167A1.833 1.833 0 0 0 13.833 44z" fill="#103f91"/><path d="M24.167 12H12v25h12.167A1.839 1.839 0 0 0 26 35.167V13.833A1.839 1.839 0 0 0 24.167 12z" opacity=".1"/><path d="M23.167 13H12v25h11.167A1.839 1.839 0 0 0 25 36.167V14.833A1.839 1.839 0 0 0 23.167 13z" opacity=".2"/><path d="M23.167 13H12v23h11.167A1.839 1.839 0 0 0 25 34.167V14.833A1.839 1.839 0 0 0 23.167 13z" opacity=".2"/><path d="M22.167 13H12v23h10.167A1.839 1.839 0 0 0 24 34.167V14.833A1.839 1.839 0 0 0 22.167 13z" opacity=".2"/><rect x="2" y="13" width="22" height="22" rx="1.833" fill="url(#ic-wd-a)"/><path d="M9.522 27.058c.036.283.06.529.071.74h.042q.024-.3.1-.723t.137-.715l1.928-8.318h2.493l2 8.193a12.133 12.133 0 0 1 .249 1.546h.033a11.853 11.853 0 0 1 .208-1.5l1.595-8.243h2.269l-2.802 11.92h-2.651l-1.9-7.894c-.055-.227-.118-.524-.187-.889s-.112-.632-.129-.8h-.033q-.033.291-.129.864t-.154.848l-1.786 7.869H8.18L5.363 18.042h2.31l1.737 8.335c.039.171.076.399.112.681z" fill="#fff"/></svg>Word</p>
-        <p class="tile-t">Documents arrive as Word files, ready to review.</p>
-      </li>
-      <li class="tile rv">
-        <p class="tile-k"><svg class="app-ic" width="28" height="28" viewBox="0 0 48 48" aria-hidden="true" focusable="false"><defs><linearGradient id="ic-tm-a" x1="5.822" y1="11.568" x2="20.178" y2="36.432" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#5a62c3"/><stop offset=".5" stop-color="#4d55bd"/><stop offset="1" stop-color="#3940ab"/></linearGradient></defs><path d="M31.993 19H43.1a1.9 1.9 0 0 1 1.9 1.9v10.117A6.983 6.983 0 0 1 38.017 38h-.033A6.983 6.983 0 0 1 31 31.017V19.993a.993.993 0 0 1 .993-.993z" fill="#5059c9"/><circle cx="39.5" cy="12.5" r="4.5" fill="#5059c9"/><circle cx="25.5" cy="10.5" r="6.5" fill="#7b83eb"/><path d="M34.167 19H15.833A1.88 1.88 0 0 0 14 20.923v11.539A11.279 11.279 0 0 0 25 44a11.279 11.279 0 0 0 11-11.538V20.923A1.88 1.88 0 0 0 34.167 19z" fill="#7b83eb"/><path d="M26 19v16.17a1.841 1.841 0 0 1-1.14 1.69 1.772 1.772 0 0 1-.69.14h-9.29c-.13-.33-.25-.66-.35-1a12.179 12.179 0 0 1-.53-3.54V20.92A1.877 1.877 0 0 1 15.83 19z" opacity=".1"/><path d="M25 19v17.17a1.772 1.772 0 0 1-.14.69A1.841 1.841 0 0 1 23.17 38h-7.82c-.17-.33-.33-.66-.47-1s-.25-.66-.35-1a12.179 12.179 0 0 1-.53-3.54V20.92A1.877 1.877 0 0 1 15.83 19z" opacity=".2"/><path d="M25 19v15.17A1.844 1.844 0 0 1 23.17 36h-8.64a12.179 12.179 0 0 1-.53-3.54V20.92A1.877 1.877 0 0 1 15.83 19z" opacity=".2"/><path d="M24 19v15.17A1.844 1.844 0 0 1 22.17 36h-7.64a12.179 12.179 0 0 1-.53-3.54V20.92A1.877 1.877 0 0 1 15.83 19z" opacity=".2"/><path d="M26 13.83v3.15c-.17.01-.33.02-.5.02s-.33-.01-.5-.02a5.489 5.489 0 0 1-1-.16A6.5 6.5 0 0 1 19.5 13a5.556 5.556 0 0 1-.32-1h4.99A1.837 1.837 0 0 1 26 13.83z" opacity=".1"/><path d="M25 14.83v2.15a5.489 5.489 0 0 1-1-.16A6.5 6.5 0 0 1 19.5 13h3.67A1.837 1.837 0 0 1 25 14.83z" opacity=".2"/><path d="M25 14.83v2.15a5.489 5.489 0 0 1-1-.16A6.5 6.5 0 0 1 19.5 13h3.67A1.837 1.837 0 0 1 25 14.83z" opacity=".2"/><path d="M24 14.83v1.99A6.5 6.5 0 0 1 19.5 13h2.67A1.837 1.837 0 0 1 24 14.83z" opacity=".2"/><rect x="2" y="13" width="22" height="22" rx="1.833" fill="url(#ic-tm-a)"/><path d="M17.824 19.978h-3.665v9.98h-2.335v-9.98H8.176v-1.936h9.648z" fill="#fff"/></svg>Teams</p>
-        <p class="tile-t">Reminders arrive in your team&rsquo;s channel, like a message from a colleague.</p>
-      </li>
-    </ul>
-    <div class="req rv">
-      <p class="req-lead">After each agent goes live, I keep improving it until both are true:</p>
-      <ul class="req-list">
-        <li class="req-i"><p class="req-t"><svg class="req-ck" width="22" height="22" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#212442" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#f96a00" stroke-width="1.9"/></svg><span>Your team actually uses it</span></p><p class="req-m"><span class="req-k">In my weekly email</span>How often your team acted on each agent&rsquo;s work</p></li>
-        <li class="req-i"><p class="req-t"><svg class="req-ck" width="22" height="22" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#212442" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#f96a00" stroke-width="1.9"/></svg><span>What it drafts is what your best lawyer in that area would sign</span></p><p class="req-m"><span class="req-k">In my weekly email</span>How often your lawyers approved its drafts without changes</p></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
 <!-- ======================= 4.0 THE PROCESS ======================= -->
-<section id="process" aria-labelledby="h-process" style="padding-top:0">
+<section id="process" aria-labelledby="h-process">
   <div class="wrap">
     <div class="chap rv"><span class="chap-i">4.0</span><span class="chap-t">The process</span><span class="chap-r"></span></div>
     <h2 class="h-sec rv" id="h-process">From the first call to your first working agent.</h2>
@@ -1247,14 +1355,15 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
       <div class="step rv">
         <p class="step-i">Step 01</p>
         <h3>The 30 minute call</h3>
-        <p>When you book, you can name a few recurring tasks that take the most hours. Before the call, I build an agent workflow from them. On the call, you see it, with the emails and documents it drafted.</p>
+        <p>You see the agent workflow I built from your tasks, with the emails and documents it drafted.</p>
         <p>After the call, you get it in writing: what I would build first, and why.</p>
       </div>
       <div class="step rv">
         <p class="step-i">Step 02</p>
         <h3>First agent live in 48 hours</h3>
-        <p>After kickoff (payment received and access provided), your first AI agent is live in your firm within 48 hours, or your first month is refunded.</p>
-        <p>It starts on the highest-value job I map out from our call, built from your SOPs, your templates and the documents your best lawyer in that area has already signed.</p>
+        <p>After kickoff, your first AI agent is live in your firm within 48 hours.</p>
+        <p>It starts on the highest-value job I map out from our call.</p>
+        <p>The setup stays my job: I just need one person at your firm to work with while I build, and a few emails are enough.</p>
       </div>
       <div class="step rv">
         <p class="step-i">Step 03</p>
@@ -1270,7 +1379,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
 <section id="retainer" aria-labelledby="h-buys" style="padding-top:0">
   <div class="wrap">
     <div class="chap rv"><span class="chap-i">5.0</span><span class="chap-t">The retainer</span><span class="chap-r"></span></div>
-    <h2 class="h-sec rv" id="h-buys">What 5,000 USD a month actually buys.</h2>
+    <h2 class="h-sec rv" id="h-buys">What the monthly retainer actually buys.</h2>
     <p class="lead rv">Your intake pipeline kept up to date, no callback or unsigned engagement letter forgotten, and the drafts written, month after month. Building the agents, watching them and keeping them current is my job, not your firm&rsquo;s.</p>
     <ul class="buys-top" aria-label="Included in the retainer">
       <li class="buy rv"><svg class="buy-ck" width="26" height="26" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#212442" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#f96a00" stroke-width="1.9"/></svg><h3>The work comes back ready for review</h3><p>Your team forwards the work from its own Outlook. The draft comes back in the same thread.</p></li>
@@ -1292,7 +1401,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
         <li><svg width="14" height="14" viewBox="0 0 18 18" aria-hidden="true"><rect x="0.75" y="0.75" width="16.5" height="16.5" rx="3" fill="none" stroke="#6b7089" stroke-width="1.5"/><path d="M4.6 9.3l2.8 2.8 6-6.2" fill="none" stroke="#6b7089" stroke-width="1.9"/></svg><span><b>Everything I build for you is yours to keep, forever.</b></span></li>
       </ul>
     </div>
-    <p class="claims-total rv"><b>One flat number:</b> 5,000 USD a month for the whole firm, not per user. Everyone at the firm can use the agents.</p>
+    <p class="claims-total rv"><b>One flat monthly fee</b> for the whole firm, not per user. Everyone at the firm can use the agents. The same retainer covers Claude setup and training, and AI consulting, when your firm wants them.</p>
   </div>
 </section>
 
@@ -1301,25 +1410,21 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
   <div class="wrap">
     <div class="chap rv"><span class="chap-i">6.0</span><span class="chap-t">The terms</span><span class="chap-r"></span></div>
     <h2 class="sr" id="h-terms">The terms</h2>
-    <div class="sheet rv">
-      <div class="sheet-grid">
-        <div>
-          <span class="m2m">Month to month</span>
-          <p class="price">5,000 USD<small>/ month</small></p>
-          <p class="note">No hourly billing, no surprise bills.</p>
-          <ul class="sheet-list">
-            <li>Cancel with 30 days&rsquo; notice.</li>
-            <li class="own">Everything I build for you is yours to keep, forever.</li>
-            <li>If you ever leave, you keep the playbooks the agents work from, the files and everything the agents produced. No lock-in.</li>
-          </ul>
-        </div>
-        <div class="gbox">
-          <p class="inc-l">The guarantee</p>
-          <p>Your first AI agent is live in your firm within 48 hours of kickoff, or your first month is refunded.</p>
-          <p class="gk">Kickoff means payment received and access provided.</p>
-        </div>
-      </div>
-    </div>
+    <ul class="terms3 rv" aria-label="The terms">
+      <li class="term">
+        <h3>Month to month</h3>
+        <p>One flat monthly fee. No hourly billing, no surprise bills. Cancel with 30 days&rsquo; notice.</p>
+      </li>
+      <li class="term">
+        <h3>No lock-in</h3>
+        <p><b>Everything I build for you is yours to keep, forever.</b> If you ever leave, you keep the playbooks the agents work from, the files and everything the agents produced.</p>
+      </li>
+      <li class="term">
+        <h3>The guarantee</h3>
+        <p>Your first AI agent is live in your firm within 48 hours of kickoff, or your first month is refunded.</p>
+        <p class="term-k">Kickoff means payment received and access provided.</p>
+      </li>
+    </ul>
     <div class="data rv" aria-labelledby="h-data">
       <h3 class="data-h" id="h-data">Your client data</h3>
       <p class="data-sub">The agents run in our own Microsoft Azure.</p>
@@ -1338,10 +1443,43 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
   </div>
 </section>
 
-<!-- ======================= 7.0 THE OPERATOR ======================= -->
-<section id="operator" aria-labelledby="h-op">
+<!-- ======================= 7.0 THE SERVICES ======================= -->
+<section id="services" aria-labelledby="h-svc">
   <div class="wrap">
-    <div class="chap rv"><span class="chap-i">7.0</span><span class="chap-t">The operator</span><span class="chap-r"></span></div>
+    <div class="chap rv"><span class="chap-i">7.0</span><span class="chap-t">The services</span><span class="chap-r"></span></div>
+    <h2 class="h-sec rv" id="h-svc">Three ways to work with me, on one monthly retainer.</h2>
+    <p class="lead rv">Whichever you start with, you get the same thing: one person who knows your firm, as its long-term partner for AI.</p>
+    <ul class="ways">
+      <li class="way way--main rv" id="agents">
+        <span class="way-tag">The main service</span>
+        <h3>AI agents, run for you</h3>
+        <p class="way-d">AI employees for your firm&rsquo;s routine work. Your team hands them the work by email, and the finished draft comes back ready for review.</p>
+        <p class="way-for"><b>Ideal for</b>Firms that want the work done for them.</p>
+      </li>
+      <li class="way rv" id="claude" style="--d:80ms">
+        <span class="way-tag way-tag--q">On the same retainer</span>
+        <h3>Claude setup and training</h3>
+        <p class="way-d">Your templates, your writing style and your most repeated tasks, built into Claude. Then your team trained on its own real work.</p>
+        <p class="way-for"><b>Ideal for</b>Firms that want to use Claude themselves.</p>
+      </li>
+      <li class="way rv" id="consulting" style="--d:160ms">
+        <span class="way-tag way-tag--q">On the same retainer</span>
+        <h3>AI consulting</h3>
+        <p class="way-d">Straight answers for your firm: what to use, what to skip and what to do first. You get the plan in writing.</p>
+        <p class="way-for"><b>Ideal for</b>Firms that want advice before they decide anything.</p>
+      </li>
+    </ul>
+    <div class="ways-foot rv">
+      <p>Start with one and move to another as your firm needs. Same retainer, same call.</p>
+      <a class="btn btn--primary" href="#book">Book the 30 minute call</a>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 8.0 THE OPERATOR ======================= -->
+<section id="operator" aria-labelledby="h-op" style="padding-top:0">
+  <div class="wrap">
+    <div class="chap rv"><span class="chap-i">8.0</span><span class="chap-t">The operator</span><span class="chap-r"></span></div>
     <h2 class="h-sec rv" id="h-op">You are hiring one person, and this is him.</h2>
     <div class="op-grid">
       <div class="rv">
@@ -1363,14 +1501,14 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
     </div>
     <div class="op-rec" id="record" aria-labelledby="h-record">
       <h3 class="rv" id="h-record">Every build, published start to finish.</h3>
-      <p class="lead rv">I build AI agents on camera and publish every build on YouTube. See how the work gets done before we talk. Someone at your firm could follow those builds and set the agents up themselves. The retainer is for firms that would rather that person be me.</p>
+      <p class="lead rv">I build AI employees in Claude on camera and publish every build on YouTube. See how the work gets done before we talk. Someone at your firm could follow those builds and set the agents up themselves. The retainer is for firms that would rather that person be me.</p>
       <div class="rec-one rv">
         <!-- ===== THE BUILD VIDEO ===== -->
         <div class="frame" id="build-video" data-embed="live">
-          <a class="vcover" href="https://www.youtube.com/watch?v=cE3cBCxkwvI" target="_blank" rel="noopener" role="button" data-embed-src="https://www.youtube-nocookie.com/embed/cE3cBCxkwvI?autoplay=1" aria-label="Play the latest build, start to finish, 53 minutes">
-            <img src="assets/build-video-thumbnail-intake.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
+          <a class="vcover" href="https://www.youtube.com/watch?v=CVgDd4TOr3Q" target="_blank" rel="noopener" role="button" data-embed-src="https://www.youtube-nocookie.com/embed/CVgDd4TOr3Q?autoplay=1" aria-label="Play the build, start to finish, 39 minutes">
+            <img src="assets/build-video-thumbnail.jpg" alt="" width="1280" height="720" loading="lazy" decoding="async">
             <span class="vplay" aria-hidden="true"><svg width="68" height="48" viewBox="0 0 68 48"><path class="vplay-bg" d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55C3.97 2.33 2.27 4.81 1.48 7.74.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"/><path d="M45 24 27 14v20z" fill="#fff"/></svg></span>
-            <span class="vdur" aria-hidden="true">53:09</span>
+            <span class="vdur" aria-hidden="true">39:29</span>
           </a>
         </div>
         <div class="chip-row">
@@ -1381,10 +1519,10 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
   </div>
 </section>
 
-<!-- ======================= 8.0 THE QUESTIONS ======================= -->
+<!-- ======================= 9.0 THE QUESTIONS ======================= -->
 <section id="questions" aria-labelledby="h-faq" style="padding-top:0">
   <div class="wrap">
-    <div class="chap rv"><span class="chap-i">8.0</span><span class="chap-t">The questions</span><span class="chap-r"></span></div>
+    <div class="chap rv"><span class="chap-i">9.0</span><span class="chap-t">The questions</span><span class="chap-r"></span></div>
     <h2 class="h-sec rv" id="h-faq">Questions before you book.</h2>
     <div class="faq-grid">
     <div class="faq">
@@ -1392,6 +1530,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
         <summary>Where do the agents run?</summary>
         <div class="a">
           <p>The agents run in our own Microsoft Azure, or in your firm&rsquo;s own if you prefer.</p>
+          <p>In our Azure, AI usage is included. In your firm&rsquo;s own Azure, Microsoft bills your firm directly for what runs there for you, including my Microsoft 365 seat and the Cloud PC I work from in your environment; I credit up to 250 USD of that bill each month; anything above that only with your approval.</p>
           <p><a href="#h-data">How your client data is kept</a></p>
         </div>
       </details>
@@ -1405,17 +1544,16 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
       </details>
       <details class="rv">
         <summary>Do we need technical people?</summary>
-        <div class="a"><p>No. There is nothing for your team to install, learn or maintain, and nothing about how your team works changes. The work arrives in Outlook, Word or Teams.</p></div>
+        <div class="a"><p>No. With the agents, there is nothing for your team to install, learn or maintain, and nothing about how your team works changes. The work arrives in Outlook, Word or Teams.</p></div>
       </details>
       <details class="rv">
         <summary>What does it cost?</summary>
         <div class="a">
           <ul>
-            <li>5,000 USD a month, flat.</li>
-            <li>Your total is 5,000 USD a month, unless you approve more Azure use in your own environment.</li>
-            <li>In our Azure: AI usage is included.</li>
-            <li>In your firm&rsquo;s own Azure: Microsoft bills your firm directly for what runs there for you, including my Microsoft 365 seat and the Cloud PC I work from in your environment; I credit up to 250 USD of that bill each month; anything above that only with your approval.</li>
-                        <li>Month to month, cancel with 30 days&rsquo; notice.</li>
+            <li>One flat monthly fee for your whole firm, set on the call.</li>
+            <li>AI usage is included when the agents run in our Azure.</li>
+            <li>No per-user fees, no hourly billing.</li>
+            <li>Month to month, cancel with 30 days&rsquo; notice.</li>
           </ul>
         </div>
       </details>
@@ -1460,10 +1598,10 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
   </div>
 </section>
 
-<!-- ======================= 9.0 THE BOOKING ======================= -->
+<!-- ======================= 10.0 THE BOOKING ======================= -->
 <section class="band--dark" id="book" aria-labelledby="h-book">
   <div class="wrap">
-    <div class="chap rv"><span class="chap-i">9.0</span><span class="chap-t">The booking</span><span class="chap-r"></span></div>
+    <div class="chap rv"><span class="chap-i">10.0</span><span class="chap-t">The booking</span><span class="chap-r"></span></div>
     <div class="book-head rv">
       <h2 id="h-book">Find out what your firm&rsquo;s first AI agent should do.</h2>
       <p class="book-sub">30 minutes, with me.</p>
@@ -1474,6 +1612,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
         <li>When you book, you can name a few recurring tasks that take the most hours.</li>
         <li>On the call: the agent workflow built from them, and the emails and documents it drafted, then your questions.</li>
         <li>After the call, you get it in writing: what I would build first, and why.</li>
+        <li>Here for Claude setup and training, or AI consulting? Book the same call and say so when you book.</li>
       </ul>
     </div>
     <div class="cal-card rv">
@@ -1481,11 +1620,10 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
         <span class="mono cal-dot">The 30 minute call</span>
         <span class="mono">Pick a time</span>
       </div>
-      <p class="cal-fall" style="border-top:0;border-bottom:1px solid var(--hair)">Calendar not loading? <a href="https://calendly.com/backes-jordy/20min?utm_source=landing" target="_blank" rel="noopener">Open the booking page</a></p>
       <div class="calendly-inline-widget" data-url="https://calendly.com/backes-jordy/20min?utm_source=landing&hide_gdpr_banner=1&primary_color=f96a00" aria-label="Calendly booking calendar"></div>
       <p class="cal-fall">Calendar not loading? <a href="https://calendly.com/backes-jordy/20min?utm_source=landing" target="_blank" rel="noopener">Open the booking page</a></p>
     </div>
-    <p class="cal-alt rv">Or <a href="https://www.linkedin.com/in/jordybackes/" target="_blank" rel="noopener">message me on LinkedIn</a>.</p>
+    <p class="cal-alt rv">Prefer to write? <a href="mailto:jordy@nightdocket.com">jordy@nightdocket.com</a>, or <a href="https://www.linkedin.com/in/jordybackes/" target="_blank" rel="noopener">message me on LinkedIn</a>.</p>
     <div class="gsign rv">
       <p>Your first AI agent is live in your firm within 48 hours of kickoff, or your first month is refunded.</p>
       <p class="gk">Kickoff means payment received and access provided.</p>
@@ -1533,7 +1671,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
       </nav>
     </div>
     <div class="foot-legal">
-      <p style="max-width:60ch">Every legal document the agents draft is review-ready. A licensed attorney at your firm makes every final call. Night Docket does not provide legal advice.</p>
+      <p style="max-width:60ch">Every legal document the agents draft is review-ready. A licensed attorney at your firm makes every final call. Night Docket does not provide legal advice. Night Docket is independent and is not affiliated with or endorsed by Anthropic.</p>
       <p>&copy; 2026 Night Docket</p>
     </div>
   </div>
@@ -1642,12 +1780,12 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
     });
   });
   /* a link to the sample inbox opens the intake email, the one the page's text is about */
-  document.querySelectorAll('a[href="#sample-email"]').forEach(function(a){ a.addEventListener("click", function(){ pick(rows[0], false); }); });
+  document.querySelectorAll('a[href="#sample-email"]').forEach(function(a){ a.addEventListener("click", function(){ pick(document.getElementById("ib-tab-intake") || rows[0], false); }); });
   /* back from a full email (a reload on some phones): the email that was open opens again, on a back or forward visit only */
   try {
     var kept = sessionStorage.getItem("ib-open"), was = kept && document.getElementById(kept);
     var nv = window.performance && performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
-    if (was && rows.indexOf(was) > 0 && nv && nv.type === "back_forward") pick(was, false);
+    if (was && rows.indexOf(was) > -1 && was.getAttribute("aria-selected") !== "true" && nv && nv.type === "back_forward") pick(was, false);
   } catch (err) {}
 })();
 </script>
@@ -1666,7 +1804,7 @@ footer.site{background:var(--dark);border-top:1px solid var(--hair-inv);padding:
     e.preventDefault();
     var i = document.createElement("iframe");
     i.setAttribute("src", c.getAttribute("data-embed-src"));
-    i.setAttribute("title", "The latest build, start to finish");
+    i.setAttribute("title", "The build, start to finish");
     i.setAttribute("allow", "autoplay; encrypted-media; picture-in-picture; fullscreen");
     i.setAttribute("allowfullscreen", "");
     i.setAttribute("referrerpolicy", "strict-origin-when-cross-origin");
